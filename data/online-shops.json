@@ -2090,6 +2090,112 @@
         "checkedAt": "2026-11-13",
         "note": "楽天市場の検索で公式店が見つからず"
       }
+    },
+    {
+      "id": "toho-online",
+      "name": "TOHOシネマズ（ネット購入）",
+      "category": "other",
+      "aliases": [
+        "TOHO",
+        "トーホー",
+        "vit",
+        "映画",
+        "映画館",
+        "tohoshinemazu"
+      ],
+      "popular": false,
+      "officialUrl": "https://www.tohotheater.jp/vit/",
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": false,
+        "status": "confirmed",
+        "exclusions": []
+      },
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          }
+        },
+        "olive_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払い（ネットではOliveの8%上乗せは対象外）"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "楽天ペイ（オンライン決済）で支払い元を楽天カードにした場合（楽天カード分1%）"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "本人確認済みが条件"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ]
+        }
+      },
+      "notes": [
+        "楽天リーベイツ・dポイントの対象外",
+        "TOHOシネマズ独自の「シネマイレージ」や曜日・時間帯の割引の方が効果大（比較対象外）",
+        "劇場窓口・自動券売機ではPayPay不可。ネット購入（vit・アプリ）はPayPay可"
+      ],
+      "sources": [
+        {
+          "title": "TOHOシネマズ：インターネットチケット販売 vit",
+          "url": "https://www.tohotheater.jp/vit/",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "TOHOシネマズ：お支払い方法について（FAQ）",
+          "url": "http://help.tohotheater.jp/category/show/429?site_domain=default",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "TOHOシネマズ：PayPayは利用できますか？（FAQ）",
+          "url": "https://help.tohotheater.jp/faq/show/2735?category_id=4&site_domain=default",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天リーベイツ：ストア一覧（サイトマップ）に掲載なし",
+          "url": "https://www.rebates.jp/sitemap/stores.xml",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "coupons": [],
+      "ichiba": {
+        "exists": false,
+        "checkedAt": "2026-11-13",
+        "note": "楽天市場の公式店なし"
+      }
     }
   ]
 }
