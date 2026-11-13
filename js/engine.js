@@ -107,6 +107,7 @@
    */
   function calcPoints(earn, amount, taxRate) {
     if (!earn || !(amount > 0)) return 0;
+    if (typeof earn.minAmount === 'number' && amount < earn.minAmount) return 0; // ○円以上の注文が条件
     const t = typeof taxRate === 'number' ? taxRate : 0.1;
     const base = earn.basis === 'tax_excluded' ? Math.floor(amount / (1 + t)) : amount;
     let pts;
@@ -455,7 +456,7 @@
     if (!earn) return null;
     if (typeof earn.fixedPoints === 'number') return `${earn.fixedPoints.toLocaleString('ja-JP')}pt/件`;
     const r = nominalRate(earn);
-    return r == null ? null : `${round2(r)}%`;
+    return r == null ? null : `${earn.upTo ? '最大' : ''}${round2(r)}%`;
   }
 
   /**
@@ -516,9 +517,19 @@
     const bestPay = ranking[0] || null;
     const payValue = bestPay ? bestPay.totalValue : 0;
 
+    // --- その他のポイント（例：Amazon×dポイント連携）。リーベイツ・決済とは別枠
+    const extras = (shop.extras || []).map((x) => {
+      const countable = COUNTABLE_STATUS.has(x.status || 'unverified') && (settings.enabledServices || []).includes(x.service)
+        && missingRequirements(x.requires, settings).length === 0;
+      const pts = countable ? calcPoints(x.earn, payTotal, taxRate) : 0;
+      return { ...x, countable, points: pts, value: pts * (pv[x.pointType] ?? 1), rate: nominalRate(x.earn) };
+    });
+    const extraPoints = extras.reduce((s, x) => s + x.points, 0);
+    const extraValue = extras.reduce((s, x) => s + x.value, 0);
+
     const mk = (rebPts) => {
-      const value = rebPts * rakutenValue + payValue;
-      return { rebatesPoints: rebPts, paymentPoints: bestPay ? bestPay.totalPoints : 0, value, rate: payTotal > 0 ? round2((value / payTotal) * 100) : 0 };
+      const value = rebPts * rakutenValue + payValue + extraValue;
+      return { rebatesPoints: rebPts, paymentPoints: bestPay ? bestPay.totalPoints : 0, extraPoints, value, rate: payTotal > 0 ? round2((value / payTotal) * 100) : 0 };
     };
     const totals = {
       normal: mk(normalPts),
@@ -532,7 +543,7 @@
     // 一覧の並び替え用：今使えるリーベイツ還元率(%)
     const sortRate = activeCampaign ? nominalRate(activeCampaign.earn) ?? 0 : rebates.normal.rate ?? -1;
 
-    return { amount, shipping, taxRate, today, rebates, evals, byKey: Object.fromEntries(evals.map((e) => [e.key, e])), payment: { best: bestPay, ranking }, totals, sortRate };
+    return { amount, shipping, taxRate, today, rebates, extras, evals, byKey: Object.fromEntries(evals.map((e) => [e.key, e])), payment: { best: bestPay, ranking }, totals, sortRate };
   }
 
   // ---------------------------------------------------------------- 検索

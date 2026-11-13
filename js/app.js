@@ -352,11 +352,26 @@
     return null;
   }
 
+  function upcomingBlock() {
+    const list = (S.onlineMeta && S.onlineMeta.upcomingSales) || [];
+    if (!list.length) return '';
+    return `<section class="section"><h2>📅 これからの大型セール <small>公式発表待ち・還元計算には未反映</small></h2><div class="list">${list.map((u) => `
+      <article class="card upcoming"><div class="pad">
+        <h3>${esc(u.title)}</h3>
+        <p class="sub" style="font-size:14px">${esc(u.expected)}</p>
+        ${u.note ? `<p class="foot" style="margin-top:4px">${esc(u.note)}</p>` : ''}
+        ${u.url ? `<a href="${esc(u.url)}" target="_blank" rel="noopener" class="sub" style="font-size:13px">公式サイトで日程を確認 ↗</a>` : ''}
+      </div></article>`).join('')}</div></section>`;
+  }
+
   function shopCard(shop) {
     const ev = evalShop(shop);
     const cur = currentRebates(ev);
     let rec;
-    if (ev.rebates.listed === false && E.COUNTABLE_STATUS.has(ev.rebates.status)) {
+    const ex = (ev.extras || []).filter((x) => x.countable);
+    if (ev.rebates.listed === false && E.COUNTABLE_STATUS.has(ev.rebates.status) && ex.length) {
+      rec = `<div class="rec"><div class="rec-body"><div class="rec-label">リーベイツ対象外 → 代わりに</div><div class="rec-method">${esc(ex[0].label)}</div></div><div class="rec-rate">${pct(ex[0].rate)}</div></div>`;
+    } else if (ev.rebates.listed === false && E.COUNTABLE_STATUS.has(ev.rebates.status)) {
       rec = `<div class="rec none"><div class="rec-body"><div class="rec-label">楽天リーベイツ</div><div class="rec-method" style="color:inherit">対象外ショップ</div></div></div>`;
     } else if (cur) {
       rec = `<div class="rec"><div class="rec-body"><div class="rec-label">${cur.camp ? '🎉 期間限定ポイントバック' : '楽天リーベイツ ポイントバック'}</div><div class="rec-method">${cur.camp ? `通常 ${esc(ev.rebates.normal.rateLabel || '要確認')} → ` : ''}経由で購入</div></div><div class="rec-rate">${esc(cur.label)}</div></div>`;
@@ -391,7 +406,9 @@
     const cats = ['all', ...Object.keys(S.defs.onlineCategories)];
     const hasSample = S.shops.some((s) => s.isSample);
     app.innerHTML = `
-      ${hasSample ? '<p class="banner">【サンプル】は架空のショップです。実在ショップ（UNIQLO・Appleなど）は<strong>調査前</strong>のため、掲載状況・還元率はすべて「要確認」です。</p>' : ''}
+      ${hasSample ? '<p class="banner">【サンプル】は架空のショップです。</p>' : ''}
+      ${upcomingBlock()}
+      <p class="banner">🔰 楽天リーベイツを<strong>初めて</strong>使う場合は、1回3,000円（税抜）以上の購入で最大500ptの初回特典があります（条件あり）。<br><small>${esc(S.onlineMeta.pointCap || '')}</small></p>
       <div class="search" role="search">
         <span class="ico">🔍</span>
         <input id="oq" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="ショップ名で検索（例：Apple）" value="${esc(S.ui.oq)}" aria-label="ショップを検索">
@@ -400,7 +417,6 @@
       <div class="chips" role="group" aria-label="カテゴリー">${cats.map((c) => `<button class="chip" data-cat="${c}" aria-pressed="${S.ui.oc === c}">${c === 'all' ? 'すべて' : esc(oCatLabel(c))}</button>`).join('')}</div>
       <div class="toolbar">
         <button class="chip" id="f-camp" aria-pressed="${S.ui.onlyCamp}">🎉 キャンペーン中</button>
-        <button class="chip" id="f-first" aria-pressed="${S.ui.onlyFirst}">🔰 初回特典あり</button>
         <button class="chip" id="f-coupon" aria-pressed="${!!S.ui.onlyCoupon}">🎟 クーポン確認</button>
         <select id="sort" aria-label="並び替え">
           <option value="recommended" ${S.ui.sort === 'recommended' ? 'selected' : ''}>おすすめ順</option>
@@ -423,7 +439,6 @@
       S.ui[key] = !S.ui[key]; e.currentTarget.setAttribute('aria-pressed', S.ui[key]); renderOnlineResults();
     });
     tog('#f-camp', 'onlyCamp');
-    tog('#f-first', 'onlyFirst');
     tog('#f-coupon', 'onlyCoupon');
     app.querySelector('#sort').addEventListener('change', (e) => { S.ui.sort = e.target.value; renderOnlineResults(); });
     renderOnlineResults();
@@ -506,8 +521,9 @@
         <div class="split">
           <div><div class="k">① リーベイツ分（楽天ポイント）</div><div class="v">${t.rebatesPoints.toLocaleString('ja-JP')}pt</div></div>
           <div><div class="k">② 決済分（${best ? esc(best.label) : '確認済みの決済なし'}）</div><div class="v">${t.paymentPoints.toLocaleString('ja-JP')}pt</div></div>
+          ${(ev.extras || []).length ? `<div><div class="k">③ ${esc(ev.extras.map((x) => x.label).join('・'))}</div><div class="v">${(t.extraPoints || 0).toLocaleString('ja-JP')}pt</div></div>` : ''}
         </div>
-        <div class="total"><span>合計（①＋②）</span><span class="v">${t.value.toLocaleString('ja-JP')}pt <small>/ 実質${pct(t.rate)}</small></span></div>
+        <div class="total"><span>合計（①＋②${(ev.extras || []).length ? '＋③' : ''}）</span><span class="v">${t.value.toLocaleString('ja-JP')}pt <small>/ 実質${pct(t.rate)}</small></span></div>
       </div>` : '';
 
     app.innerHTML = `
@@ -524,8 +540,10 @@
         ${linkBtn(shop.officialUrl, '公式ショップを開く（リーベイツ経由なし）', false)}
       </div>
       ${couponPanel(shop)}
+      ${((S.onlineMeta && S.onlineMeta.upcomingSales) || []).filter((u) => (u.shops || []).includes(shop.id)).map((u) => `<p class="banner">📅 ${esc(u.title)}：${esc(u.expected)}。${esc(u.note || '')}</p>`).join('')}
 
       <div class="panel"><h2>ポイントバック率</h2>${ratesPanel}</div>
+      ${(ev.extras || []).length ? `<div class="panel"><h2>その他のポイント</h2>${ev.extras.map((x) => `<div class="mrow"><span>${esc(x.label)}</span><span class="rate">${x.rate != null ? pct(x.rate) : '要確認'}</span><div class="meta">${statusBadge(x.status)}<span>${esc(x.condition || '')}</span></div></div>`).join('')}</div>` : ''}
 
       <div class="panel">
         <h2>実質還元シミュレーション</h2>

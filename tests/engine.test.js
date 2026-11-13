@@ -147,7 +147,7 @@ test('検索：ひらがな/カタカナ/全角半角/部分一致', () => {
 
 // ---------------------------------------------------------------- online
 console.log('\nonline');
-const online = load('online-shops.json');
+const online = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures', 'online.sample.json'), 'utf8'));
 const shop = (id) => online.shops.find((x) => x.id === id);
 const evalShop = (id, opts = {}) => E.evaluateOnline(shop(id), defs, baseSettings, { today: TODAY, amount: 1000, ...opts });
 
@@ -208,5 +208,19 @@ console.log(`\n${passed} passed`);
 test('会員ランクの予定：12/1からダイヤモンド', () => {
   assert.equal(E.rankOn(baseSettings, '2026-11-30'), 'platinum');
   assert.equal(E.rankOn(baseSettings, '2026-12-01'), 'diamond');
+});
+console.log(`${passed} passed`);
+test('最低注文金額：未満なら0、以上なら付与（上限あり）', () => {
+  assert.equal(E.calcPoints({ rate: 1, minAmount: 5000, maxPoints: 100 }, 4999, 0.1), 0);
+  assert.equal(E.calcPoints({ rate: 1, minAmount: 5000, maxPoints: 100 }, 5000, 0.1), 50);
+  assert.equal(E.calcPoints({ rate: 1, minAmount: 5000, maxPoints: 100 }, 30000, 0.1), 100);
+});
+test('オンライン：その他ポイント（dポイント連携）を別枠で合算', () => {
+  const shop = { rebates: { listed: false, status: 'confirmed' }, payments: { rakuten_card: { available: true, status: 'confirmed', earn: { per: 100, points: 1 } } },
+    extras: [{ key: 'dpoint_link', label: 'dポイント連携', service: 'dpoint', pointType: 'dpoint', status: 'confirmed', earn: { rate: 1, minAmount: 5000, maxPoints: 100 } }] };
+  const r = E.evaluateOnline(shop, defs, baseSettings, { today: TODAY, amount: 10000 });
+  assert.equal(r.totals.normal.extraPoints, 100);
+  assert.equal(r.totals.normal.paymentPoints, 100);
+  assert.equal(r.totals.normal.value, 200);
 });
 console.log(`${passed} passed`);

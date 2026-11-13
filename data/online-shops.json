@@ -1,542 +1,288 @@
 {
   "meta": {
-    "version": 1,
+    "version": 2,
     "updatedAt": "2026-11-13",
-    "note": "【サンプル】は架空のショップ（計算確認用）。isCandidate=true は調査候補で、楽天リーベイツへの掲載・還元率・URLは未確認です。",
-    "rebatesTopUrl": null
+    "note": "楽天リーベイツ公式のストアページで2026/11/13に確認。還元率は変動するため購入直前に公式で再確認。",
+    "rebatesTopUrl": "https://www.rebates.jp/",
+    "pointCap": "獲得ポイント（各種ボーナス＋ポイントバックの合算）は購入金額（税抜）の20%が上限（楽天リーベイツ公式）",
+    "upcomingSales": [
+      {
+        "id": "amazon-bf",
+        "title": "Amazon ブラックフライデー",
+        "shops": [
+          "amazon"
+        ],
+        "expected": "例年11月下旬（2026年の日程は11/13時点で公式未発表）",
+        "url": "https://www.amazon.co.jp/",
+        "note": "セール価格はAmazon側の割引。dポイント連携の1%（5,000円以上）は通常どおり"
+      },
+      {
+        "id": "qoo10-mega",
+        "title": "Qoo10 メガ割",
+        "shops": [
+          "qoo10"
+        ],
+        "expected": "例年11月中旬〜下旬（2026年の日程は11/13時点で公式未発表）",
+        "url": "https://www.qoo10.jp/",
+        "note": "メガ割クーポンで値引きした分は楽天リーベイツのポイント対象外"
+      },
+      {
+        "id": "rebates-bf",
+        "title": "楽天リーベイツ ブラックフライデー",
+        "shops": [],
+        "expected": "例年11月下旬（2025年は11/21〜11/30・要エントリー・購入額に応じ最大+3%）",
+        "url": "https://www.rebates.jp/",
+        "note": "2026年の内容は11/13時点で公式未発表。発表されたら期間・条件を確認してキャンペーンとして登録"
+      }
+    ]
   },
   "shops": [
     {
-      "id": "sample-hikari",
-      "name": "【サンプル】ひかりコスメ公式ストア",
+      "id": "uniqlo",
+      "name": "ユニクロオンラインストア",
+      "category": "fashion",
       "aliases": [
-        "ひかり",
-        "サンプルコスメ"
+        "UNIQLO",
+        "ユニクロ"
       ],
-      "category": "cosme",
-      "isSample": true,
       "popular": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
+      "officialUrl": "https://www.uniqlo.com/jp/ja/",
+      "rebatesUrl": "https://www.rebates.jp/uniqlo.com",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：ユニクロオンラインストア",
+          "url": "https://www.rebates.jp/uniqlo.com",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
       "rebates": {
         "listed": true,
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 3,
+            "rate": 1.0,
             "basis": "tax_excluded"
           }
         },
-        "campaigns": [
-          {
-            "id": "hikari-1111",
-            "title": "【サンプル】期間限定 ポイントバック6%",
-            "earn": {
-              "rate": 6,
-              "basis": "tax_excluded"
-            },
-            "start": "2026-11-10",
-            "end": "2026-11-20",
-            "status": "confirmed",
-            "conditions": "期間中の注文のみ（サンプル）"
-          }
-        ],
-        "firstTime": {
-          "earn": {
-            "fixedPoints": 500
-          },
-          "status": "conditional",
-          "conditions": "楽天リーベイツ経由で初めて購入する場合のみ（サンプル）"
-        },
+        "campaigns": [],
         "conditions": [
-          "税抜・送料を除いた商品代金が対象（サンプル）"
+          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約7日"
         ],
         "exclusions": [
-          "アプリからの購入は対象外（サンプル）",
-          "他社クーポン併用時は対象外（サンプル）",
-          "店舗受け取りは対象外（サンプル）"
+          "消費税・送料、自社ポイント利用分、ギフトカード利用分はポイント対象外です。",
+          "実店舗での購入等、ユニクロオンラインストア以外でのご注文はポイント対象外です。",
+          "ユニクロアプリ経由のご注文はポイント対象外です",
+          "UNIQLO PAYでのお支払いはポイント対象外です。（2026年1月でサービス終了）",
+          "ギフトカード（電子版を含む）の購入はポイント対象外です。",
+          "キャンセル・返品・交換はポイント対象外です。",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
         ]
       },
-      "payments": {
-        "rakuten_card": {
-          "available": true,
-          "status": "confirmed",
-          "earn": {
-            "per": 100,
-            "points": 1
-          }
-        },
-        "olive_card": {
-          "available": true,
-          "status": "confirmed",
-          "earn": {
-            "rate": 0.5
-          }
-        },
-        "paypay_balance": {
-          "available": true,
-          "status": "confirmed",
-          "earn": {
-            "rate": 0.5
-          }
-        }
-      },
-      "notes": [],
-      "sources": [],
-      "checkedAt": null
+      "coupons": []
     },
     {
-      "id": "sample-soyokaze",
-      "name": "【サンプル】そよかぜアパレル",
-      "aliases": [
-        "そよかぜ",
-        "サンプルアパレル"
-      ],
+      "id": "gu",
+      "name": "GU（ジーユー）",
       "category": "fashion",
-      "isSample": true,
-      "popular": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": true,
-        "status": "confirmed",
-        "normal": {
-          "earn": {
-            "rate": 2
-          }
-        },
-        "campaigns": [
-          {
-            "id": "soyokaze-oct",
-            "title": "【サンプル】終了したキャンペーン 8%",
-            "earn": {
-              "rate": 8
-            },
-            "start": "2026-10-01",
-            "end": "2026-10-31",
-            "status": "confirmed"
-          }
-        ],
-        "exclusions": [
-          "セール品は対象外（サンプル）"
-        ]
-      },
-      "payments": {
-        "rakuten_card": {
-          "available": true,
-          "status": "confirmed",
-          "earn": {
-            "per": 100,
-            "points": 1
-          }
-        },
-        "paypay_balance": {
-          "available": true,
-          "status": "confirmed",
-          "earn": {
-            "rate": 0.5
-          }
-        }
-      },
-      "notes": [],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "sample-denki",
-      "name": "【サンプル】でんきの森オンライン",
       "aliases": [
-        "でんきの森",
-        "サンプル家電"
-      ],
-      "category": "electronics",
-      "isSample": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": true,
-        "status": "confirmed",
-        "normal": {
-          "earn": {
-            "rate": 1
-          }
-        },
-        "campaigns": [
-          {
-            "id": "denki-nodate",
-            "title": "【サンプル】終了日不明のキャンペーン 5%",
-            "earn": {
-              "rate": 5
-            },
-            "start": "2026-11-01",
-            "end": null,
-            "status": "confirmed"
-          }
-        ],
-        "exclusions": [
-          "ゲーム機・金券は対象外（サンプル）"
-        ]
-      },
-      "payments": {
-        "rakuten_card": {
-          "available": true,
-          "status": "confirmed",
-          "earn": {
-            "per": 100,
-            "points": 1
-          }
-        },
-        "olive_card": {
-          "available": true,
-          "status": "confirmed",
-          "earn": {
-            "rate": 0.5
-          }
-        }
-      },
-      "notes": [],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "sample-tabi",
-      "name": "【サンプル】たびのそら予約",
-      "aliases": [
-        "たびのそら",
-        "サンプル旅行"
-      ],
-      "category": "travel",
-      "isSample": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": true,
-        "status": "confirmed",
-        "normal": {
-          "earn": {
-            "rate": 2
-          }
-        },
-        "campaigns": [
-          {
-            "id": "tabi-dec",
-            "title": "【サンプル】12月開始予定 4%",
-            "earn": {
-              "rate": 4
-            },
-            "start": "2026-12-01",
-            "end": "2026-12-31",
-            "status": "confirmed"
-          }
-        ],
-        "conditions": [
-          "宿泊完了後にポイント付与（サンプル）"
-        ],
-        "exclusions": [
-          "現地払いプランは対象外（サンプル）"
-        ]
-      },
-      "payments": {
-        "rakuten_card": {
-          "available": true,
-          "status": "confirmed",
-          "earn": {
-            "per": 100,
-            "points": 1
-          }
-        }
-      },
-      "notes": [],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "sample-marugoto",
-      "name": "【サンプル】まるごと日用品",
-      "aliases": [
-        "まるごと",
-        "サンプル日用品"
-      ],
-      "category": "daily",
-      "isSample": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": false,
-        "status": "confirmed"
-      },
-      "payments": {
-        "rakuten_card": {
-          "available": true,
-          "status": "confirmed",
-          "earn": {
-            "per": 100,
-            "points": 1
-          }
-        }
-      },
-      "notes": [
-        "楽天リーベイツ非掲載の例（サンプル）"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-01",
-      "name": "UNIQLO",
-      "aliases": [
-        "ユニクロ"
-      ],
-      "category": "fashion",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-02",
-      "name": "GU",
-      "aliases": [
+        "GU",
         "ジーユー"
       ],
-      "category": "fashion",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
+      "popular": true,
+      "officialUrl": "https://www.gu-global.com/jp/ja/",
+      "rebatesUrl": "https://www.rebates.jp/gu-japan",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
       },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      "notes": [],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：GU（ジーユー）",
+          "url": "https://www.rebates.jp/gu-japan",
+          "checkedAt": "2026-11-13"
+        }
       ],
-      "sources": [],
-      "checkedAt": null
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 1.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約7日"
+        ],
+        "exclusions": [
+          "消費税、送料、自社ポイント利用分はポイント対象外です。",
+          "GU以外でのご注文はポイント対象外です。",
+          "キャンセル・返品・交換はポイント対象外です。",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": []
     },
     {
-      "id": "cand-03",
+      "id": "zozotown",
       "name": "ZOZOTOWN",
+      "category": "fashion",
       "aliases": [
         "ゾゾタウン",
-        "ゾゾ"
+        "ゾゾ",
+        "zozo"
       ],
-      "category": "fashion",
-      "isCandidate": true,
-      "officialUrl": null,
+      "popular": false,
+      "officialUrl": "https://zozo.jp/",
       "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
       },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      "notes": [],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：ストア一覧（サイトマップ）に掲載なし",
+          "url": "https://www.rebates.jp/sitemap/stores.xml",
+          "checkedAt": "2026-11-13"
+        }
       ],
-      "sources": [],
-      "checkedAt": null
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": false,
+        "status": "confirmed",
+        "exclusions": []
+      },
+      "coupons": []
     },
     {
-      "id": "cand-04",
-      "name": "adidas",
-      "aliases": [
-        "アディダス"
-      ],
-      "category": "fashion",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-05",
-      "name": "Nike",
-      "aliases": [
-        "ナイキ"
-      ],
-      "category": "fashion",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-06",
-      "name": "New Balance",
-      "aliases": [
-        "ニューバランス",
-        "ニューバラ"
-      ],
-      "category": "fashion",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-07",
-      "name": "SHEIN",
-      "aliases": [
-        "シーイン"
-      ],
-      "category": "fashion",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-08",
-      "name": "BEAMS",
-      "aliases": [
-        "ビームス"
-      ],
-      "category": "fashion",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-09",
-      "name": "UNITED ARROWS",
-      "aliases": [
-        "ユナイテッドアローズ",
-        "ユナイテッドアローズ"
-      ],
-      "category": "fashion",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-10",
-      "name": "WACOAL",
-      "aliases": [
-        "ワコール"
-      ],
-      "category": "fashion",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-11",
-      "name": "ベルメゾン",
-      "aliases": [
-        "bellemaison",
-        "千趣会"
-      ],
-      "category": "fashion",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-12",
+      "id": "shiseido",
       "name": "資生堂オンラインストア",
+      "category": "cosme",
       "aliases": [
         "shiseido",
         "しせいどう"
       ],
-      "category": "cosme",
-      "isCandidate": true,
+      "popular": true,
       "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
+      "rebatesUrl": "https://www.rebates.jp/shiseido-jp",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
       },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      "notes": [],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：資生堂オンラインストア",
+          "url": "https://www.rebates.jp/shiseido-jp",
+          "checkedAt": "2026-11-13"
+        }
       ],
-      "sources": [],
-      "checkedAt": null,
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 10.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は10.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約2ヶ月"
+        ],
+        "exclusions": [
+          "消費税、送料",
+          "定期便利用時",
+          "Beauty Key-資生堂メンバーシップアプリからのご購入",
+          "予約商品、ギフトラッピングの購入",
+          "資生堂オンラインストアのドメイン以外からの購入",
+          "資生堂オンラインストアのLINE公式アカウント経由での注文",
+          "虚偽、不正、いたずら、未入金、キャンセル",
+          "同一ユーザーが同一商品4点以上購入している等、ストア側で転売目的と判断されたご注文",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
       "coupons": [
         {
           "service": "paypay",
@@ -545,47 +291,69 @@
       ]
     },
     {
-      "id": "cand-13",
-      "name": "DHC",
-      "aliases": [
-        "ディーエイチシー"
-      ],
-      "category": "cosme",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-14",
+      "id": "cosme-shopping",
       "name": "@cosme SHOPPING",
+      "category": "cosme",
       "aliases": [
         "アットコスメ",
-        "atcosme"
+        "atcosme",
+        "コスメ"
       ],
-      "category": "cosme",
-      "isCandidate": true,
+      "popular": false,
       "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
+      "rebatesUrl": "https://www.rebates.jp/cosmeshopping",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
       },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      "notes": [],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：@cosme SHOPPING",
+          "url": "https://www.rebates.jp/cosmeshopping",
+          "checkedAt": "2026-11-13"
+        }
       ],
-      "sources": [],
-      "checkedAt": null,
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 1.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約7日"
+        ],
+        "exclusions": [
+          "消費税、送料",
+          "クーポン利用分、自社ポイント利用分",
+          "リーベイツから遷移する前に、既にカート追加されていた商品はポイント対象外となる場合がございますのでご注意下さい。",
+          "大量購入および転売目的と見られる購入はポイント対象外です。転売目的と思われる注文は一切ポイント付与いたしませんのであらかじめご了承ください。",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
       "coupons": [
         {
           "service": "paypay",
@@ -594,180 +362,282 @@
       ]
     },
     {
-      "id": "cand-15",
-      "name": "FANCL",
-      "aliases": [
-        "ファンケル"
-      ],
+      "id": "oliveyoung",
+      "name": "オリーブヤング公式ストア",
       "category": "cosme",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      "aliases": [
+        "OLIVE YOUNG",
+        "オリヤン",
+        "オリーブヤング"
       ],
-      "sources": [],
-      "checkedAt": null
+      "popular": false,
+      "officialUrl": "https://global.oliveyoung.com/",
+      "rebatesUrl": "https://www.rebates.jp/global.oliveyoung.com",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
+      },
+      "notes": [
+        "海外通販（関税は対象外）"
+      ],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：オリーブヤング公式ストア",
+          "url": "https://www.rebates.jp/global.oliveyoung.com",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 2.5,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は2.5%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約7日"
+        ],
+        "exclusions": [
+          "消費税、関税、送料",
+          "割引サービス利用分",
+          "ストア公式アプリからの申込",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": []
     },
     {
-      "id": "cand-16",
-      "name": "オルビス",
-      "aliases": [
-        "orbis"
-      ],
+      "id": "matsukiyo-online",
+      "name": "マツキヨココカラ公式オンラインストア",
       "category": "cosme",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      "aliases": [
+        "マツキヨ",
+        "ココカラ",
+        "マツモトキヨシ"
       ],
-      "sources": [],
-      "checkedAt": null
+      "popular": false,
+      "officialUrl": null,
+      "rebatesUrl": "https://www.rebates.jp/matsukiyo-jp",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
+      },
+      "notes": [
+        "「お店で受け取る」を選ぶとリーベイツ対象外"
+      ],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：マツキヨココカラ公式オンラインストア",
+          "url": "https://www.rebates.jp/matsukiyo-jp",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 1.5,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は1.5%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約7日"
+        ],
+        "exclusions": [
+          "送料、消費税、自社ポイント・クーポン利用分はポイント対象外です。",
+          "商品ご注文時に「お店で受け取る」を選択して注文された場合、ポイント対象外となりますので予めご了承ください。",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": [
+        {
+          "service": "paypay",
+          "asOf": "2026-11-13"
+        }
+      ]
     },
     {
-      "id": "cand-17",
-      "name": "ドクターシーラボ",
-      "aliases": [
-        "シーラボ",
-        "drcilabo"
-      ],
-      "category": "cosme",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-18",
-      "name": "iHerb",
-      "aliases": [
-        "アイハーブ"
-      ],
-      "category": "cosme",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-19",
-      "name": "OLIVE YOUNG",
-      "aliases": [
-        "オリーブヤング",
-        "オリヤン"
-      ],
-      "category": "cosme",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-20",
+      "id": "apple",
       "name": "Apple公式サイト",
+      "category": "electronics",
       "aliases": [
-        "apple",
+        "Apple",
         "アップル",
-        "iphone",
-        "mac"
+        "iPhone",
+        "Mac",
+        "iPad"
       ],
-      "category": "electronics",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
+      "popular": true,
+      "officialUrl": "https://www.apple.com/jp/",
+      "rebatesUrl": "https://www.rebates.jp/apple-store",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
       },
-      "payments": {},
       "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+        "同一モデルは合計6台までが対象"
       ],
-      "sources": [],
-      "checkedAt": null
+      "sources": [
+        {
+          "title": "楽天リーベイツ：Apple公式サイト",
+          "url": "https://www.rebates.jp/apple-store",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 1.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約1ヶ月"
+        ],
+        "exclusions": [
+          "Apple公式サイトで対象製品を購入した場合、ユーザー毎に以下の台数制限が定められています。",
+          "この台数を超えて購入された場合、ポイントバックの対象外となります。",
+          "iPhone、Mac、iPad、Apple Watch、Apple Vision Pro、Apple TV、HomePod：各モデルにつき合計6台まで",
+          "例：iPhone 16は6台まで、iPhone 16 Plusも6台までポイントバック対象",
+          "（容量や色が異なっても、同じモデルであれば合計6台までがポイントバックの対象となります。）",
+          "AirTag、AirTagアクセサリー：合計32個まで",
+          "AirPods、その他対象アクセサリー：各製品につき合計10個まで",
+          "上記の台数制限は、Rebates（リーベイツ）経由での購入だけでなく、他のポイントサイト経由、またはApple公式サイトやApple Store Appで直接購入した場合も含めた全ての購入が対象となります。",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": []
     },
     {
-      "id": "cand-21",
-      "name": "ソニーストア",
-      "aliases": [
-        "sony",
-        "ソニー"
-      ],
-      "category": "electronics",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-22",
+      "id": "biccamera",
       "name": "ビックカメラ.com",
+      "category": "electronics",
       "aliases": [
         "ビックカメラ",
         "ビック",
         "biccamera"
       ],
-      "category": "electronics",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
+      "popular": true,
+      "officialUrl": "https://www.biccamera.com/",
+      "rebatesUrl": "https://www.rebates.jp/bic-camera",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
       },
-      "payments": {},
       "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+        "リーベイツのページに「BLACK FRIDAY開催中」の掲載あり（還元率は4.0%のまま）"
       ],
-      "sources": [],
-      "checkedAt": null,
+      "sources": [
+        {
+          "title": "楽天リーベイツ：ビックカメラ.com",
+          "url": "https://www.rebates.jp/bic-camera",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 4.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は4.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約7日"
+        ],
+        "exclusions": [
+          "消費税、送料、ビックポイント利用分、クーポンによる値引き分、代引き手数料",
+          "当社グループ会社のサイト（ソフマップ.com、コジマ.net）、当サイトからリンクしている外部サイト等、「biccamera.com」ドメイン以外のサイトでのご購入、サービス（商品の店舗取り置き）、ビック酒販、ビックカメラリフォーム",
+          "年に一度の大セール！BLACK FRIDAY開催中",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
       "coupons": [
         {
           "service": "paypay",
@@ -776,158 +646,254 @@
       ]
     },
     {
-      "id": "cand-23",
+      "id": "yodobashi",
       "name": "ヨドバシ.com",
+      "category": "electronics",
       "aliases": [
-        "ヨドバシカメラ",
         "ヨドバシ",
+        "ヨドバシカメラ",
         "yodobashi"
       ],
-      "category": "electronics",
-      "isCandidate": true,
-      "officialUrl": null,
+      "popular": false,
+      "officialUrl": "https://www.yodobashi.com/",
       "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
       },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      "notes": [],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：ストア一覧（サイトマップ）に掲載なし",
+          "url": "https://www.rebates.jp/sitemap/stores.xml",
+          "checkedAt": "2026-11-13"
+        }
       ],
-      "sources": [],
-      "checkedAt": null
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": false,
+        "status": "confirmed",
+        "exclusions": []
+      },
+      "coupons": []
     },
     {
-      "id": "cand-24",
-      "name": "au PAY マーケット",
-      "aliases": [
-        "auペイマーケット",
-        "aupay"
-      ],
-      "category": "department",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-25",
-      "name": "LOHACO",
-      "aliases": [
-        "ロハコ"
-      ],
-      "category": "department",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-26",
-      "name": "イオンスタイルオンライン",
-      "aliases": [
-        "イオン",
-        "aeon"
-      ],
-      "category": "department",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-27",
+      "id": "mistore",
       "name": "三越伊勢丹オンラインストア",
+      "category": "department",
       "aliases": [
         "三越",
-        "伊勢丹"
+        "伊勢丹",
+        "mistore"
       ],
-      "category": "department",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
+      "popular": false,
+      "officialUrl": "https://www.mistore.jp/",
+      "rebatesUrl": "https://www.rebates.jp/mistore.com",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
       },
-      "payments": {},
       "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+        "ISETAN BEAUTY online・MOO:D MARK など別サイトでの購入は対象外"
       ],
-      "sources": [],
-      "checkedAt": null
+      "sources": [
+        {
+          "title": "楽天リーベイツ：三越伊勢丹オンラインストア",
+          "url": "https://www.rebates.jp/mistore.com",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 5.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は5.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約7日"
+        ],
+        "exclusions": [
+          "化粧品サイト「ISETAN BEAUTY online」での購入",
+          "ラグジュアリーサイト「ISETAN MITSUKOSHI LUXURY」での購入",
+          "伊勢丹ギフトサイト「MOO:D MARK by ISETAN」での購入",
+          "地域店サイト（丸井今井、岩田屋三越、ジェイアール京都伊勢丹オンライン他各店の商品サイト）での購入",
+          "他、対象サイト以外の三越伊勢丹関連サイトすべて",
+          "抽選販売商品",
+          "消費税、送料、クーポン利用分、システム手数料",
+          "不備・不正・虚偽・いたずら・キャンセル・未入金・返品・転売目的",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": []
     },
     {
-      "id": "cand-28",
+      "id": "takashimaya",
       "name": "高島屋オンラインストア",
+      "category": "department",
       "aliases": [
         "タカシマヤ",
         "たかしまや"
       ],
-      "category": "department",
-      "isCandidate": true,
+      "popular": false,
       "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
+      "rebatesUrl": "https://www.rebates.jp/takashimaya",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
       },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      "notes": [],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：高島屋オンラインストア",
+          "url": "https://www.rebates.jp/takashimaya",
+          "checkedAt": "2026-11-13"
+        }
       ],
-      "sources": [],
-      "checkedAt": null
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 5.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は5.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約7日"
+        ],
+        "exclusions": [
+          "消費税",
+          "カタログギフトのシステム料",
+          "タカシマヤ通信販売にてご購入の商品（カタログ商品番号での注文、コールセンターでの注文含む）",
+          "タカシマヤファッションスクエアにてご購入の商品",
+          "ローズキッチンにてご購入の商品",
+          "セクレタリーサービスにてご購入の商品",
+          "提携サイトにてご購入の商品",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": []
     },
     {
-      "id": "cand-29",
+      "id": "daimaru-matsuzakaya",
       "name": "大丸松坂屋オンラインストア",
+      "category": "department",
       "aliases": [
         "大丸",
         "松坂屋"
       ],
-      "category": "department",
-      "isCandidate": true,
+      "popular": true,
       "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
+      "rebatesUrl": "https://www.rebates.jp/daimaru-matsuzakaya",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
       },
-      "payments": {},
       "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+        "DEPACO（コスメ）の商品は対象外"
       ],
-      "sources": [],
-      "checkedAt": null,
+      "sources": [
+        {
+          "title": "楽天リーベイツ：大丸松坂屋オンラインストア",
+          "url": "https://www.rebates.jp/daimaru-matsuzakaya",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 8.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は8.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約1ヶ月"
+        ],
+        "exclusions": [
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
       "coupons": [
         {
           "service": "paypay",
@@ -936,114 +902,935 @@
       ]
     },
     {
-      "id": "cand-30",
-      "name": "アカチャンホンポ",
+      "id": "qoo10",
+      "name": "Qoo10",
+      "category": "department",
       "aliases": [
-        "赤ちゃん本舗",
-        "アカホン"
+        "キューテン",
+        "qoo10",
+        "メガ割"
       ],
-      "category": "daily",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
+      "popular": true,
+      "officialUrl": "https://www.qoo10.jp/",
+      "rebatesUrl": "https://www.rebates.jp/qoo10",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
       },
-      "payments": {},
       "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+        "メガ割クーポンなど各種割引の利用分はリーベイツ対象外"
       ],
-      "sources": [],
-      "checkedAt": null
+      "sources": [
+        {
+          "title": "楽天リーベイツ：Qoo10",
+          "url": "https://www.rebates.jp/qoo10",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 1.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約7日"
+        ],
+        "exclusions": [
+          "Qoo10が不正な注文と判断した場合、注文の一部または全てがポイント対象外となる可能性がございます。",
+          "例：同一ユーザーが複数のQoo10アカウントを発行し、本来の取得上限以上のクーポンを取得・利用している場合",
+          "例：同一ユーザーによる大量注文など、転売目的と疑われる注文",
+          "各種割引利用分（カート割引、メガ割クーポン、アイテムクーポン、タイムセール、今日の特価、一般割引など）",
+          "Qポイント利用分",
+          "商品券（ギフト券・割引券・航空券等のチケットを含む）",
+          "虚偽 / いたずら / 重複 / 登録不備 / 注文キャンセル（クーリングオフ）",
+          "Qoo10公式アプリからの注文",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": []
     },
     {
-      "id": "cand-31",
-      "name": "サーモスオンライン",
+      "id": "amazon",
+      "name": "Amazon.co.jp",
+      "category": "department",
       "aliases": [
-        "thermos",
-        "サーモス"
+        "アマゾン",
+        "amazon"
       ],
-      "category": "daily",
-      "isCandidate": true,
-      "officialUrl": null,
+      "popular": true,
+      "officialUrl": "https://www.amazon.co.jp/",
       "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
       },
-      "payments": {},
       "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+        "楽天リーベイツの対象外。dアカウント連携でdポイントがたまる"
       ],
-      "sources": [],
-      "checkedAt": null
+      "sources": [
+        {
+          "title": "楽天リーベイツ：ストア一覧（サイトマップ）に掲載なし",
+          "url": "https://www.rebates.jp/sitemap/stores.xml",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "dポイントクラブ：Amazon",
+          "url": "https://dpoint.docomo.ne.jp/static/store/103768/",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": false,
+        "status": "confirmed",
+        "exclusions": []
+      },
+      "coupons": [],
+      "extras": [
+        {
+          "key": "dpoint_link",
+          "label": "dポイント（Amazonアカウント連携）",
+          "service": "dpoint",
+          "pointType": "dpoint",
+          "status": "confirmed",
+          "earn": {
+            "rate": 1,
+            "minAmount": 5000,
+            "maxPoints": 100
+          },
+          "condition": "1回の注文の合計が5,000円（税込）以上で、合計金額の1%（1注文につき上限100pt）。事前のアカウント連携が必要"
+        }
+      ]
     },
     {
-      "id": "cand-32",
-      "name": "HARIO NETSHOP",
+      "id": "jal-jaldomestic",
+      "name": "JAL 国内線航空券",
+      "category": "travel",
       "aliases": [
-        "ハリオ",
-        "hario"
-      ],
-      "category": "daily",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null
-    },
-    {
-      "id": "cand-33",
-      "name": "JAL",
-      "aliases": [
+        "JAL",
         "日本航空",
         "ジャル"
       ],
-      "category": "travel",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
+      "popular": false,
+      "officialUrl": "https://www.jal.co.jp/",
+      "rebatesUrl": "https://www.rebates.jp/jal-domestic",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
       },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      "notes": [],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：JAL 国内線航空券",
+          "url": "https://www.rebates.jp/jal-domestic",
+          "checkedAt": "2026-11-13"
+        }
       ],
-      "sources": [],
-      "checkedAt": null
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 1.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約7日"
+        ],
+        "exclusions": [
+          "◆「フレックス」「JALカード割引」「ビジネスフレックス」「セイバー」「プロモーション」「株主割引」「スカイメイト」「当日シニア割引」「離島割引」「特定路線離島割引」運賃は対象外",
+          "◆「スペシャルセイバー」「往復セイバー」と上記の対象外運賃の組み合わせは、対象外",
+          "◆以下のサイトでの購入は対象外となります。JAL ONLINE（ http://www.jal.co.jp/jalonline/ ）",
+          "◆ご予約の変更後、購入時と予約番号が異なる以下の場合は対象外",
+          "◆一部のお客様のご予約を分割した場合（分割されたお客様には新しい予約番号が発行されます）",
+          "◆虚偽・不正・いたずら・キャンセル・申し込み不備・未入金・返品",
+          "◆お客様、または広告主の都合により、商品の交換や一部キャンセルなどになりますとシステム上、ポイントが無効となります。",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": []
     },
     {
-      "id": "cand-klook",
-      "name": "Klook",
+      "id": "jal-jalinternational",
+      "name": "JAL 国際線航空券",
+      "category": "travel",
+      "aliases": [
+        "JAL",
+        "日本航空",
+        "ジャル"
+      ],
+      "popular": false,
+      "officialUrl": "https://www.jal.co.jp/",
+      "rebatesUrl": "https://www.rebates.jp/jal-international",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：JAL 国際線航空券",
+          "url": "https://www.rebates.jp/jal-international",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 1.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約7日"
+        ],
+        "exclusions": [
+          "運賃のみ対象(諸税・燃油サーチャージは対象外)",
+          "運賃種別「Flex」は全ての搭乗クラスで対象外",
+          "コンビニ支払い、銀行振り込みでのご購入",
+          "2018年11月1日より：e JALポイント利用分",
+          "特典航空券の引き換え",
+          "購入後にキャンセルされた場合",
+          "以下のサイトでの購入：",
+          "- ガラパゴス携帯サイト（iPhone、Android以外の携帯端末） (アフィリエイト経由でPCから予約をされても、モバイルサイトから購入された場合は成果の対象外となります）",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": []
+    },
+    {
+      "id": "jal-jalcocom",
+      "name": "JALパック 国内ツアー",
+      "category": "travel",
+      "aliases": [
+        "JAL",
+        "ジャルパック"
+      ],
+      "popular": false,
+      "officialUrl": "https://www.jal.co.jp/",
+      "rebatesUrl": "https://www.rebates.jp/jal.co.com",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：JALパック 国内ツアー",
+          "url": "https://www.rebates.jp/jal.co.com",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 3.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は3.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約2ヶ月"
+        ],
+        "exclusions": [
+          "虚偽、いたずら、重複",
+          "登録不備",
+          "注文キャンセル（クーリングオフ）",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": []
+    },
+    {
+      "id": "jal-jalcom",
+      "name": "JALパック 海外ツアー",
+      "category": "travel",
+      "aliases": [
+        "JAL",
+        "ジャルパック"
+      ],
+      "popular": false,
+      "officialUrl": "https://www.jal.co.jp/",
+      "rebatesUrl": "https://www.rebates.jp/jal.com",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：JALパック 海外ツアー",
+          "url": "https://www.rebates.jp/jal.com",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 3.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は3.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約3ヶ月"
+        ],
+        "exclusions": [
+          "(1)ツアー",
+          "1. 【JALパック 海外ツアー】からJAL公式サイトへ進み、【JALパック 海外ツアー】以外をご予約された場合。",
+          "(2)決済方法",
+          "1.新規予約時に決済完了にならなかった場合",
+          "(3)予約内容",
+          "1.予約取消の場合",
+          "2.取消料",
+          "3.一部取消など旅行代金が減額した場合",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": []
+    },
+    {
+      "id": "ana",
+      "name": "ANAトラベラーズ（ツアー）",
+      "category": "travel",
+      "aliases": [
+        "ANA",
+        "全日空"
+      ],
+      "popular": false,
+      "officialUrl": "https://www.ana.co.jp/",
+      "rebatesUrl": "https://www.rebates.jp/www.ana.com",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
+      },
+      "notes": [
+        "国内・海外ツアーのみ対象（航空券単体・ホテル単体などは対象外）"
+      ],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：ANAトラベラーズ（ツアー）",
+          "url": "https://www.rebates.jp/www.ana.com",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 1.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約1ヶ月"
+        ],
+        "exclusions": [
+          "消費税、送料",
+          "クーポン利用分、自社ポイント利用分",
+          "国内航空券、海外航空券、海外レンタカー、海外ホテル、単品アクティビティ",
+          "ANAトラベラーズの国内・海外ツアー",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": []
+    },
+    {
+      "id": "rakuten-travel",
+      "name": "楽天トラベル",
+      "category": "travel",
+      "aliases": [
+        "らくてんトラベル",
+        "楽天"
+      ],
+      "popular": true,
+      "officialUrl": "https://travel.rakuten.co.jp/",
+      "rebatesUrl": "https://www.rebates.jp/travel.rakuten.co.jp.com",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
+      },
+      "notes": [
+        "国内宿泊のみ対象。楽天トラベル自体のポイントとは別"
+      ],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：楽天トラベル",
+          "url": "https://www.rebates.jp/travel.rakuten.co.jp.com",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 1.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約1ヶ月"
+        ],
+        "exclusions": [
+          "消費税、クーポン利用分",
+          "楽パック、レンタカー、バス、海外ホテル、海外ツアー、海外航空券など、国内宿泊以外のサービス",
+          "楽天トラベルアプリからのご予約",
+          "当アフィリエイト以外のアフィリエイトサービスやキャンペーンが有効になった場合",
+          "イタズラや重複など、お申し込み内容として相応しくない入力がみられた場合",
+          "その他楽天トラベルが不正と判断した場合",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": []
+    },
+    {
+      "id": "jalan",
+      "name": "じゃらん",
+      "category": "travel",
+      "aliases": [
+        "jalan",
+        "じゃらんnet"
+      ],
+      "popular": false,
+      "officialUrl": "https://www.jalan.net/",
+      "rebatesUrl": null,
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：ストア一覧（サイトマップ）に掲載なし",
+          "url": "https://www.rebates.jp/sitemap/stores.xml",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": false,
+        "status": "confirmed",
+        "exclusions": []
+      },
+      "coupons": []
+    },
+    {
+      "id": "booking",
+      "name": "Booking.com",
+      "category": "travel",
+      "aliases": [
+        "ブッキングドットコム",
+        "booking"
+      ],
+      "popular": false,
+      "officialUrl": "https://www.booking.com/",
+      "rebatesUrl": "https://www.rebates.jp/booking.com",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
+      },
+      "notes": [
+        "宿泊予約のみ対象"
+      ],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：Booking.com",
+          "url": "https://www.rebates.jp/booking.com",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 3.5,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は3.5%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約3ヶ月"
+        ],
+        "exclusions": [
+          "航空券、パッケージ等宿泊予約以外は対象外",
+          "消費税",
+          "Booking.com WALLET ポイント利用分、Travel credit利用分、Genius特典利用分、Genius割引利用分、セール割引利用分、割引利用分",
+          "キャンセルや無断不泊など、実際に宿泊がされなかった場合",
+          "Booking.comサイト内のページをブックマークなどされて、直接ご利用された場合",
+          "本ページボタンをクリックした後に、Booking.comのリスティング広告やその他一般広告等を踏んだ場合",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": []
+    },
+    {
+      "id": "expedia-hotels",
+      "name": "エクスペディア（ホテル）",
+      "category": "travel",
+      "aliases": [
+        "Expedia",
+        "エクスペディア"
+      ],
+      "popular": false,
+      "officialUrl": "https://www.expedia.co.jp/",
+      "rebatesUrl": "https://www.rebates.jp/expedia.hotels.jp",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：エクスペディア（ホテル）",
+          "url": "https://www.rebates.jp/expedia.hotels.jp",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 6.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は6.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約2ヶ月"
+        ],
+        "exclusions": [
+          "消費税、送料、サービス料、キャンセルされたご予約（キャンセル後コールセンター等で再予約した場合も含む）、ホテル以外のご予約、エクスペディアが提供するクーポンを利用したご予約はポイント対象外です",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": [
+        {
+          "service": "paypay",
+          "asOf": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "expedia-flights",
+      "name": "エクスペディア（航空券）",
+      "category": "travel",
+      "aliases": [
+        "Expedia",
+        "エクスペディア"
+      ],
+      "popular": false,
+      "officialUrl": "https://www.expedia.co.jp/",
+      "rebatesUrl": "https://www.rebates.jp/expedia.flights.jp",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：エクスペディア（航空券）",
+          "url": "https://www.rebates.jp/expedia.flights.jp",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 1.0,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約2ヶ月"
+        ],
+        "exclusions": [
+          "消費税、送料、サービス料、キャンセルされたご予約（キャンセル後コールセンター等で再予約した場合も含む）、航空券以外のご予約、エクスペディアが提供するクーポンを利用したご予約はポイント対象外です。",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": [
+        {
+          "service": "paypay",
+          "asOf": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "expedia-tours",
+      "name": "エクスペディア（現地ツアー）",
+      "category": "travel",
+      "aliases": [
+        "Expedia",
+        "エクスペディア"
+      ],
+      "popular": false,
+      "officialUrl": "https://www.expedia.co.jp/",
+      "rebatesUrl": "https://www.rebates.jp/expedia.co.jp",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：エクスペディア（現地ツアー）",
+          "url": "https://www.rebates.jp/expedia.co.jp",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 2.5,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は2.5%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約2ヶ月"
+        ],
+        "exclusions": [
+          "消費税、送料、サービス料、キャンセルされたご予約（キャンセル後コールセンター等で再予約した場合も含む）、現地ツアー以外のご予約、エクスペディアが提供するクーポンを利用したご予約はポイント対象外です。",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": [
+        {
+          "service": "paypay",
+          "asOf": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "klook",
+      "name": "Klook（クルック）",
+      "category": "travel",
       "aliases": [
         "クルック",
         "klook"
       ],
-      "category": "travel",
-      "isCandidate": true,
+      "popular": false,
       "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
+      "rebatesUrl": "https://www.rebates.jp/klook.com",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
       },
-      "payments": {},
       "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+        "東京ディズニーリゾート・USJのチケットを含む商品は対象外"
       ],
-      "sources": [],
-      "checkedAt": null,
+      "sources": [
+        {
+          "title": "楽天リーベイツ：Klook（クルック）",
+          "url": "https://www.rebates.jp/klook.com",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "conditional",
+        "normal": {
+          "earn": {
+            "rate": 7.5,
+            "basis": "tax_excluded",
+            "upTo": true
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は最大7.5%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約2ヶ月",
+          "対象商品・カテゴリーにより還元率が低い場合あり（表示は最大値）"
+        ],
+        "exclusions": [
+          "消費税、クーポンを使用した購入、自社ポイント利用分、ギフトカード利用分、東京ディズニーリゾートおよびユニバーサルスタジオジャパンのチケットを含む商品はポイント対象外です。",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
       "coupons": [
         {
           "service": "paypay",
@@ -1052,62 +1839,73 @@
       ]
     },
     {
-      "id": "cand-expedia",
-      "name": "エクスペディア",
-      "aliases": [
-        "Expedia",
-        "expedia"
-      ],
+      "id": "getyourguide",
+      "name": "GetYourGuide",
       "category": "travel",
-      "isCandidate": true,
-      "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null,
-      "coupons": [
-        {
-          "service": "paypay",
-          "asOf": "2026-11-13"
-        }
-      ]
-    },
-    {
-      "id": "cand-matsukiyo-online",
-      "name": "マツキヨココカラ公式オンラインストア",
       "aliases": [
-        "マツキヨ",
-        "ココカラ",
-        "マツモトキヨシ",
-        "matsukiyo"
+        "ゲットユアガイド"
       ],
-      "category": "cosme",
-      "isCandidate": true,
+      "popular": false,
       "officialUrl": null,
-      "rebatesUrl": null,
-      "rebates": {
-        "listed": null,
-        "status": "unverified"
-      },
-      "payments": {},
-      "notes": [
-        "調査前：楽天リーベイツの掲載・還元率は未確認です"
-      ],
-      "sources": [],
-      "checkedAt": null,
-      "coupons": [
-        {
-          "service": "paypay",
-          "asOf": "2026-11-13"
+      "rebatesUrl": "https://www.rebates.jp/getyourguide.com",
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（購入画面で利用可否を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
         }
-      ]
+      },
+      "notes": [
+        "公式アプリからの予約は対象外"
+      ],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：GetYourGuide",
+          "url": "https://www.rebates.jp/getyourguide.com",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 3.5,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [],
+        "conditions": [
+          "2026-11-13時点の表示は3.5%（変動するため購入直前に再確認）",
+          "ポイント反映の目安：約1ヶ月"
+        ],
+        "exclusions": [
+          "クーポン/ギフトカード利用分",
+          "ギフトカード購入分",
+          "GetYourGuide公式アプリからのご予約",
+          "キャンセルされた予約",
+          "イタズラや重複など、お申し込み内容として相応しくない入力がみられた場合",
+          "その他不正と判断した場合",
+          "他の広告/サイトを経由したご予約",
+          "実店舗での購入（リーベイツはオンライン購入専用）",
+          "リーベイツを経由せずに購入した場合"
+        ]
+      },
+      "coupons": []
     }
   ]
 }
