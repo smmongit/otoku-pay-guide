@@ -380,7 +380,8 @@
     }
     const c = ev.rebates.activeCampaign;
     const camp = c ? `<div class="camp-line">🎉 ${esc(c.title)}（〜${md(c.end)}）</div>` : '';
-    const ft = ev.rebates.firstTime && ev.rebates.firstTime.valid ? `<span class="badge b-camp">初回特典 ${esc(ev.rebates.firstTime.rateLabel)}</span>` : '';
+    const ft = (ev.rebates.firstTime && ev.rebates.firstTime.valid ? `<span class="badge b-camp">初回特典 ${esc(ev.rebates.firstTime.rateLabel)}</span>` : '')
+      + (ev.verdict === 'ichiba' ? '<span class="badge b-vs">🆚 楽天市場の方がお得</span>' : ev.verdict === 'rebates' ? '<span class="badge b-vs">🆚 リーベイツ経由がお得</span>' : ev.verdict === 'tie' ? '<span class="badge b-vs">🆚 楽天市場と同等</span>' : '');
     return `<article class="card">
       <a href="#/online/${encodeURIComponent(shop.id)}">
         <div class="card-meta"><span>${esc(oCatLabel(shop.category))}</span>${listedBadge(ev, shop)}${ft}${couponBadges(shop)}${shop.isSample ? '<span class="badge b-sample">サンプル</span>' : ''}</div>
@@ -479,6 +480,26 @@
     box.innerHTML = html;
   }
 
+  function ichibaPanel(shop, ev) {
+    const ic = shop.ichiba;
+    if (!ic) return '';
+    if (!ic.exists) return `<div class="panel"><h2>🆚 楽天市場の公式店</h2><p class="sub" style="font-size:14px">${esc(ic.note || '公式店なし')}（${ymd(ic.checkedAt)}確認）</p></div>`;
+    const r = ev.totals.normal; const i = ev.ichiba;
+    const win = ev.verdict === 'ichiba' ? '楽天市場の公式店で買う方がお得' : ev.verdict === 'rebates' ? '楽天リーベイツ経由で公式サイトから買う方がお得' : 'どちらも同じ';
+    return `<div class="panel compare">
+      <h2>🆚 リーベイツ経由 vs 楽天市場の公式店</h2>
+      <p class="verdict">👑 ${esc(win)}</p>
+      <div class="split">
+        <div class="${ev.verdict === 'rebates' ? 'win' : ''}"><div class="k">リーベイツ経由で公式サイト</div><div class="v">${r.value.toLocaleString('ja-JP')}pt</div><div class="k">実質${pct(r.rate)}（①＋②${(ev.extras || []).length ? '＋③' : ''}）</div></div>
+        <div class="${ev.verdict === 'ichiba' ? 'win' : ''}"><div class="k">楽天市場：${esc(ic.shopName)}</div><div class="v">${i.value.toLocaleString('ja-JP')}pt</div><div class="k">実質${pct(i.rate)}</div></div>
+      </div>
+      <ul class="breakdown">${i.parts.map((x) => `<li><span>${esc(x.label)}（${pct(x.rate)}）</span><span class="num">${x.points}pt</span></li>`).join('')}</ul>
+      <p class="foot">${yen(ev.amount)}（税込）の買い物で同じ価格と仮定。楽天市場のポイントは税抜価格が対象。${esc(ic.note || '')}</p>
+      <a class="btn" href="${esc(ic.url)}" target="_blank" rel="noopener" style="margin-top:8px">楽天市場の公式店を開く ↗</a>
+      <p class="foot" style="margin-top:6px">SPUの追加倍率は「設定」で変更できます（現在 +${Number(S.settings.ichibaSpuExtra) || 0}%）。</p>
+    </div>`;
+  }
+
   function linkBtn(url, label, primary) {
     return url
       ? `<a class="btn ${primary ? 'primary' : ''}" href="${esc(url)}" target="_blank" rel="noopener">${label} ↗</a>`
@@ -557,6 +578,8 @@
         <p class="foot">リーベイツ分は「税抜・送料除く商品代金」を対象に端数切り捨て（ショップ条件が分かればそれに従う）。決済分は送料を含む支払総額で計算。リーベイツ分と決済分は別々に付与されるポイントとして分けて表示し、同じポイントを二重に数えていません。</p>
       </div>
 
+      ${ichibaPanel(shop, ev)}
+
       <div class="panel"><h2>支払い方法の比較（決済分）</h2>${servicesPanel(ev, 'payment')}</div>
 
       ${(src.conditions || []).length ? `<div class="panel"><h2>ポイント付与条件</h2><ul class="plain">${src.conditions.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></div>` : ''}
@@ -622,6 +645,7 @@
 
       <div class="panel"><h2>計算</h2>
         <div class="form-row"><label for="ref">一覧で使う基準金額（円）</label><input id="ref" type="number" min="1" inputmode="numeric" value="${st.referenceAmount}" style="width:110px"></div>
+        <div class="form-row"><label for="spu">楽天市場SPUの追加倍率（楽天カード以外・%）</label><input id="spu" type="number" min="0" step="0.1" inputmode="decimal" value="${Number(st.ichibaSpuExtra) || 0}" style="width:90px"></div>
         <div class="form-row"><span>ポイント価値</span><span>1ポイント＝1円</span></div>
       </div>
 
@@ -656,6 +680,7 @@
       save({ capabilities: [...caps] });
     }));
     app.querySelector('#ref').addEventListener('change', (e) => { const v = parseInt(e.target.value, 10); if (v > 0) save({ referenceAmount: v }); });
+    app.querySelector('#spu').addEventListener('change', (e) => { const v = parseFloat(e.target.value); if (v >= 0) save({ ichibaSpuExtra: v }); });
     app.querySelector('#reset').addEventListener('click', () => { LS.del(K.settings); applySettings(); renderSettings(); });
   }
 

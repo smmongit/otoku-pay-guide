@@ -4721,6 +4721,133 @@
           "asOf": "2026-11-13"
         }
       ]
+    },
+    {
+      "id": "eyecity",
+      "name": "アイシティ",
+      "category": "other",
+      "aliases": [
+        "eyecity",
+        "コンタクト",
+        "コンタクトレンズ",
+        "HOYA"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_excluded"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "note": "一部店舗では利用不可"
+        },
+        "rakuten_card": {
+          "status": "unverified",
+          "note": "店頭でのクレジットカード可否を公式で確認できず"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
+        },
+        "olive_card": {
+          "status": "unverified",
+          "note": "店頭でのカード現物払いは公式で確認できず"
+        },
+        "vpoint_card": {
+          "available": false,
+          "status": "confirmed",
+          "note": "2024年8月31日でVポイントの取り扱い終了（アイシティ公式）"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "本人確認済みが条件。一部店舗で利用できない場合あり"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        },
+        "dpoint_card": {
+          "status": "unverified",
+          "note": "dポイント加盟店一覧で見つからず"
+        },
+        "d_barai": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "requires": [
+            "dbarai_user"
+          ],
+          "condition": "dカード以外のクレジットカードを支払い方法にすると対象外",
+          "note": "店舗ページの電子決済一覧に記載あり"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        }
+      },
+      "campaigns": [],
+      "notes": [
+        "コンタクトレンズ専門店",
+        "アイシティ独自のアイシティポイントもあり（この計算には含めていない）"
+      ],
+      "sources": [
+        {
+          "title": "楽天ポイントカード：加盟店ページ",
+          "url": "https://pointcard.rakuten.co.jp/partner/eyecity/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "アイシティ：ポイントサービス",
+          "url": "https://www.eyecity.jp/service/point/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "アイシティ：店舗ページ（ご利用可能な電子決済サービス）",
+          "url": "https://www.eyecity.jp/shop/467",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：使えるお店",
+          "url": "https://pay.rakuten.co.jp/shop/",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "coupons": []
     }
   ]
 }

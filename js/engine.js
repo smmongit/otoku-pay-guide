@@ -540,10 +540,36 @@
         : null,
     };
 
+    // --- 楽天市場の公式店で買った場合との比較（同じ価格と仮定）
+    let ichiba = null;
+    if (shop.ichiba && shop.ichiba.exists === true) {
+      const itemBase = Math.floor(amount / (1 + taxRate)); // 楽天市場のポイントは税抜価格が対象
+      const hasCard = (settings.capabilities || []).includes('rakuten_card_holder');
+      const spuExtra = Number(settings.ichibaSpuExtra) || 0; // 楽天カード以外のSPU（%）
+      const parts = [
+        { label: '楽天市場 通常ポイント', rate: 1, points: Math.floor(itemBase * 0.01) },
+      ];
+      if (hasCard) {
+        parts.push({ label: 'SPU 楽天カード特典分', rate: 1, points: Math.floor(itemBase * 0.01) });
+        parts.push({ label: '楽天カード 通常分（支払額の1%）', rate: 1, points: Math.floor((amount + shipping) / 100) });
+      }
+      if (spuExtra > 0) parts.push({ label: `SPU その他（設定：+${spuExtra}%）`, rate: spuExtra, points: Math.floor((itemBase * spuExtra) / 100) });
+      const pts = parts.reduce((s, x) => s + x.points, 0);
+      const value = pts * rakutenValue;
+      ichiba = { ...shop.ichiba, parts, points: pts, value, rate: payTotal > 0 ? round2((value / payTotal) * 100) : 0 };
+    }
+
     // 一覧の並び替え用：今使えるリーベイツ還元率(%)
     const sortRate = activeCampaign ? nominalRate(activeCampaign.earn) ?? 0 : rebates.normal.rate ?? -1;
 
-    return { amount, shipping, taxRate, today, rebates, extras, evals, byKey: Object.fromEntries(evals.map((e) => [e.key, e])), payment: { best: bestPay, ranking }, totals, sortRate };
+    // 比較の結論（通常時）
+    let verdict = null;
+    if (ichiba) {
+      const r = totals.normal.value; const i = ichiba.value;
+      verdict = r > i ? 'rebates' : i > r ? 'ichiba' : 'tie';
+    }
+
+    return { amount, shipping, taxRate, today, rebates, extras, ichiba, verdict, evals, byKey: Object.fromEntries(evals.map((e) => [e.key, e])), payment: { best: bestPay, ranking }, totals, sortRate };
   }
 
   // ---------------------------------------------------------------- 検索

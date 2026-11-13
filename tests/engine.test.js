@@ -224,3 +224,16 @@ test('オンライン：その他ポイント（dポイント連携）を別枠�
   assert.equal(r.totals.normal.value, 200);
 });
 console.log(`${passed} passed`);
+test('楽天市場の公式店との比較（税抜1%＋カード特典1%＋カード1%＋SPU追加）', () => {
+  const shop = { rebates: { listed: true, status: 'confirmed', normal: { earn: { rate: 1.5, basis: 'tax_excluded' } } },
+    payments: { rakuten_card: { available: true, status: 'confirmed', earn: { per: 100, points: 1 } } },
+    ichiba: { exists: true, shopName: 'テスト楽天市場店' } };
+  const r = E.evaluateOnline(shop, defs, baseSettings, { today: TODAY, amount: 11000, taxRate: 0.1 });
+  // リーベイツ：10000*1.5%=150 + カード110 = 260 ／ 楽天市場：100+100+110 = 310
+  assert.equal(r.totals.normal.value, 260);
+  assert.equal(r.ichiba.value, 310);
+  assert.equal(r.verdict, 'ichiba');
+  const r2 = E.evaluateOnline(shop, defs, { ...baseSettings, ichibaSpuExtra: 2 }, { today: TODAY, amount: 11000, taxRate: 0.1 });
+  assert.equal(r2.ichiba.value, 510);
+});
+console.log(`${passed} passed`);

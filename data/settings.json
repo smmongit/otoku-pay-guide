@@ -42,5 +42,7 @@
     "paypay": "PayPay残高のみ（PayPayクレジットなし）",
     "dpoint": "d払いは使わず、dポイントカード提示でためるだけ",
     "olive": "Olive 一般（通常0.5%）"
-  }
+  },
+  "ichibaSpuExtra": 0,
+  "_ichibaSpuExtra": "楽天市場のSPUのうち、楽天カード（特典分）以外で達成している倍率の合計（%）。例：楽天銀行引落+0.3なら0.3"
 }

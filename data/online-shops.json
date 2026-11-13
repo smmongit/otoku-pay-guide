@@ -102,7 +102,12 @@
           "リーベイツを経由せずに購入した場合"
         ]
       },
-      "coupons": []
+      "coupons": [],
+      "ichiba": {
+        "exists": false,
+        "checkedAt": "2026-11-13",
+        "note": "楽天市場の検索で公式店が見つからず"
+      }
     },
     {
       "id": "gu",
@@ -166,7 +171,12 @@
           "リーベイツを経由せずに購入した場合"
         ]
       },
-      "coupons": []
+      "coupons": [],
+      "ichiba": {
+        "exists": false,
+        "checkedAt": "2026-11-13",
+        "note": "楽天市場の検索で公式店が見つからず"
+      }
     },
     {
       "id": "zozotown",
@@ -214,7 +224,12 @@
         "status": "confirmed",
         "exclusions": []
       },
-      "coupons": []
+      "coupons": [],
+      "ichiba": {
+        "exists": false,
+        "checkedAt": "2026-11-13",
+        "note": "楽天市場の検索で公式店が見つからず"
+      }
     },
     {
       "id": "shiseido",
@@ -288,7 +303,15 @@
           "service": "paypay",
           "asOf": "2026-11-13"
         }
-      ]
+      ],
+      "ichiba": {
+        "exists": true,
+        "shopId": "brandshiseido",
+        "shopName": "SHISEIDO 公式ショップ",
+        "url": "https://www.rakuten.co.jp/brandshiseido/",
+        "checkedAt": "2026-11-13",
+        "note": "商品・価格・クーポンが公式サイトと異なる場合あり。ショップ独自のポイント倍率やお買い物マラソン等は含まない"
+      }
     },
     {
       "id": "cosme-shopping",
@@ -359,7 +382,15 @@
           "service": "paypay",
           "asOf": "2026-11-13"
         }
-      ]
+      ],
+      "ichiba": {
+        "exists": true,
+        "shopId": "cosmecomonline",
+        "shopName": "アットコスメショッピング",
+        "url": "https://www.rakuten.co.jp/cosmecomonline/",
+        "checkedAt": "2026-11-13",
+        "note": "商品・価格・クーポンが公式サイトと異なる場合あり。ショップ独自のポイント倍率やお買い物マラソン等は含まない"
+      }
     },
     {
       "id": "oliveyoung",
@@ -426,7 +457,15 @@
           "リーベイツを経由せずに購入した場合"
         ]
       },
-      "coupons": []
+      "coupons": [],
+      "ichiba": {
+        "exists": true,
+        "shopId": "oliveyoung",
+        "shopName": "OLIVEYOUNG 公式楽天市場店",
+        "url": "https://www.rakuten.co.jp/oliveyoung/",
+        "checkedAt": "2026-11-13",
+        "note": "商品・価格・クーポンが公式サイトと異なる場合あり。ショップ独自のポイント倍率やお買い物マラソン等は含まない"
+      }
     },
     {
       "id": "matsukiyo-online",
@@ -497,7 +536,15 @@
           "service": "paypay",
           "asOf": "2026-11-13"
         }
-      ]
+      ],
+      "ichiba": {
+        "exists": true,
+        "shopId": "matsukiyo",
+        "shopName": "マツモトキヨシ楽天市場店",
+        "url": "https://www.rakuten.co.jp/matsukiyo/",
+        "checkedAt": "2026-11-13",
+        "note": "商品・価格・クーポンが公式サイトと異なる場合あり。ショップ独自のポイント倍率やお買い物マラソン等は含まない"
+      }
     },
     {
       "id": "apple",
@@ -571,7 +618,12 @@
           "リーベイツを経由せずに購入した場合"
         ]
       },
-      "coupons": []
+      "coupons": [],
+      "ichiba": {
+        "exists": false,
+        "checkedAt": "2026-11-13",
+        "note": "楽天市場の検索で公式店が見つからず"
+      }
     },
     {
       "id": "biccamera",
@@ -643,7 +695,15 @@
           "service": "paypay",
           "asOf": "2026-11-13"
         }
-      ]
+      ],
+      "ichiba": {
+        "exists": true,
+        "shopId": "biccamera",
+        "shopName": "楽天ビック(ビックカメラ×楽天)",
+        "url": "https://www.rakuten.co.jp/biccamera/",
+        "checkedAt": "2026-11-13",
+        "note": "商品・価格・クーポンが公式サイトと異なる場合あり。ショップ独自のポイント倍率やお買い物マラソン等は含まない"
+      }
     },
     {
       "id": "yodobashi",
@@ -691,7 +751,12 @@
         "status": "confirmed",
         "exclusions": []
       },
-      "coupons": []
+      "coupons": [],
+      "ichiba": {
+        "exists": false,
+        "checkedAt": "2026-11-13",
+        "note": "楽天市場の検索で公式店が見つからず"
+      }
     },
     {
       "id": "mistore",
@@ -763,7 +828,12 @@
           "リーベイツを経由せずに購入した場合"
         ]
       },
-      "coupons": []
+      "coupons": [],
+      "ichiba": {
+        "exists": false,
+        "checkedAt": "2026-11-13",
+        "note": "楽天市場の検索で公式店が見つからず"
+      }
     },
     {
       "id": "takashimaya",
@@ -831,7 +901,15 @@
           "リーベイツを経由せずに購入した場合"
         ]
       },
-      "coupons": []
+      "coupons": [],
+      "ichiba": {
+        "exists": true,
+        "shopId": "takashimaya-tsuhan",
+        "shopName": "高島屋通信販売 楽天市場店",
+        "url": "https://www.rakuten.co.jp/takashimaya-tsuhan/",
+        "checkedAt": "2026-11-13",
+        "note": "楽天市場店は「高島屋通信販売」（リーベイツではタカシマヤ通信販売の商品は対象外）。商品・価格・クーポンが公式サイトと異なる場合あり。ショップ独自のポイント倍率やお買い物マラソン等は含まない"
+      }
     },
     {
       "id": "daimaru-matsuzakaya",
@@ -899,7 +977,12 @@
           "service": "paypay",
           "asOf": "2026-11-13"
         }
-      ]
+      ],
+      "ichiba": {
+        "exists": false,
+        "checkedAt": "2026-11-13",
+        "note": "楽天市場の検索で公式店が見つからず"
+      }
     },
     {
       "id": "qoo10",
@@ -1906,6 +1989,81 @@
         ]
       },
       "coupons": []
+    },
+    {
+      "id": "eyecity-online",
+      "name": "アイシティ ほしいとき便",
+      "category": "cosme",
+      "aliases": [
+        "アイシティ",
+        "eyecity",
+        "コンタクト",
+        "コンタクトレンズ"
+      ],
+      "popular": false,
+      "officialUrl": "https://www.eyecity.jp/service/hoshitoki/",
+      "rebatesUrl": null,
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          }
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "クレジットカード払いを選んだ場合（ネットではOliveの8%上乗せは対象外）"
+        }
+      },
+      "notes": [
+        "ネット注文（定期便・店舗受け取りあり）。店頭価格（税抜）から最大25%OFFなどの割引はアイシティ側"
+      ],
+      "sources": [
+        {
+          "title": "楽天リーベイツ：ストア一覧（サイトマップ）に掲載なし",
+          "url": "https://www.rebates.jp/sitemap/stores.xml",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "アイシティ：ほしいとき便",
+          "url": "https://www.eyecity.jp/service/hoshitoki/",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "rebates": {
+        "listed": false,
+        "status": "confirmed",
+        "exclusions": []
+      },
+      "coupons": [],
+      "extras": [
+        {
+          "key": "eyecity_rakuten",
+          "label": "楽天ポイント（楽天ID連携）",
+          "service": "rakuten",
+          "pointType": "rakuten",
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_excluded"
+          },
+          "condition": "注文時に楽天IDを連携。税抜・値引き後200円につき1pt"
+        }
+      ],
+      "ichiba": {
+        "exists": false,
+        "checkedAt": "2026-11-13",
+        "note": "楽天市場の検索で公式店が見つからず"
+      }
     }
   ]
 }

@@ -248,3 +248,6 @@ main { max-width: 720px; margin: 0 auto; padding: 0 16px 48px; outline: none; }
 .coupon-panel { border-color: #f0b35a; }
 .card.upcoming .pad { padding: 12px 14px; }
 .card.upcoming h3 { margin: 0 0 2px; }
+.b-vs { color: var(--text-2); background: var(--surface-2); border: 1px solid var(--border); }
+.compare .verdict { font-weight: 800; margin: 0 0 6px; }
+.compare .split > div.win { outline: 2px solid var(--win-border); background: var(--win-bg); }
