@@ -23,6 +23,7 @@
     "setagaya": 1
   },
   "capabilities": [
+    "credit_anywhere",
     "smartphone_touch",
     "rakuten_card_holder",
     "setagaya_pay_user"

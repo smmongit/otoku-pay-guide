@@ -135,13 +135,28 @@
    *   eligible  … 利用可能が確認済み＆条件を満たす（キャンペーン加算の前提）
    *   countable … eligible かつ 還元率が確認済み/条件付き（通常時の計算に使える）
    */
+  /** 「クレジットカードは原則どこでも使える」前提で、未確認のクレカ払いを使える扱いにするか */
+  function assumeCredit(def, entry, settings) {
+    if (!def || !def.assumable || !def.defaultEarn) return false;
+    if (entry && entry.available === false) return false; // 公式に「使えない」とあるお店は除外
+    if (entry && entry.available === true) return false;  // 確認済みならそのまま
+    return (settings.capabilities || []).includes('credit_anywhere');
+  }
+
   function evaluateMethod(key, entry, defs, settings) {
     const def = defs.methods[key];
-    const e = entry || {};
+    let e = entry || {};
+    let assumed = false;
+    if (assumeCredit(def, entry, settings)) {
+      assumed = true;
+      e = { ...e, available: true, status: 'conditional', earn: def.defaultEarn,
+        condition: 'このお店での利用可否は未確認（設定「クレジットカードは原則使える」による前提。タッチ決済・QUICPay・iD含む）' };
+    }
     const res = {
       key,
       def,
-      entry: entry || null,
+      assumed,
+      entry: assumed ? e : entry || null,
       scope: e.scope || null,
       available: e.available === true ? true : e.available === false ? false : null,
       status: e.status || 'unverified',

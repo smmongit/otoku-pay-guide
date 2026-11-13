@@ -241,6 +241,7 @@
         badge = statusBadge(m.status);
       }
       const meta = [badge, scopeBadge(m.scope)];
+      if (m.assumed) meta.push('<span class="badge b-cond">使える前提（未確認）</span>');
       if (m.rankApplied) meta.push(`<span class="badge b-ok">${esc(S.defs.rakutenRanks[m.rankApplied])}会員の特典を反映</span>`);
       if (m.missing && m.missing.length) meta.push(`<span class="badge b-unk">条件未達：${esc(m.missing.map((x) => S.defs.capabilities[x] || x).join('、'))}</span>`);
       if (def.type === 'presentation' && m.available === true) {

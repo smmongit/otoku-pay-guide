@@ -42,7 +42,8 @@
       "defaultEarn": {
         "per": 100,
         "points": 1
-      }
+      },
+      "assumable": true
     },
     "rakuten_pay": {
       "service": "rakuten",
@@ -74,7 +75,8 @@
       "defaultEarn": {
         "per": 200,
         "points": 1
-      }
+      },
+      "assumable": true
     },
     "paypay_balance": {
       "service": "paypay",
@@ -120,6 +122,7 @@
     }
   },
   "capabilities": {
+    "credit_anywhere": "楽天カード・Oliveは原則どこでも使える前提で比較する（タッチ決済・QUICPay・iD含む）",
     "smartphone_touch": "スマホ（Apple Pay / Google Pay 等）でOliveのタッチ決済ができる",
     "rakuten_card_holder": "楽天カードを持っている",
     "paypay_credit_holder": "PayPayクレジットを使える",

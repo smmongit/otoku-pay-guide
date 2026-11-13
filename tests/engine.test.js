@@ -8,7 +8,10 @@ const E = require('../js/engine.js');
 const load = (f) => JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', f), 'utf8'));
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures', 'stores.sample.json'), 'utf8'));
 const defs = load('services.json');
-const baseSettings = load('settings.json');
+const loadedSettings = load('settings.json');
+// 判定ロジックのテストは「クレジットカードは原則使える」前提なしで行う（前提ありは個別のテストで確認）
+const baseSettings = { ...loadedSettings, capabilities: loadedSettings.capabilities.filter((c) => c !== 'credit_anywhere') };
+const creditSettings = { ...baseSettings, capabilities: [...baseSettings.capabilities, 'credit_anywhere'] };
 const TODAY = '2026-11-13';
 
 const resolve = (id, override = {}) => E.resolveStore(override, data.chains.find((c) => c.id === id));
@@ -263,5 +266,15 @@ test('ヒント：使えるか未確認の楽天カードが使えれば上回�
   assert.equal(r.potential.effectiveRate, 1);
   const s = real.find((x) => x.id === 'sukiya');        // 確認済みで十分高い店ではヒントなし
   assert.equal(E.evaluateStore(E.resolveStore({}, s), defs, baseSettings, { today: TODAY }).potential, null);
+});
+console.log(`${passed} passed`);
+test('クレジットカードは原則使える前提（設定）', () => {
+  const real = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'stores.json'), 'utf8')).chains;
+  const ev = (id, st = creditSettings) => E.evaluateStore(E.resolveStore({}, real.find((x) => x.id === id)), defs, st, { today: TODAY });
+  const bk = ev('burgerking');
+  assert.equal(bk.best.payment, 'rakuten_card');            // 前提あり：楽天カード1%が1位
+  assert.equal(bk.byKey.rakuten_card.assumed, true);
+  assert.equal(ev('burgerking', baseSettings).best.payment, 'paypay_balance'); // 前提なし：確認済みのPayPay
+  assert.equal(ev('misterdonut').byKey.rakuten_card.available, false); // 公式に不可とある店は除外のまま
 });
 console.log(`${passed} passed`);
