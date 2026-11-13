@@ -205,11 +205,9 @@
             "basis": "tax_excluded"
           },
           "stack": {
-            "with": [
-              "d_barai"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "d払い＋dポイントカード提示"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "d_barai": {
@@ -527,11 +525,9 @@
             "basis": "tax_excluded"
           },
           "stack": {
-            "with": [
-              "d_barai"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "d払い＋dポイントカード提示"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "d_barai": {
@@ -671,11 +667,9 @@
             "basis": "tax_excluded"
           },
           "stack": {
-            "with": [
-              "d_barai"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "d払い＋dポイントカード提示"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "d_barai": {
@@ -785,7 +779,9 @@
             "basis": "tax_excluded"
           },
           "stack": {
-            "status": "unverified"
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
           "note": "税抜・値引後200円につき1pt。毎月20日などの特別ポイントは別"
         },
@@ -1087,11 +1083,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "d_barai"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "d払い＋dポイントカード提示"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "d_barai": {
@@ -1165,12 +1159,9 @@
             "basis": "tax_excluded"
           },
           "stack": {
-            "with": [
-              "rakuten_card",
-              "rakuten_pay"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "楽天公式「ダブルで貯まる」。一部のお店・支払いは対象外"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
           "note": "税抜200円で1pt。KFCカードチャージ・デリバリー等は対象外。付与対象の決済方法は店舗で異なる"
         },
@@ -1179,12 +1170,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_excluded"
           },
           "stack": {
-            "status": "unverified"
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "一部店舗除く"
+          "note": "一部店舗除く。公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
         },
         "rakuten_card": {
           "available": true,
@@ -1341,12 +1335,9 @@
             "basis": "tax_excluded"
           },
           "stack": {
-            "with": [
-              "rakuten_card",
-              "rakuten_pay"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "楽天公式「ダブルで貯まる」。一部のお店・支払いは対象外"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "vpoint_card": {
@@ -1354,11 +1345,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_excluded"
           },
           "stack": {
-            "status": "unverified"
-          }
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "note": "公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
         },
         "rakuten_card": {
           "available": true,
@@ -1554,11 +1549,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "d_barai"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "d払い＋dポイントカード提示"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "d_barai": {
@@ -1617,12 +1610,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "rakuten_card",
-              "rakuten_pay"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "楽天公式「ダブルで貯まる」。一部のお店・支払いは対象外"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "vpoint_card": {
@@ -1630,11 +1620,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_excluded"
           },
           "stack": {
-            "status": "unverified"
-          }
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "note": "公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
         },
         "rakuten_card": {
           "available": true,
@@ -1707,11 +1701,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "d_barai"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "d払い＋dポイントカード提示"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "d_barai": {
@@ -1888,12 +1880,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "rakuten_card",
-              "rakuten_pay"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "楽天公式「ダブルで貯まる」。一部のお店・支払いは対象外"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "vpoint_card": {
@@ -1901,12 +1890,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_excluded"
           },
           "stack": {
-            "status": "unverified"
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "自動販売機の商品は対象外"
+          "note": "自動販売機の商品は対象外。公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
         },
         "rakuten_card": {
           "available": true,
@@ -1980,11 +1972,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "d_barai"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "d払い＋dポイントカード提示"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "d_barai": {
@@ -2078,12 +2068,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "rakuten_card",
-              "rakuten_pay"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "楽天公式「ダブルで貯まる」。一部のお店・支払いは対象外"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "vpoint_card": {
@@ -2091,12 +2078,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_excluded"
           },
           "stack": {
-            "status": "unverified"
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "自動販売機の商品は対象外"
+          "note": "自動販売機の商品は対象外。公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
         },
         "rakuten_card": {
           "available": true,
@@ -2170,11 +2160,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "d_barai"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "d払い＋dポイントカード提示"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "d_barai": {
@@ -2268,12 +2256,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "rakuten_card",
-              "rakuten_pay"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "楽天公式「ダブルで貯まる」。一部のお店・支払いは対象外"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "vpoint_card": {
@@ -2281,12 +2266,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_excluded"
           },
           "stack": {
-            "status": "unverified"
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "自動販売機の商品は対象外"
+          "note": "自動販売機の商品は対象外。公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
         },
         "rakuten_card": {
           "available": true,
@@ -2781,12 +2769,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_excluded"
           },
           "stack": {
-            "status": "unverified"
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "お会計前に提示（事後は不可）"
+          "note": "お会計前に提示（事後は不可）。公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
         },
         "rakuten_card": {
           "available": true,
@@ -2859,11 +2850,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "d_barai"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "d払い＋dポイントカード提示"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
           "note": "dポイント対象店舗は公式店舗検索のアイコンで確認"
         },
@@ -2942,12 +2931,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "rakuten_card",
-              "rakuten_pay"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "楽天公式「ダブルで貯まる」。一部のお店・支払いは対象外"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
           "note": "一部対応していない店舗あり"
         },
@@ -3178,12 +3164,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "rakuten_card",
-              "rakuten_pay"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "楽天公式「ダブルで貯まる」。一部のお店・支払いは対象外"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "rakuten_card": {
@@ -3233,11 +3216,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "d_barai"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "d払い＋dポイントカード提示"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "d_barai": {
@@ -3314,12 +3295,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "rakuten_card",
-              "rakuten_pay"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "楽天公式「ダブルで貯まる」。一部のお店・支払いは対象外"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
           "note": "優待券・割引券利用時は利用後の金額に付与"
         },
@@ -3372,11 +3350,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "d_barai"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "d払い＋dポイントカード提示"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "d_barai": {
@@ -3611,12 +3587,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "rakuten_card",
-              "rakuten_pay"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "楽天公式「ダブルで貯まる」。一部のお店・支払いは対象外"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
           "note": "一部商品は対象外。ファミペイ連携でも提示可"
         },
@@ -3625,10 +3598,13 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
-            "status": "unverified"
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
           "note": "200円(税込)につき1pt。一部対象外の商品あり"
         },
@@ -3688,11 +3664,9 @@
             "points": 1
           },
           "stack": {
-            "with": [
-              "d_barai"
-            ],
+            "with": "any",
             "status": "conditional",
-            "note": "d払い＋dポイントカード提示"
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           }
         },
         "d_barai": {
@@ -3844,11 +3818,9 @@
             "basis": "tax_excluded"
           },
           "stack": {
-            "with": [
-              "d_barai"
-            ],
-            "status": "confirmed",
-            "note": "d払い＋dポイントカード提示"
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
           "note": "0:00〜15:59は税抜200円で1pt、16:00〜23:59は2pt"
         },
