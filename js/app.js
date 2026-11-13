@@ -115,11 +115,14 @@
   const evalStore = (r, opts) => E.evaluateStore(r, S.defs, S.settings, opts);
   const catLabel = (c) => S.defs.categories[c] || 'その他';
 
+  /** おすすめの組み合わせの「支払いに使うサービス」（支払いが5サービス外なら提示カードのサービス） */
+  const comboService = (c) => { if (!c) return ''; const pay = c.parts.find((p) => p.type === 'payment'); return (pay || c.parts[0] || {}).service || ''; };
+
   function storeCard(r) {
     const ev = evalStore(r);
     const best = ev.best;
     const rec = best
-      ? `<div class="rec"><div class="rec-body"><div class="rec-label">🏆 おすすめ</div><div class="rec-method">${esc(best.label)}</div></div><div class="rec-rate">${pct(best.effectiveRate)}</div></div>`
+      ? `<div class="rec svc-${comboService(best)}"><div class="rec-body"><div class="rec-label">🏆 おすすめ</div><div class="rec-method">${esc(best.label)}</div></div><div class="rec-rate">${pct(best.effectiveRate)}</div></div>`
       : `<div class="rec none"><div class="rec-body"><div class="rec-label">判定不可</div><div class="rec-method" style="color:inherit">還元率 要確認</div></div></div>`;
     const camp = ev.campaignBest
       ? `<div class="camp-line">🎉 キャンペーン時：${esc(ev.campaignBest.label)} ${pct(ev.campaignBest.effectiveRate)}（〜${md(ev.campaignBest.endsAt)}）</div>`
@@ -247,7 +250,7 @@
     const best = ev.best;
 
     const hero = best
-      ? `<div class="hero"><div class="k">🏆 通常時のおすすめ</div>
+      ? `<div class="hero svc-${comboService(best)}"><div class="k">🏆 通常時のおすすめ</div>
           <div class="v"><div class="method">${esc(best.label)}</div><div class="rate">${pct(best.effectiveRate)}</div></div>
           ${breakdown(best)}
           <p class="reason">${esc(ev.reason)}</p>
@@ -355,13 +358,10 @@
   function upcomingBlock() {
     const list = (S.onlineMeta && S.onlineMeta.upcomingSales) || [];
     if (!list.length) return '';
-    return `<section class="section"><h2>📅 これからの大型セール <small>公式発表待ち・還元計算には未反映</small></h2><div class="list">${list.map((u) => `
-      <article class="card upcoming"><div class="pad">
-        <h3>${esc(u.title)}</h3>
-        <p class="sub" style="font-size:14px">${esc(u.expected)}</p>
-        ${u.note ? `<p class="foot" style="margin-top:4px">${esc(u.note)}</p>` : ''}
-        ${u.url ? `<a href="${esc(u.url)}" target="_blank" rel="noopener" class="sub" style="font-size:13px">公式サイトで日程を確認 ↗</a>` : ''}
-      </div></article>`).join('')}</div></section>`;
+    return `<details class="upcoming">
+      <summary>📅 大型セール予定：${list.map((u) => esc(u.short || u.title)).join('・')} <span class="muted">（日程は公式発表待ち）</span></summary>
+      <ul>${list.map((u) => `<li><strong>${esc(u.title)}</strong>：${esc(u.expected)}${u.note ? `<br><span class="muted">${esc(u.note)}</span>` : ''}${u.url ? ` <a href="${esc(u.url)}" target="_blank" rel="noopener">公式 ↗</a>` : ''}</li>`).join('')}</ul>
+    </details>`;
   }
 
   function shopCard(shop) {
@@ -409,7 +409,7 @@
     app.innerHTML = `
       ${hasSample ? '<p class="banner">【サンプル】は架空のショップです。</p>' : ''}
       ${upcomingBlock()}
-      <p class="banner">🔰 楽天リーベイツを<strong>初めて</strong>使う場合は、1回3,000円（税抜）以上の購入で最大500ptの初回特典があります（条件あり）。<br><small>${esc(S.onlineMeta.pointCap || '')}</small></p>
+      ${S.onlineMeta.pointCap ? `<p class="foot" style="margin:8px 2px 0">※ ${esc(S.onlineMeta.pointCap)}</p>` : ''}
       <div class="search" role="search">
         <span class="ico">🔍</span>
         <input id="oq" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="ショップ名で検索（例：Apple）" value="${esc(S.ui.oq)}" aria-label="ショップを検索">

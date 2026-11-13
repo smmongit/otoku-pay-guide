@@ -337,3 +337,41 @@ a { color: var(--accent); }
 .section h2 small { font-weight: 400; letter-spacing: .02em; }
 @media (max-width: 639px) { .section h2::after { display: none; } }
 .offline-badge { background: var(--text); color: var(--bg); }
+
+/* ---------- 大型セール予定（折りたたみ） */
+details.upcoming { margin: 12px 0 0; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 8px 12px; font-size: 13px; }
+details.upcoming summary { cursor: pointer; color: var(--text-2); list-style: none; }
+details.upcoming summary::-webkit-details-marker { display: none; }
+details.upcoming summary::after { content: "▾"; float: right; color: var(--text-3); }
+details.upcoming[open] summary::after { content: "▴"; }
+details.upcoming ul { margin: 8px 0 2px; padding-left: 1.1em; }
+details.upcoming li { margin: 4px 0; }
+.muted { color: var(--text-3); font-size: 12px; }
+
+/* ---------- おすすめ欄：決済サービス別の色 */
+:root {
+  --svc-rakuten-bg: #fdecef; --svc-rakuten-line: #f1c3cb; --svc-rakuten-ink: #b0223b;
+  --svc-olive-bg: #e8f5ee; --svc-olive-line: #bfe0cd; --svc-olive-ink: #2a7650;
+  --svc-paypay-bg: #ffffff; --svc-paypay-line: #e6374f; --svc-paypay-ink: #d42039;
+  --svc-dpoint-bg: #fbeaf4; --svc-dpoint-line: #efc1dc; --svc-dpoint-ink: #a92574;
+  --svc-setagaya-bg: #e9f2fb; --svc-setagaya-line: #bcd6ef; --svc-setagaya-ink: #2a6aa8;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --svc-rakuten-bg: #3a1f26; --svc-rakuten-line: #7a3644; --svc-rakuten-ink: #ff9fb0;
+    --svc-olive-bg: #1d3328; --svc-olive-line: #3d6b52; --svc-olive-ink: #8fdcb0;
+    --svc-paypay-bg: #262030; --svc-paypay-line: #f0566b; --svc-paypay-ink: #ff8a9a;
+    --svc-dpoint-bg: #3a1f30; --svc-dpoint-line: #7a3a62; --svc-dpoint-ink: #f6a3d4;
+    --svc-setagaya-bg: #1d2a3a; --svc-setagaya-line: #3d5f85; --svc-setagaya-ink: #9cc8f4;
+  }
+}
+.rec.svc-rakuten, .hero.svc-rakuten { background: var(--svc-rakuten-bg); border-color: var(--svc-rakuten-line); }
+.rec.svc-olive, .hero.svc-olive { background: var(--svc-olive-bg); border-color: var(--svc-olive-line); }
+.rec.svc-paypay, .hero.svc-paypay { background: var(--svc-paypay-bg); border: 2px solid var(--svc-paypay-line); }
+.rec.svc-dpoint, .hero.svc-dpoint { background: var(--svc-dpoint-bg); border-color: var(--svc-dpoint-line); }
+.rec.svc-setagaya, .hero.svc-setagaya { background: var(--svc-setagaya-bg); border-color: var(--svc-setagaya-line); }
+.svc-rakuten .rec-label, .svc-rakuten .rec-rate, .hero.svc-rakuten .k, .hero.svc-rakuten .rate { color: var(--svc-rakuten-ink); }
+.svc-olive .rec-label, .svc-olive .rec-rate, .hero.svc-olive .k, .hero.svc-olive .rate { color: var(--svc-olive-ink); }
+.svc-paypay .rec-label, .svc-paypay .rec-rate, .hero.svc-paypay .k, .hero.svc-paypay .rate { color: var(--svc-paypay-ink); }
+.svc-dpoint .rec-label, .svc-dpoint .rec-rate, .hero.svc-dpoint .k, .hero.svc-dpoint .rate { color: var(--svc-dpoint-ink); }
+.svc-setagaya .rec-label, .svc-setagaya .rec-rate, .hero.svc-setagaya .k, .hero.svc-setagaya .rate { color: var(--svc-setagaya-ink); }
