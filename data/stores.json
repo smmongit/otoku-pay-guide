@@ -5423,6 +5423,307 @@
         }
       ],
       "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "burgerking",
+      "name": "バーガーキング",
+      "category": "restaurant",
+      "aliases": [
+        "バーキン",
+        "BURGER KING",
+        "burgerking",
+        "ばーがーきんぐ"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "rakuten_card": {
+          "status": "unverified",
+          "note": "店頭でのクレジットカード可否を公式で確認できず（モバイルオーダーはクレジットカード可）"
+        },
+        "olive_card": {
+          "status": "unverified",
+          "note": "店頭でのクレジットカード可否を公式で確認できず"
+        },
+        "rakuten_pay": {
+          "status": "unverified",
+          "note": "楽天ペイ公式の使えるお店一覧で見つからず"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "本人確認済みが条件。一部店舗で利用できない場合あり"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        },
+        "dpoint_card": {
+          "status": "unverified",
+          "note": "dポイント加盟店一覧で見つからず"
+        },
+        "d_barai": {
+          "status": "unverified"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外（三井住友銀行公式の対象店舗に含まれない）",
+        "モバイルオーダーはクレジットカード・PayPayで事前決済可（PayPayクーポン配布の実績あり）"
+      ],
+      "sources": [
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "バーガーキング：モバイルオーダー",
+          "url": "https://app.burgerking.co.jp/bkad/mobileorder/index.html",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PayPay：PayPayステップ（残高0.5％／クレジット1％）",
+          "url": "https://paypay.ne.jp/event/paypaystep/",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "deandeluca",
+      "name": "DEAN & DELUCA",
+      "category": "cafe",
+      "aliases": [
+        "ディーンアンドデルーカ",
+        "ディーン＆デルーカ",
+        "ディーンデルーカ",
+        "DEAN&DELUCA"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "店舗により異なる（公式のイベント告知でクレジットカード対応を確認。通常店舗の一覧は未確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "店舗により異なる（公式のイベント告知でクレジットカード対応を確認）"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分1%）。公式のイベント告知で楽天ペイ対応を確認、通常店舗は店舗により異なる"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "公式のイベント告知でPayPay対応を確認。通常店舗は店舗により異なる"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        },
+        "dpoint_card": {
+          "available": false,
+          "status": "confirmed",
+          "note": "dポイント公式の加盟店ページの対応サービスがd払いのみ（カード提示の記載なし）"
+        },
+        "d_barai": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "requires": [
+            "dbarai_user"
+          ],
+          "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "マーケット（食料品）・カフェの両業態",
+        "独自のポイントプログラム（DEAN & DELUCA CLUB）は比較対象外",
+        "決済方法は出店先（駅ビル・商業施設）により異なる場合あり"
+      ],
+      "sources": [
+        {
+          "title": "DEAN & DELUCA：ファミリーセールのお知らせ（利用可能な決済方法）",
+          "url": "https://www.deandeluca.co.jp/release/news/detail/family-sale",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "dポイントクラブ：加盟店ページ",
+          "url": "https://dpoint.docomo.ne.jp/static/store/572723/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天カード：100円につき1ポイント",
+          "url": "https://www.rakuten-card.co.jp/card/rakuten-card/",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "popolamama",
+      "name": "ポポラマーマ",
+      "category": "restaurant",
+      "aliases": [
+        "ぽぽらまーま",
+        "Popolamama",
+        "パスタ"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "店舗により異なる（公式：カードの取り扱いは各店舗へ問い合わせ）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "店舗により異なる（公式：各店舗へ問い合わせ）"
+        },
+        "rakuten_pay": {
+          "status": "unverified",
+          "note": "楽天ペイ公式の使えるお店一覧で見つからず"
+        },
+        "paypay_balance": {
+          "status": "unverified",
+          "note": "PayPay公式の主要店舗一覧に掲載なし（過去にPayPayクーポン配布の実績あり）"
+        },
+        "paypay_credit": {
+          "status": "unverified"
+        },
+        "dpoint_card": {
+          "available": false,
+          "status": "confirmed",
+          "note": "dポイント公式の加盟店ページの対応サービスがd払いのみ（カード提示の記載なし）"
+        },
+        "d_barai": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "requires": [
+            "dbarai_user"
+          ],
+          "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "生パスタ専門店",
+        "カード・電子マネーの取り扱いは店舗ごとに異なる（公式）"
+      ],
+      "sources": [
+        {
+          "title": "ポポラマーマ：店舗、商品、サービスに関するお問い合わせ",
+          "url": "https://www.popolamama.com/company/service_contact.php",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "dポイントクラブ：加盟店ページ",
+          "url": "https://dpoint.docomo.ne.jp/static/store/387461/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天カード：100円につき1ポイント",
+          "url": "https://www.rakuten-card.co.jp/card/rakuten-card/",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
     }
   ]
 }
