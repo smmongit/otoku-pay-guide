@@ -147,6 +147,14 @@
   /** おすすめの組み合わせの「支払いに使うサービス」（支払いが5サービス外なら提示カードのサービス） */
   const comboService = (c) => { if (!c) return ''; const pay = c.parts.find((p) => p.type === 'payment'); return (pay || c.parts[0] || {}).service || ''; };
 
+  /** 「使えるか未確認の手段が使えたら」のヒント */
+  const potentialLine = (ev, cls) => {
+    const p = ev.potential; if (!p) return '';
+    const names = p.unverified.map((k) => S.defs.methods[k].label).join('・');
+    const what = p.parts.length > 1 ? `${esc(p.label)} ` : '';
+    return `<div class="${cls}">💡 ${esc(names)}が使えれば ${what}<strong>${pct(p.effectiveRate)}</strong><span class="muted">（使えるか要確認）</span></div>`;
+  };
+
   function storeCard(r) {
     const ev = evalStore(r);
     const best = ev.best;
@@ -160,7 +168,7 @@
       <a href="#/store/${encodeURIComponent(r.id)}">
         <div class="card-meta"><span>${esc(catLabel(r.category))}</span>${couponBadges(r)}${r.isSample ? '<span class="badge b-sample">サンプル</span>' : ''}</div>
         <h3>${esc(r.name)}</h3>
-        ${rec}${camp}
+        ${rec}${potentialLine(ev, 'hint-line')}${camp}
       </a>${favBtn('store', r.id)}</article>`;
   }
 
@@ -284,6 +292,7 @@
           ${breakdown(best)}
           <p class="reason">${esc(ev.reason)}</p>
           ${best.conditions.map((c) => `<p class="cond">⚠ 条件：${esc(c)}</p>`).join('')}
+          ${potentialLine(ev, 'hint-line in-hero')}
         </div>`
       : `<div class="hero none"><div class="k">判定不可</div><div class="v"><div class="method">還元率 要確認</div></div><p class="reason">${esc(ev.reason)}</p></div>`;
 

@@ -254,3 +254,14 @@ test('ローマ字検索（実データ）', () => {
   assert.equal(find('zzzz').length, 0);
 });
 console.log(`${passed} passed`);
+test('ヒント：使えるか未確認の楽天カードが使えれば上回る場合（バーガーキング）', () => {
+  const real = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'stores.json'), 'utf8')).chains;
+  const c = real.find((x) => x.id === 'burgerking');
+  const r = E.evaluateStore(E.resolveStore({}, c), defs, baseSettings, { today: TODAY });
+  assert.equal(r.best.payment, 'paypay_balance');      // 判定は確認済みの情報だけ
+  assert.equal(r.potential.payment, 'rakuten_card');   // ヒントは楽天カード
+  assert.equal(r.potential.effectiveRate, 1);
+  const s = real.find((x) => x.id === 'sukiya');        // 確認済みで十分高い店ではヒントなし
+  assert.equal(E.evaluateStore(E.resolveStore({}, s), defs, baseSettings, { today: TODAY }).potential, null);
+});
+console.log(`${passed} passed`);

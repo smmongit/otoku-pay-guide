@@ -408,6 +408,23 @@
     }
 
     const best = normal[0] || null;
+
+    // ヒント：「使えるか未確認」の支払い手段が、もし使えたら今のおすすめより得になるか（判定には使わない）
+    let potential = null;
+    const altEvals = evals.map((ev) => {
+      const d = ev.def;
+      if (!d || d.type !== 'payment' || ev.available !== null || !d.defaultEarn) return ev;
+      if (!(settings.enabledServices || []).includes(d.service)) return ev;
+      const entry = ev.entry || {};
+      if (missingRequirements(entry.requires, settings).length) return ev;
+      return { ...ev, eligible: true, countable: true, earn: d.defaultEarn, rate: nominalRate(d.defaultEarn), status: 'conditional', unverifiedAvail: true };
+    });
+    if (altEvals.some((x) => x.unverifiedAvail)) {
+      const alt = buildCombos(altEvals, ctx, 'normal', {})[0];
+      if (alt && alt.payment && altEvals.find((x) => x.key === alt.payment).unverifiedAvail && (!best || alt.totalValue > best.totalValue)) {
+        potential = { ...alt, unverified: [alt.payment] };
+      }
+    }
     let reason;
     if (!best) {
       reason = '確認済みの還元情報がないため、おすすめを判定できません（要確認）。';
@@ -428,6 +445,7 @@
       evals,
       byKey,
       best,
+      potential,
       reason,
       ranking: normal,
       campaigns,

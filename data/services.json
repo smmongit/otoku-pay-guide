@@ -38,13 +38,21 @@
       "service": "rakuten",
       "type": "payment",
       "label": "楽天カード",
-      "pointType": "rakuten"
+      "pointType": "rakuten",
+      "defaultEarn": {
+        "per": 100,
+        "points": 1
+      }
     },
     "rakuten_pay": {
       "service": "rakuten",
       "type": "payment",
       "label": "楽天ペイ",
-      "pointType": "rakuten"
+      "pointType": "rakuten",
+      "defaultEarn": {
+        "per": 100,
+        "points": 1
+      }
     },
     "vpoint_card": {
       "service": "olive",
@@ -62,19 +70,31 @@
       "service": "olive",
       "type": "payment",
       "label": "Olive（カード現物）",
-      "pointType": "vpoint"
+      "pointType": "vpoint",
+      "defaultEarn": {
+        "per": 200,
+        "points": 1
+      }
     },
     "paypay_balance": {
       "service": "paypay",
       "type": "payment",
       "label": "PayPay残高",
-      "pointType": "paypay"
+      "pointType": "paypay",
+      "defaultEarn": {
+        "per": 200,
+        "points": 1
+      }
     },
     "paypay_credit": {
       "service": "paypay",
       "type": "payment",
       "label": "PayPayクレジット",
-      "pointType": "paypay"
+      "pointType": "paypay",
+      "defaultEarn": {
+        "per": 200,
+        "points": 2
+      }
     },
     "dpoint_card": {
       "service": "dpoint",
@@ -86,7 +106,11 @@
       "service": "dpoint",
       "type": "payment",
       "label": "d払い",
-      "pointType": "dpoint"
+      "pointType": "dpoint",
+      "defaultEarn": {
+        "per": 200,
+        "points": 1
+      }
     },
     "setagaya_pay": {
       "service": "setagaya",
@@ -129,5 +153,6 @@
     "daily": "食品・日用品",
     "travel": "旅行・ホテル",
     "other": "その他"
-  }
+  },
+  "_defaultEarn": "defaultEarn：お店で使えるか未確認のときに「もし使えたら」のヒントだけに使う標準の還元率（おすすめ判定には使わない）"
 }
