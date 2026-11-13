@@ -35,5 +35,12 @@
       "rank": "diamond",
       "note": "ダイヤモンド会員に昇格（本人確認済み）"
     }
-  ]
+  ],
+  "oliveRank": "general",
+  "paymentNotes": {
+    "rakuten_pay": "支払い元は楽天カード",
+    "paypay": "PayPay残高のみ（PayPayクレジットなし）",
+    "dpoint": "d払いは使わず、dポイントカード提示でためるだけ",
+    "olive": "Olive 一般（通常0.5%）"
+  }
 }

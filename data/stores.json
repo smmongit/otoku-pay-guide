@@ -34,12 +34,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）"
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
         },
         "olive_card": {
           "available": true,
@@ -84,6 +82,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -159,7 +160,8 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1
+            "per": 100,
+            "points": 1
           },
           "condition": "楽天ペイのポイント進呈対象外の店舗。支払い元を楽天カードにした場合のみ楽天カード分1%",
           "note": "楽天ペイ公式の対象外店舗リストで「全店舗対象外」"
@@ -217,6 +219,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -293,12 +298,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）",
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%",
           "note": "一部店舗はポイント対象外（楽天ペイ公式リスト）"
         },
         "olive_card": {
@@ -478,12 +481,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）",
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%",
           "note": "一部店舗はポイント対象外（楽天ペイ公式リスト）"
         },
         "olive_card": {
@@ -540,6 +541,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -622,12 +626,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）"
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
         },
         "olive_card": {
           "available": true,
@@ -683,6 +685,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -766,12 +771,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）"
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
         },
         "vpoint_card": {
           "available": true,
@@ -829,6 +832,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -906,7 +912,8 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1
+            "per": 100,
+            "points": 1
           },
           "condition": "楽天ペイのポイント進呈対象外の店舗。支払い元を楽天カードにした場合のみ楽天カード分1%",
           "note": "楽天ペイ公式の対象外店舗リストで「全店舗対象外」"
@@ -966,6 +973,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -1091,6 +1101,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -1187,7 +1200,8 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1
+            "per": 100,
+            "points": 1
           },
           "condition": "楽天ペイのポイント進呈対象外の店舗。支払い元を楽天カードにした場合のみ楽天カード分1%",
           "note": "楽天ペイ公式の対象外店舗リストで「全店舗対象外」"
@@ -1248,6 +1262,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -1357,12 +1374,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）",
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%",
           "note": "一部店舗はポイント対象外（楽天ペイ公式リスト）"
         },
         "olive_touch_phone": {
@@ -1421,6 +1436,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -1498,12 +1516,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）"
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
         },
         "olive_card": {
           "status": "unverified",
@@ -1634,12 +1650,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）"
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
         },
         "olive_touch_phone": {
           "available": true,
@@ -1707,6 +1721,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -1905,7 +1922,8 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1
+            "per": 100,
+            "points": 1
           },
           "condition": "楽天ペイのポイント進呈対象外の店舗。支払い元を楽天カードにした場合のみ楽天カード分1%",
           "note": "楽天ペイ公式の対象外店舗リストで「全店舗対象外」"
@@ -1976,6 +1994,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外",
           "note": "一部d払い対象外の店舗あり"
         },
@@ -2091,7 +2112,8 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1
+            "per": 100,
+            "points": 1
           },
           "condition": "楽天ペイのポイント進呈対象外の店舗。支払い元を楽天カードにした場合のみ楽天カード分1%",
           "note": "楽天ペイ公式の対象外店舗リストで「全店舗対象外」"
@@ -2162,6 +2184,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外",
           "note": "一部d払い対象外の店舗あり"
         },
@@ -2401,12 +2426,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）"
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
         },
         "olive_card": {
           "available": true,
@@ -2451,6 +2474,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -2514,12 +2540,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュ払いの場合。店舗により対応が異なる"
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分1%）。店舗により対応が異なる"
         },
         "olive_card": {
           "available": true,
@@ -2564,6 +2588,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -2630,12 +2657,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）",
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%",
           "note": "一部店舗はポイント対象外（楽天ペイ公式リスト）"
         },
         "olive_touch_phone": {
@@ -2690,6 +2715,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外",
           "note": "JR東日本グループ運営の店舗は対象外"
         },
@@ -2774,12 +2802,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）"
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
         },
         "olive_touch_phone": {
           "available": true,
@@ -2848,6 +2874,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外",
           "note": "一部取扱い対象外の店舗あり"
         },
@@ -2936,12 +2965,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）",
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%",
           "note": "一部店舗はポイント対象外（楽天ペイ公式リスト）"
         },
         "olive_card": {
@@ -2987,6 +3014,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -3060,12 +3090,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）"
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
         },
         "olive_card": {
           "available": true,
@@ -3096,6 +3124,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -3163,12 +3194,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）",
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%",
           "note": "一部店舗はポイント対象外（楽天ペイ公式リスト）"
         },
         "olive_card": {
@@ -3218,6 +3247,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -3305,12 +3337,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）",
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%",
           "note": "一部店舗はポイント対象外（楽天ペイ公式リスト）"
         },
         "paypay_balance": {
@@ -3356,6 +3386,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -3438,12 +3471,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）"
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
         },
         "olive_touch_phone": {
           "available": true,
@@ -3500,6 +3531,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -3611,12 +3645,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）"
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
         },
         "olive_card": {
           "available": true,
@@ -3670,6 +3702,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {
@@ -3752,12 +3787,10 @@
           "available": true,
           "status": "conditional",
           "earn": {
-            "rate": 1.5
+            "per": 100,
+            "points": 1
           },
-          "requires": [
-            "rakuten_cash_charge"
-          ],
-          "condition": "楽天カードからチャージした楽天キャッシュで支払う場合（支払い元により還元率が変わる）"
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
         },
         "olive_touch_phone": {
           "available": true,
@@ -3826,6 +3859,9 @@
             "per": 200,
             "points": 1
           },
+          "requires": [
+            "dbarai_user"
+          ],
           "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
         },
         "setagaya_pay": {

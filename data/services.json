@@ -98,8 +98,8 @@
   "capabilities": {
     "smartphone_touch": "スマホ（Apple Pay / Google Pay 等）でOliveのタッチ決済ができる",
     "rakuten_card_holder": "楽天カードを持っている",
-    "rakuten_cash_charge": "楽天ペイは「楽天カードからチャージした楽天キャッシュ」で払う",
     "paypay_credit_holder": "PayPayクレジットを使える",
+    "dbarai_user": "d払いで支払う（オフなら、dポイントはカード提示でためるだけ）",
     "setagaya_pay_user": "せたがやPayアプリを使える"
   },
   "categories": {
