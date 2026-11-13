@@ -243,3 +243,6 @@ main { max-width: 720px; margin: 0 auto; padding: 0 16px 48px; outline: none; }
 .mrow .meta .badge { white-space: normal; max-width: 100%; }
 .mrow .meta { min-width: 0; }
 .mrow > span { min-width: 0; overflow-wrap: anywhere; }
+.b-coupon { color: #8a4b00; background: #ffe7c2; }
+@media (prefers-color-scheme: dark) { .b-coupon { color: #ffd08a; background: #3a2a10; } }
+.coupon-panel { border-color: #f0b35a; }

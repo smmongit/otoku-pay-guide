@@ -82,6 +82,7 @@
       notes: [...tag((chain.notes || []).map((t) => ({ text: t })), 'chain'), ...tag((store.notes || []).map((t) => ({ text: t })), 'store')],
       sources: [...tag(chain.sources, 'chain'), ...tag(store.sources, 'store')],
       checkedAt: store.checkedAt || chain.checkedAt || null,
+      coupons: [...(chain.coupons || []), ...(store.coupons || [])],
     };
   }
 

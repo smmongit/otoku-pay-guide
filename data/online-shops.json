@@ -536,7 +536,13 @@
         "調査前：楽天リーベイツの掲載・還元率は未確認です"
       ],
       "sources": [],
-      "checkedAt": null
+      "checkedAt": null,
+      "coupons": [
+        {
+          "service": "paypay",
+          "asOf": "2026-11-13"
+        }
+      ]
     },
     {
       "id": "cand-13",
@@ -579,7 +585,13 @@
         "調査前：楽天リーベイツの掲載・還元率は未確認です"
       ],
       "sources": [],
-      "checkedAt": null
+      "checkedAt": null,
+      "coupons": [
+        {
+          "service": "paypay",
+          "asOf": "2026-11-13"
+        }
+      ]
     },
     {
       "id": "cand-15",
@@ -755,7 +767,13 @@
         "調査前：楽天リーベイツの掲載・還元率は未確認です"
       ],
       "sources": [],
-      "checkedAt": null
+      "checkedAt": null,
+      "coupons": [
+        {
+          "service": "paypay",
+          "asOf": "2026-11-13"
+        }
+      ]
     },
     {
       "id": "cand-23",
@@ -909,7 +927,13 @@
         "調査前：楽天リーベイツの掲載・還元率は未確認です"
       ],
       "sources": [],
-      "checkedAt": null
+      "checkedAt": null,
+      "coupons": [
+        {
+          "service": "paypay",
+          "asOf": "2026-11-13"
+        }
+      ]
     },
     {
       "id": "cand-30",
@@ -998,6 +1022,92 @@
       ],
       "sources": [],
       "checkedAt": null
+    },
+    {
+      "id": "cand-klook",
+      "name": "Klook",
+      "aliases": [
+        "クルック",
+        "klook"
+      ],
+      "category": "travel",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null,
+      "coupons": [
+        {
+          "service": "paypay",
+          "asOf": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "cand-expedia",
+      "name": "エクスペディア",
+      "aliases": [
+        "Expedia",
+        "expedia"
+      ],
+      "category": "travel",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null,
+      "coupons": [
+        {
+          "service": "paypay",
+          "asOf": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "id": "cand-matsukiyo-online",
+      "name": "マツキヨココカラ公式オンラインストア",
+      "aliases": [
+        "マツキヨ",
+        "ココカラ",
+        "マツモトキヨシ",
+        "matsukiyo"
+      ],
+      "category": "cosme",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null,
+      "coupons": [
+        {
+          "service": "paypay",
+          "asOf": "2026-11-13"
+        }
+      ]
     }
   ]
 }

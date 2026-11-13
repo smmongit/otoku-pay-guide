@@ -51,6 +51,17 @@
     LS.set(key, list.slice(0, 8));
   }
 
+  // ------------------------------------------------------------ クーポン確認ラベル
+  const COUPON = {
+    paypay: { label: 'PayPayクーポン確認', app: 'PayPayアプリ' },
+    vpoint: { label: 'Vポイントクーポン確認', app: 'Vポイントアプリ（またはVポイントPayアプリ）' },
+  };
+  const couponBadges = (o) => (o.coupons || []).map((c) => `<span class="badge b-coupon">🎟 ${esc((COUPON[c.service] || {}).label || 'クーポン確認')}</span>`).join('');
+  const couponPanel = (o) => (o.coupons || []).length ? `<div class="panel coupon-panel"><h2>🎟 支払う前にクーポンを確認</h2><ul class="plain">${o.coupons.map((c) => {
+      const d = COUPON[c.service] || { app: 'アプリ' };
+      return `<li><strong>${esc(d.label)}</strong>：${esc(d.app)}で、このお店のクーポンが配信されていないか確認してください。<br><small>${ymd(c.asOf)}時点で配信を確認。有効期限・還元率・使える条件はアプリで確認（おすすめ判定には含めていません）</small></li>`;
+    }).join('')}</ul></div>` : '';
+
   // ------------------------------------------------------------ 読み込み
   async function getJSON(path) {
     const res = await fetch(path, { cache: 'no-cache' });
@@ -115,7 +126,7 @@
       : '';
     return `<article class="card">
       <a href="#/store/${encodeURIComponent(r.id)}">
-        <div class="card-meta"><span>${esc(catLabel(r.category))}</span>${r.isSample ? '<span class="badge b-sample">サンプル</span>' : ''}</div>
+        <div class="card-meta"><span>${esc(catLabel(r.category))}</span>${couponBadges(r)}${r.isSample ? '<span class="badge b-sample">サンプル</span>' : ''}</div>
         <h3>${esc(r.name)}</h3>
         ${rec}${camp}
       </a>${favBtn('store', r.id)}</article>`;
@@ -167,7 +178,8 @@
     const pick = (ids) => ids.map((id) => S.storeById[id]).filter(Boolean);
     let html =
       section('⭐ お気に入り', pick(LS.get(K.favS, [])), storeCard) +
-      section('🕘 最近見たお店', pick(LS.get(K.recS, [])).slice(0, 4), storeCard);
+      section('🕘 最近見たお店', pick(LS.get(K.recS, [])).slice(0, 4), storeCard) +
+      section('🎟 クーポン確認', S.stores.filter((r) => (r.coupons || []).length), storeCard, 'アプリでクーポンを確認してから支払う');
     for (const c of Object.keys(S.defs.categories)) {
       const list = S.stores.filter((r) => r.category === c).sort((a, b) => a.name.localeCompare(b.name, 'ja'));
       html += section(esc(catLabel(c)), list, storeCard);
@@ -266,6 +278,7 @@
 
       ${hero}
       ${camp}
+      ${couponPanel(r)}
 
       <div class="panel">
         <h2>金額を変えて計算</h2>
@@ -355,7 +368,7 @@
     const ft = ev.rebates.firstTime && ev.rebates.firstTime.valid ? `<span class="badge b-camp">初回特典 ${esc(ev.rebates.firstTime.rateLabel)}</span>` : '';
     return `<article class="card">
       <a href="#/online/${encodeURIComponent(shop.id)}">
-        <div class="card-meta"><span>${esc(oCatLabel(shop.category))}</span>${listedBadge(ev, shop)}${ft}${shop.isSample ? '<span class="badge b-sample">サンプル</span>' : ''}</div>
+        <div class="card-meta"><span>${esc(oCatLabel(shop.category))}</span>${listedBadge(ev, shop)}${ft}${couponBadges(shop)}${shop.isSample ? '<span class="badge b-sample">サンプル</span>' : ''}</div>
         <h3>${esc(shop.name)}</h3>
         ${rec}${camp}
       </a>${favBtn('shop', shop.id)}</article>`;
@@ -388,6 +401,7 @@
       <div class="toolbar">
         <button class="chip" id="f-camp" aria-pressed="${S.ui.onlyCamp}">🎉 キャンペーン中</button>
         <button class="chip" id="f-first" aria-pressed="${S.ui.onlyFirst}">🔰 初回特典あり</button>
+        <button class="chip" id="f-coupon" aria-pressed="${!!S.ui.onlyCoupon}">🎟 クーポン確認</button>
         <select id="sort" aria-label="並び替え">
           <option value="recommended" ${S.ui.sort === 'recommended' ? 'selected' : ''}>おすすめ順</option>
           <option value="rate" ${S.ui.sort === 'rate' ? 'selected' : ''}>還元率が高い順</option>
@@ -410,16 +424,17 @@
     });
     tog('#f-camp', 'onlyCamp');
     tog('#f-first', 'onlyFirst');
+    tog('#f-coupon', 'onlyCoupon');
     app.querySelector('#sort').addEventListener('change', (e) => { S.ui.sort = e.target.value; renderOnlineResults(); });
     renderOnlineResults();
   }
 
   function renderOnlineResults() {
     const box = app.querySelector('#oresults');
-    const { oq, oc, onlyCamp, onlyFirst, sort } = S.ui;
-    const filtered = oq.trim() || oc !== 'all' || onlyCamp || onlyFirst;
+    const { oq, oc, onlyCamp, onlyFirst, onlyCoupon, sort } = S.ui;
+    const filtered = oq.trim() || oc !== 'all' || onlyCamp || onlyFirst || onlyCoupon;
     if (filtered) {
-      let hits = S.shops.filter((s) => (oc === 'all' || s.category === oc) && E.matches(s, oq));
+      let hits = S.shops.filter((s) => (oc === 'all' || s.category === oc) && E.matches(s, oq) && (!onlyCoupon || (s.coupons || []).length));
       if (onlyCamp || onlyFirst) {
         hits = hits.filter((s) => {
           const ev = evalShop(s);
@@ -508,6 +523,7 @@
         ${linkBtn(shop.rebatesUrl, '楽天リーベイツ経由で購入する', true)}
         ${linkBtn(shop.officialUrl, '公式ショップを開く（リーベイツ経由なし）', false)}
       </div>
+      ${couponPanel(shop)}
 
       <div class="panel"><h2>ポイントバック率</h2>${ratesPanel}</div>
 
