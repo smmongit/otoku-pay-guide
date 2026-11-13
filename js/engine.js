@@ -588,10 +588,63 @@
     return normalize([resolved.name, resolved.chainName, ...(resolved.aliases || [])].filter(Boolean).join(' '));
   }
 
+  // ---------------------------------------------------------------- ローマ字検索
+  const KANA2 = {
+    キャ: 'kya', キュ: 'kyu', キョ: 'kyo', シャ: 'sha', シュ: 'shu', ショ: 'sho', シェ: 'she', チャ: 'cha', チュ: 'chu', チョ: 'cho', チェ: 'che',
+    ニャ: 'nya', ニュ: 'nyu', ニョ: 'nyo', ヒャ: 'hya', ヒュ: 'hyu', ヒョ: 'hyo', ミャ: 'mya', ミュ: 'myu', ミョ: 'myo', リャ: 'rya', リュ: 'ryu', リョ: 'ryo',
+    ギャ: 'gya', ギュ: 'gyu', ギョ: 'gyo', ジャ: 'ja', ジュ: 'ju', ジョ: 'jo', ジェ: 'je', ビャ: 'bya', ビュ: 'byu', ビョ: 'byo', ピャ: 'pya', ピュ: 'pyu', ピョ: 'pyo',
+    ファ: 'fa', フィ: 'fi', フェ: 'fe', フォ: 'fo', ティ: 'ti', ディ: 'di', デュ: 'dyu', ウィ: 'wi', ウェ: 'we', ウォ: 'wo', ヴァ: 'va', ヴィ: 'vi', ヴェ: 've', ヴォ: 'vo',
+  };
+  const KANA1 = {
+    ア: 'a', イ: 'i', ウ: 'u', エ: 'e', オ: 'o', カ: 'ka', キ: 'ki', ク: 'ku', ケ: 'ke', コ: 'ko', サ: 'sa', シ: 'shi', ス: 'su', セ: 'se', ソ: 'so',
+    タ: 'ta', チ: 'chi', ツ: 'tsu', テ: 'te', ト: 'to', ナ: 'na', ニ: 'ni', ヌ: 'nu', ネ: 'ne', ノ: 'no', ハ: 'ha', ヒ: 'hi', フ: 'fu', ヘ: 'he', ホ: 'ho',
+    マ: 'ma', ミ: 'mi', ム: 'mu', メ: 'me', モ: 'mo', ヤ: 'ya', ユ: 'yu', ヨ: 'yo', ラ: 'ra', リ: 'ri', ル: 'ru', レ: 're', ロ: 'ro', ワ: 'wa', ヲ: 'o', ン: 'n',
+    ガ: 'ga', ギ: 'gi', グ: 'gu', ゲ: 'ge', ゴ: 'go', ザ: 'za', ジ: 'ji', ズ: 'zu', ゼ: 'ze', ゾ: 'zo', ダ: 'da', ヂ: 'ji', ヅ: 'zu', デ: 'de', ド: 'do',
+    バ: 'ba', ビ: 'bi', ブ: 'bu', ベ: 'be', ボ: 'bo', パ: 'pa', ピ: 'pi', プ: 'pu', ペ: 'pe', ポ: 'po', ヴ: 'vu',
+    ァ: 'a', ィ: 'i', ゥ: 'u', ェ: 'e', ォ: 'o', ャ: 'ya', ュ: 'yu', ョ: 'yo', ヮ: 'wa',
+  };
+
+  /** カタカナ → ヘボン式ローマ字（カタカナ以外はそのまま。伸ばす音「ー」は省く） */
+  function kataToRomaji(s) {
+    let out = '';
+    for (let i = 0; i < s.length; i++) {
+      const two = s.slice(i, i + 2);
+      if (KANA2[two]) { out += KANA2[two]; i++; continue; }
+      const ch = s[i];
+      if (ch === 'ッ') { // 次の子音を重ねる
+        const nx = KANA2[s.slice(i + 1, i + 3)] || KANA1[s[i + 1]] || '';
+        out += nx ? (nx.startsWith('ch') ? 't' : nx[0]) : '';
+        continue;
+      }
+      if (ch === 'ー') continue;
+      out += KANA1[ch] != null ? KANA1[ch] : ch;
+    }
+    return out;
+  }
+
+  /** ローマ字の表記ゆれをそろえる（shi/si, tsu/tu, chi/ti, fu/hu, ji/zi, sha/sya, nn/n など） */
+  function canonRomaji(s, partial) {
+    let r = s.toLowerCase().replace(/[\s'\-]/g, '')
+      .replace(/shi/g, 'si').replace(/sh/g, 'sy')
+      .replace(/chi/g, 'ti').replace(/ch/g, 'ty')
+      .replace(/tsu/g, 'tu').replace(/ts/g, 't')
+      .replace(/fu/g, 'hu').replace(/ji/g, 'zi').replace(/j/g, 'zy')
+      .replace(/nn/g, 'n').replace(/m(?=[bmp])/g, 'n');
+    if (partial) r = r.replace(/(sy|ty|zy)$/, (m) => m[0]); // 入力途中（「sh」「ch」「j」）でも一致させる
+    return r;
+  }
+
+  function romajiText(resolved) {
+    return canonRomaji(kataToRomaji(normalize([resolved.name, resolved.chainName, ...(resolved.aliases || [])].filter(Boolean).join('|'))));
+  }
+
   function matches(resolved, query) {
     const q = normalize(query);
     if (!q) return true;
-    return searchText(resolved).includes(q);
+    if (searchText(resolved).includes(q)) return true;
+    // 英字だけの入力はローマ字としても照合（例：mat → マツキヨ、sutaba → スタバ）
+    if (/^[a-z0-9']+$/.test(q)) return romajiText(resolved).includes(canonRomaji(q, true));
+    return false;
   }
 
   return {
@@ -611,6 +664,8 @@
     rebatesPoints,
     rebatesRateLabel,
     normalize,
+    kataToRomaji,
+    canonRomaji,
     matches,
   };
 });

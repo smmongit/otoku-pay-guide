@@ -174,7 +174,7 @@
       ${S.storesMeta && S.stores.some((s) => s.isSample) ? `<p class="banner">現在のデータは<strong>サンプル（架空のチェーン）</strong>です。実在のお店の情報ではありません。</p>` : ''}
       <div class="search" role="search">
         <span class="ico">🔍</span>
-        <input id="q" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="チェーン名で検索（例：マツキヨ）" value="${esc(S.ui.sq)}" aria-label="店舗を検索">
+        <input id="q" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="チェーン名で検索（ローマ字もOK）" value="${esc(S.ui.sq)}" aria-label="店舗を検索">
         <button class="clear" type="button" aria-label="検索語を消す" ${S.ui.sq ? '' : 'hidden'}>×</button>
       </div>
       <div class="chips" role="group" aria-label="カテゴリー">${storeChips()}</div>
@@ -441,7 +441,7 @@
       ${S.onlineMeta.pointCap ? `<p class="foot" style="margin:8px 2px 0">※ ${esc(S.onlineMeta.pointCap)}</p>` : ''}
       <div class="search" role="search">
         <span class="ico">🔍</span>
-        <input id="oq" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="ショップ名で検索（例：Apple）" value="${esc(S.ui.oq)}" aria-label="ショップを検索">
+        <input id="oq" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="ショップ名で検索（ローマ字もOK）" value="${esc(S.ui.oq)}" aria-label="ショップを検索">
         <button class="clear" type="button" aria-label="検索語を消す" ${S.ui.oq ? '' : 'hidden'}>×</button>
       </div>
       <div class="chips" role="group" aria-label="カテゴリー">${cats.map((c) => `<button class="chip" data-cat="${c}" aria-pressed="${S.ui.oc === c}">${c === 'all' ? 'すべて' : esc(oCatLabel(c))}</button>`).join('')}</div>

@@ -237,3 +237,20 @@ test('楽天市場の公式店との比較（税抜1%＋カード特典1%＋カ�
   assert.equal(r2.ichiba.value, 510);
 });
 console.log(`${passed} passed`);
+test('ローマ字検索（実データ）', () => {
+  const real = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'stores.json'), 'utf8')).chains.map((c) => E.resolveStore({}, c));
+  const find = (q) => real.filter((r) => E.matches(r, q)).map((r) => r.name);
+  assert.ok(find('mat').includes('マツモトキヨシ'));
+  assert.ok(find('mat').includes('松屋'));
+  for (const q of ['matsukiyo', 'matukiyo', 'mats', 'matsuk']) assert.ok(find(q).includes('マツモトキヨシ'), q);
+  assert.ok(find('sutaba').includes('スターバックス'));
+  assert.ok(find('makku').includes('マクドナルド'));
+  assert.ok(find('famima').includes('ファミリーマート'));
+  assert.ok(find('sukiya').includes('すき家'));
+  assert.ok(find('shabu').includes('しゃぶ葉') && find('syabu').includes('しゃぶ葉') && find('sh').length > 0);
+  assert.ok(find('yoshinoya').includes('吉野家') && find('yosinoya').includes('吉野家'));
+  assert.ok(find('kaldi').includes('カルディコーヒーファーム') && find('karudi').includes('カルディコーヒーファーム'));
+  assert.ok(find('uniqlo').includes('ユニクロ') && find('yunikuro').includes('ユニクロ'));
+  assert.equal(find('zzzz').length, 0);
+});
+console.log(`${passed} passed`);
