@@ -4924,6 +4924,384 @@
       ],
       "checkedAt": "2026-11-13",
       "coupons": []
+    },
+    {
+      "id": "uniqlo",
+      "name": "ユニクロ",
+      "category": "fashion",
+      "aliases": [
+        "UNIQLO",
+        "ゆにくろ"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "店舗によっては使えない場合あり（公式FAQ）"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "楽天ペイのポイント進呈対象外の店舗。支払い元を楽天カードにした場合のみ楽天カード分1%",
+          "note": "楽天ペイ公式の対象外店舗リストで「全店舗対象外」"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "店舗によっては使えない場合あり（公式FAQ）"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "本人確認済みが条件。一部店舗で利用できない場合あり"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        },
+        "dpoint_card": {
+          "available": false,
+          "status": "confirmed",
+          "note": "dポイント公式の加盟店ページの対応サービスがd払いのみ（カード提示の記載なし）"
+        },
+        "d_barai": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "requires": [
+            "dbarai_user"
+          ],
+          "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        }
+      },
+      "campaigns": [],
+      "notes": [
+        "Olive 8%の対象外（三井住友銀行公式の対象店舗に含まれない）",
+        "オンラインストアは「オンライン」タブ（楽天リーベイツ1%）"
+      ],
+      "sources": [
+        {
+          "title": "ユニクロ：店舗での支払い方法（FAQ）",
+          "url": "https://faq.uniqlo.com/articles/FAQ/100004136",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "dポイントクラブ：加盟店ページ",
+          "url": "https://dpoint.docomo.ne.jp/static/store/327819/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：コード・QR払い 最大1.5%還元の対象外店舗",
+          "url": "https://pay.rakuten.co.jp/topics/pointprogram/excluded-shops/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天カード：100円につき1ポイント",
+          "url": "https://www.rakuten-card.co.jp/card/rakuten-card/",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "coupons": []
+    },
+    {
+      "id": "gu",
+      "name": "GU（ジーユー）",
+      "category": "fashion",
+      "aliases": [
+        "GU",
+        "ジーユー",
+        "じーゆー"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "店舗によっては使えない場合あり（公式FAQ）"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "楽天ペイのポイント進呈対象外の店舗。支払い元を楽天カードにした場合のみ楽天カード分1%",
+          "note": "楽天ペイ公式の対象外店舗リストで「全店舗対象外」"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "店舗によっては使えない場合あり（公式FAQ）"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "本人確認済みが条件。一部店舗で利用できない場合あり"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        },
+        "dpoint_card": {
+          "available": false,
+          "status": "confirmed",
+          "note": "dポイント公式の加盟店ページの対応サービスがd払いのみ（カード提示の記載なし）"
+        },
+        "d_barai": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "requires": [
+            "dbarai_user"
+          ],
+          "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        }
+      },
+      "campaigns": [],
+      "notes": [
+        "Olive 8%の対象外（三井住友銀行公式の対象店舗に含まれない）",
+        "オンラインストアは「オンライン」タブ（楽天リーベイツ1%）"
+      ],
+      "sources": [
+        {
+          "title": "GU（ジーユー）：店舗での支払い方法（FAQ）",
+          "url": "https://faq.gu-global.com/articles/Knowledge/100009030/",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "dポイントクラブ：加盟店ページ",
+          "url": "https://dpoint.docomo.ne.jp/static/store/327820/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：コード・QR払い 最大1.5%還元の対象外店舗",
+          "url": "https://pay.rakuten.co.jp/topics/pointprogram/excluded-shops/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天カード：100円につき1ポイント",
+          "url": "https://www.rakuten-card.co.jp/card/rakuten-card/",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "coupons": []
+    },
+    {
+      "id": "biccamera",
+      "name": "ビックカメラ",
+      "category": "electronics",
+      "aliases": [
+        "ビック",
+        "BIC",
+        "biccamera",
+        "ビックドラッグ"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "rate": 5,
+            "basis": "tax_included"
+          },
+          "condition": "基本は購入額（税込）の5%。購入商品・支払い方法により異なる（クレジットカード払い時の率は公式に記載なし）",
+          "stack": {
+            "status": "unverified",
+            "note": "支払い方法で付与率が変わるため、クレジットカード等の支払いとは合算しない"
+          },
+          "note": "ビックポイントが付かない商品・サービスは対象外",
+          "src": "https://pointcard.rakuten.co.jp/partner/biccamera/"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "一部店舗では使えない場合あり"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "一部店舗では使えない場合あり"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "本人確認済みが条件。一部店舗で利用できない場合あり"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        },
+        "dpoint_card": {
+          "status": "unverified",
+          "note": "dポイント加盟店一覧で見つからず"
+        },
+        "d_barai": {
+          "status": "unverified"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        }
+      },
+      "campaigns": [],
+      "notes": [
+        "ビックカメラ独自のビックポイントは比較対象外（公式：現金・提携カード10%、一般のクレジットカード8%）",
+        "楽天ポイントカードの5%は「基本」の率。クレジットカード払いでは下がる可能性があるため、おすすめは「現金など＋楽天ポイントカード提示」で計算",
+        "オンラインのビックカメラ.comは「オンライン」タブ（楽天リーベイツ4%）"
+      ],
+      "sources": [
+        {
+          "title": "楽天ポイントカード：加盟店ページ",
+          "url": "https://pointcard.rakuten.co.jp/partner/biccamera/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "ビックカメラ：ビックポイントサービス",
+          "url": "https://www.biccamera.com/bc/c/super/point/bic_point/index.jsp",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：使えるお店",
+          "url": "https://pay.rakuten.co.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天カード：100円につき1ポイント",
+          "url": "https://www.rakuten-card.co.jp/card/rakuten-card/",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13",
+      "coupons": []
     }
   ]
 }
