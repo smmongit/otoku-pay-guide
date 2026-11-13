@@ -3,7 +3,14 @@
     "version": 2,
     "updatedAt": "2026-11-13",
     "note": "1件＝1チェーン。公式情報で確認した内容のみ。調べた日付は各チェーンの checkedAt。",
-    "sourcePolicy": "sources[].via がある項目は、公式ページをクラウドから直接閲覧できず、検索結果の抜粋で確認したもの"
+    "sourcePolicy": "sources[].via がある項目は、公式ページをクラウドから直接閲覧できず、検索結果の抜粋で確認したもの",
+    "autoUpdate": {
+      "at": "2026-11-13T09:21:55.363Z",
+      "date": "2026-11-13",
+      "checked": 68,
+      "changed": [],
+      "issues": []
+    }
   },
   "chains": [
     {
@@ -209,7 +216,8 @@
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/65972/"
         },
         "d_barai": {
           "available": true,
@@ -532,7 +540,8 @@
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/70765/"
         },
         "d_barai": {
           "available": true,
@@ -675,7 +684,8 @@
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/263200/"
         },
         "d_barai": {
           "available": true,
@@ -789,7 +799,8 @@
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "税抜・値引後200円につき1pt。毎月20日などの特別ポイントは別"
+          "note": "税抜・値引後200円につき1pt。毎月20日などの特別ポイントは別",
+          "src": "https://t-point.tsite.jp/store/list/welcia/"
         },
         "olive_card": {
           "available": true,
@@ -1088,13 +1099,15 @@
           "status": "confirmed",
           "earn": {
             "per": 100,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/329564/"
         },
         "d_barai": {
           "available": true,
@@ -1172,7 +1185,8 @@
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "税抜200円で1pt。KFCカードチャージ・デリバリー等は対象外。付与対象の決済方法は店舗で異なる"
+          "note": "税抜200円で1pt。KFCカードチャージ・デリバリー等は対象外。付与対象の決済方法は店舗で異なる",
+          "src": "https://pointcard.rakuten.co.jp/partner/kfc/"
         },
         "vpoint_card": {
           "available": true,
@@ -1187,7 +1201,8 @@
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "一部店舗除く。公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
+          "note": "一部店舗除く。公式に税込/税抜の明記がないため、少なめ（税抜）で計算",
+          "src": "https://t-point.tsite.jp/store/list/kfc/"
         },
         "rakuten_card": {
           "available": true,
@@ -1348,7 +1363,8 @@
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://pointcard.rakuten.co.jp/partner/yoshinoya/"
         },
         "vpoint_card": {
           "available": true,
@@ -1363,7 +1379,8 @@
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
+          "note": "公式に税込/税抜の明記がないため、少なめ（税抜）で計算",
+          "src": "https://t-point.tsite.jp/store/list/yoshinoya/"
         },
         "rakuten_card": {
           "available": true,
@@ -1562,13 +1579,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/164872/"
         },
         "d_barai": {
           "status": "unverified",
@@ -1624,13 +1643,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://pointcard.rakuten.co.jp/partner/sukiya/"
         },
         "vpoint_card": {
           "available": true,
@@ -1645,7 +1666,8 @@
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
+          "note": "公式に税込/税抜の明記がないため、少なめ（税抜）で計算",
+          "src": "https://t-point.tsite.jp/store/list/sukiya/"
         },
         "rakuten_card": {
           "available": true,
@@ -1715,13 +1737,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/152636/"
         },
         "d_barai": {
           "available": true,
@@ -1901,13 +1925,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://pointcard.rakuten.co.jp/partner/skylark_gusto/"
         },
         "vpoint_card": {
           "available": true,
@@ -1922,7 +1948,8 @@
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "自動販売機の商品は対象外。公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
+          "note": "自動販売機の商品は対象外。公式に税込/税抜の明記がないため、少なめ（税抜）で計算",
+          "src": "https://t-point.tsite.jp/store/list/gusto/"
         },
         "rakuten_card": {
           "available": true,
@@ -1993,13 +2020,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/83658/"
         },
         "d_barai": {
           "available": true,
@@ -2095,13 +2124,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://pointcard.rakuten.co.jp/partner/skylark_bamiyan/"
         },
         "vpoint_card": {
           "available": true,
@@ -2116,7 +2147,8 @@
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "自動販売機の商品は対象外。公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
+          "note": "自動販売機の商品は対象外。公式に税込/税抜の明記がないため、少なめ（税抜）で計算",
+          "src": "https://t-point.tsite.jp/store/list/bamiyan/"
         },
         "rakuten_card": {
           "available": true,
@@ -2187,13 +2219,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/83662/"
         },
         "d_barai": {
           "available": true,
@@ -2289,13 +2323,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://pointcard.rakuten.co.jp/partner/skylark_jonathan/"
         },
         "vpoint_card": {
           "available": true,
@@ -2310,7 +2346,8 @@
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "自動販売機の商品は対象外。公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
+          "note": "自動販売機の商品は対象外。公式に税込/税抜の明記がないため、少なめ（税抜）で計算",
+          "src": "https://t-point.tsite.jp/store/list/jonathan/"
         },
         "rakuten_card": {
           "available": true,
@@ -2822,7 +2859,8 @@
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "お会計前に提示（事後は不可）。公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
+          "note": "お会計前に提示（事後は不可）。公式に税込/税抜の明記がないため、少なめ（税抜）で計算",
+          "src": "https://t-point.tsite.jp/store/list/doutor/"
         },
         "rakuten_card": {
           "available": true,
@@ -2892,14 +2930,16 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "dポイント対象店舗は公式店舗検索のアイコンで確認"
+          "note": "dポイント対象店舗は公式店舗検索のアイコンで確認",
+          "src": "https://dpoint.docomo.ne.jp/static/store/8111/"
         },
         "d_barai": {
           "available": true,
@@ -2974,14 +3014,16 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "一部対応していない店舗あり"
+          "note": "一部対応していない店舗あり",
+          "src": "https://pointcard.rakuten.co.jp/partner/tullys/"
         },
         "rakuten_card": {
           "available": true,
@@ -3209,13 +3251,15 @@
           "status": "confirmed",
           "earn": {
             "per": 100,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://pointcard.rakuten.co.jp/partner/saint-marc/"
         },
         "rakuten_card": {
           "status": "unverified",
@@ -3261,13 +3305,15 @@
           "status": "confirmed",
           "earn": {
             "per": 100,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/8113/"
         },
         "d_barai": {
           "available": true,
@@ -3341,14 +3387,16 @@
           "status": "confirmed",
           "earn": {
             "per": 100,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "優待券・割引券利用時は利用後の金額に付与"
+          "note": "優待券・割引券利用時は利用後の金額に付与",
+          "src": "https://pointcard.rakuten.co.jp/partner/misterdonut/"
         },
         "rakuten_card": {
           "available": false,
@@ -3396,13 +3444,15 @@
           "status": "confirmed",
           "earn": {
             "per": 100,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/263292/"
         },
         "d_barai": {
           "available": true,
@@ -3635,14 +3685,16 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "一部商品は対象外。ファミペイ連携でも提示可"
+          "note": "一部商品は対象外。ファミペイ連携でも提示可",
+          "src": "https://pointcard.rakuten.co.jp/partner/familymart/"
         },
         "vpoint_card": {
           "available": true,
@@ -3657,7 +3709,8 @@
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "200円(税込)につき1pt。一部対象外の商品あり"
+          "note": "200円(税込)につき1pt。一部対象外の商品あり",
+          "src": "https://t-point.tsite.jp/store/list/family/"
         },
         "rakuten_card": {
           "available": true,
@@ -3712,13 +3765,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/289914/"
         },
         "d_barai": {
           "available": true,
@@ -3874,7 +3929,8 @@
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "0:00〜15:59は税抜200円で1pt、16:00〜23:59は2pt"
+          "note": "0:00〜15:59は税抜200円で1pt、16:00〜23:59は2pt",
+          "src": "https://dpoint.docomo.ne.jp/static/store/7780/"
         },
         "d_barai": {
           "available": true,
@@ -3943,14 +3999,16 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "一部店舗・一部府県（富山・石川・福井・岐阜・滋賀・奈良・京都）では利用不可"
+          "note": "一部店舗・一部府県（富山・石川・福井・岐阜・滋賀・奈良・京都）では利用不可",
+          "src": "https://pointcard.rakuten.co.jp/partner/cocos/"
         },
         "vpoint_card": {
           "available": true,
@@ -3965,7 +4023,8 @@
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "一部府県の店舗は対象外。公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
+          "note": "一部府県の店舗は対象外。公式に税込/税抜の明記がないため、少なめ（税抜）で計算",
+          "src": "https://t-point.tsite.jp/store/list/cocos/"
         },
         "rakuten_card": {
           "status": "unverified",
@@ -4023,13 +4082,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/266766/"
         },
         "d_barai": {
           "available": true,
@@ -4107,13 +4168,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://pointcard.rakuten.co.jp/partner/skylark_syabuyo/"
         },
         "vpoint_card": {
           "available": true,
@@ -4128,7 +4191,8 @@
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "自動販売機の商品は対象外。公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
+          "note": "自動販売機の商品は対象外。公式に税込/税抜の明記がないため、少なめ（税抜）で計算",
+          "src": "https://t-point.tsite.jp/store/list/syabuyo/"
         },
         "rakuten_card": {
           "available": true,
@@ -4199,13 +4263,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/208885/"
         },
         "d_barai": {
           "available": true,
@@ -4289,14 +4355,16 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "一部店舗では利用不可"
+          "note": "一部店舗では利用不可",
+          "src": "https://pointcard.rakuten.co.jp/partner/nakau/"
         },
         "vpoint_card": {
           "available": true,
@@ -4311,7 +4379,8 @@
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "公式に税込/税抜の明記がないため、少なめ（税抜）で計算"
+          "note": "公式に税込/税抜の明記がないため、少なめ（税抜）で計算",
+          "src": "https://t-point.tsite.jp/store/list/nakau/"
         },
         "rakuten_card": {
           "status": "unverified",
@@ -4356,13 +4425,15 @@
           "status": "confirmed",
           "earn": {
             "per": 200,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/376810/"
         },
         "d_barai": {
           "available": true,
@@ -4538,14 +4609,16 @@
           "status": "confirmed",
           "earn": {
             "per": 100,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "福袋は対象外"
+          "note": "福袋は対象外",
+          "src": "https://pointcard.rakuten.co.jp/partner/saint-marc_kamakura-pasta/"
         },
         "rakuten_card": {
           "status": "unverified",
@@ -4576,13 +4649,15 @@
           "status": "confirmed",
           "earn": {
             "per": 100,
-            "points": 1
+            "points": 1,
+            "basis": "tax_included"
           },
           "stack": {
             "with": "any",
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
-          }
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/8124/"
         },
         "d_barai": {
           "available": true,
@@ -4746,7 +4821,8 @@
             "status": "conditional",
             "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
           },
-          "note": "一部店舗では利用不可"
+          "note": "一部店舗では利用不可",
+          "src": "https://pointcard.rakuten.co.jp/partner/eyecity/"
         },
         "rakuten_card": {
           "status": "unverified",

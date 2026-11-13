@@ -89,3 +89,21 @@ python3 -m http.server 8000
   - 計算に使うのは、確認済みと条件付きの情報だけです。
 - **判定ロジックのテスト用データ**：`tests/fixtures/stores.sample.json`（架空のチェーン）。
 - **オンライン（`data/online-shops.json`）**：楽天リーベイツへの掲載状況は未調査です。
+
+## データの自動更新（毎朝6時）
+
+`.github/workflows/update-data.yml` が、GitHub Actions で毎日 6:00（日本時間）に `scripts/update-data.mjs` を実行します。GitHub の無料機能だけで動き、Claude は使いません。
+
+- **更新するもの**：公式ページから機械的に読み取れる数値だけです。
+  - 楽天リーベイツの還元率
+  - 楽天ポイントカード／dポイントカード／Vポイントの付与率（`data/stores.json` で `src` が付いている項目）
+- **読み取れないとき**：データは書き換えず、`meta.autoUpdate.issues` に記録します。アプリの「設定」画面で確認できます。
+- **テストが失敗したとき**：更新を保存しません。
+- **手動で実行する**：GitHub のリポジトリ → Actions →「データ自動更新」→「Run workflow」。
+- **自動では反映されないもの**：キャンペーンの開始・終了、条件の変更、新しい店舗の追加。これらは公式ページを確認して手動で更新します。
+
+手元で実行する場合（Playwright が必要）：
+
+```bash
+npm install && npx playwright install chromium && npm run update-data
+```

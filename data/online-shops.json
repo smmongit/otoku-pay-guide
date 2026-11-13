@@ -34,7 +34,14 @@
         "url": "https://www.rebates.jp/",
         "note": "2026年の内容は11/13時点で公式未発表。発表されたら期間・条件を確認してキャンペーンとして登録"
       }
-    ]
+    ],
+    "autoUpdate": {
+      "at": "2026-11-13T09:21:55.363Z",
+      "date": "2026-11-13",
+      "checked": 68,
+      "changed": [],
+      "issues": []
+    }
   },
   "shops": [
     {
@@ -82,13 +89,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 1.0,
+            "rate": 1,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約7日"
         ],
         "exclusions": [
@@ -154,13 +161,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 1.0,
+            "rate": 1,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約7日"
         ],
         "exclusions": [
@@ -222,7 +229,8 @@
       "rebates": {
         "listed": false,
         "status": "confirmed",
-        "exclusions": []
+        "exclusions": [],
+        "conditions": []
       },
       "coupons": [],
       "ichiba": {
@@ -276,13 +284,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 10.0,
+            "rate": 10,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は10.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約2ヶ月"
         ],
         "exclusions": [
@@ -359,13 +367,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 1.0,
+            "rate": 1,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約7日"
         ],
         "exclusions": [
@@ -446,7 +454,7 @@
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は2.5%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約7日"
         ],
         "exclusions": [
@@ -521,7 +529,7 @@
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は1.5%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約7日"
         ],
         "exclusions": [
@@ -596,13 +604,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 1.0,
+            "rate": 1,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約1ヶ月"
         ],
         "exclusions": [
@@ -673,13 +681,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 4.0,
+            "rate": 4,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は4.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約7日"
         ],
         "exclusions": [
@@ -749,7 +757,8 @@
       "rebates": {
         "listed": false,
         "status": "confirmed",
-        "exclusions": []
+        "exclusions": [],
+        "conditions": []
       },
       "coupons": [],
       "ichiba": {
@@ -806,13 +815,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 5.0,
+            "rate": 5,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は5.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約7日"
         ],
         "exclusions": [
@@ -880,13 +889,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 5.0,
+            "rate": 5,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は5.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約7日"
         ],
         "exclusions": [
@@ -958,13 +967,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 8.0,
+            "rate": 8,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は8.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約1ヶ月"
         ],
         "exclusions": [
@@ -1032,13 +1041,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 1.0,
+            "rate": 1,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約7日"
         ],
         "exclusions": [
@@ -1106,7 +1115,8 @@
       "rebates": {
         "listed": false,
         "status": "confirmed",
-        "exclusions": []
+        "exclusions": [],
+        "conditions": []
       },
       "coupons": [],
       "extras": [
@@ -1171,13 +1181,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 1.0,
+            "rate": 1,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約7日"
         ],
         "exclusions": [
@@ -1240,13 +1250,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 1.0,
+            "rate": 1,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約7日"
         ],
         "exclusions": [
@@ -1309,13 +1319,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 3.0,
+            "rate": 3,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は3.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約2ヶ月"
         ],
         "exclusions": [
@@ -1373,13 +1383,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 3.0,
+            "rate": 3,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は3.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約3ヶ月"
         ],
         "exclusions": [
@@ -1444,13 +1454,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 1.0,
+            "rate": 1,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約1ヶ月"
         ],
         "exclusions": [
@@ -1511,13 +1521,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 1.0,
+            "rate": 1,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約1ヶ月"
         ],
         "exclusions": [
@@ -1576,7 +1586,8 @@
       "rebates": {
         "listed": false,
         "status": "confirmed",
-        "exclusions": []
+        "exclusions": [],
+        "conditions": []
       },
       "coupons": []
     },
@@ -1633,7 +1644,7 @@
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は3.5%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約3ヶ月"
         ],
         "exclusions": [
@@ -1694,13 +1705,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 6.0,
+            "rate": 6,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は6.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約2ヶ月"
         ],
         "exclusions": [
@@ -1761,13 +1772,13 @@
         "status": "confirmed",
         "normal": {
           "earn": {
-            "rate": 1.0,
+            "rate": 1,
             "basis": "tax_excluded"
           }
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は1.0%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約2ヶ月"
         ],
         "exclusions": [
@@ -1834,7 +1845,7 @@
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は2.5%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約2ヶ月"
         ],
         "exclusions": [
@@ -1904,7 +1915,7 @@
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は最大7.5%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約2ヶ月",
           "対象商品・カテゴリーにより還元率が低い場合あり（表示は最大値）"
         ],
@@ -1973,7 +1984,7 @@
         },
         "campaigns": [],
         "conditions": [
-          "2026-11-13時点の表示は3.5%（変動するため購入直前に再確認）",
+          "表示中の還元率は最終確認日時点のもの（変動するため購入直前に公式で再確認）",
           "ポイント反映の目安：約1ヶ月"
         ],
         "exclusions": [
@@ -2041,7 +2052,8 @@
       "rebates": {
         "listed": false,
         "status": "confirmed",
-        "exclusions": []
+        "exclusions": [],
+        "conditions": []
       },
       "coupons": [],
       "extras": [

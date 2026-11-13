@@ -611,6 +611,20 @@
     sh.addEventListener('change', rerender);
   }
 
+  // ============================================================ 自動更新の結果
+  function autoUpdatePanel() {
+    const u = (S.onlineMeta && S.onlineMeta.autoUpdate) || (S.storesMeta && S.storesMeta.autoUpdate);
+    if (!u) return `<div class="panel"><h2>自動更新</h2><p class="sub" style="font-size:14px">毎朝6時に公式ページの数値を自動確認します（まだ実行されていません）。</p></div>`;
+    const at = new Date(u.at);
+    const when = isNaN(at) ? ymd(u.date) : at.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+    const fmt = (e) => e ? (e.rate != null ? `${e.upTo ? '最大' : ''}${e.rate}%` : `${e.per}円で${e.points}pt`) : '-';
+    return `<div class="panel"><h2>自動更新（毎朝6時）</h2>
+      <dl class="kv"><dt>最終確認</dt><dd>${esc(when)}</dd><dt>確認した項目</dt><dd>${u.checked}件</dd><dt>変更</dt><dd>${u.changed.length}件</dd><dt>要確認</dt><dd>${u.issues.length}件</dd></dl>
+      ${u.changed.length ? `<h3 style="font-size:13px;margin:10px 0 4px">変更された項目</h3><ul class="plain">${u.changed.slice(0, 20).map((c) => `<li>${esc(c.where)}：${esc(fmt(c.from))} → <strong>${esc(fmt(c.to))}</strong></li>`).join('')}</ul>` : ''}
+      ${u.issues.length ? `<h3 style="font-size:13px;margin:10px 0 4px">自動で読み取れなかった項目（以前の値のまま）</h3><ul class="plain">${u.issues.map((i) => `<li><a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.where)}</a>：${esc(i.reason)}</li>`).join('')}</ul>` : ''}
+      <p class="foot">自動で更新するのは、公式ページから機械的に読み取れる数値（リーベイツ還元率・ポイントカードの付与率）だけです。キャンペーンや条件の変化は反映されません。</p></div>`;
+  }
+
   // ============================================================ 設定
   function renderSettings() {
     const st = S.settings;
@@ -652,6 +666,7 @@
       <div class="panel"><h2>データ</h2>
         <dl class="kv"><dt>店舗データ更新</dt><dd>${ymd(S.storesMeta.updatedAt)}</dd><dt>オンラインデータ更新</dt><dd>${ymd(S.onlineMeta.updatedAt)}</dd><dt>今日</dt><dd>${ymd(today())}</dd></dl>
       </div>
+      ${autoUpdatePanel()}
 
       <div class="btn-col" style="margin-top:16px"><button class="btn" id="reset">初期設定に戻す</button></div>`;
 

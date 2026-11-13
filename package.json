@@ -1,0 +1,12 @@
+{
+  "name": "otoku-pay-guide",
+  "private": true,
+  "description": "お得な支払いガイド（静的サイト）。依存パッケージはデータ自動更新とテスト専用",
+  "scripts": {
+    "test": "node tests/engine.test.js && node tests/update-data.test.mjs",
+    "update-data": "node scripts/update-data.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  }
+}
