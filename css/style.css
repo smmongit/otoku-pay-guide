@@ -251,3 +251,89 @@ main { max-width: 720px; margin: 0 auto; padding: 0 16px 48px; outline: none; }
 .b-vs { color: var(--text-2); background: var(--surface-2); border: 1px solid var(--border); }
 .compare .verdict { font-weight: 800; margin: 0 0 6px; }
 .compare .split > div.win { outline: 2px solid var(--win-border); background: var(--win-bg); }
+
+/* =====================================================================
+   テーマ：Lavender × Gold（薄紫×ゴールド）
+   ===================================================================== */
+:root {
+  --bg: #f7f3fb; --surface: #ffffff; --surface-2: #f1ebf7;
+  --text: #3a2f48; --text-2: #5f5470; --text-3: #9a90a8; --border: #e8e0f1;
+  --hdr-bg: linear-gradient(120deg, #efe6f8, #f8eef5); --hdr-ink: #3a2f48; --hdr-ink-2: #8f84a0; --hdr-line: #e6dcef;
+  --gold: #c2a165; --gold-ink: #9a7a3e;
+  --rec-bg: linear-gradient(135deg, #fffdf8, #fbf6ec); --rec-line: #e7d6b3;
+  --win-bg: #fbf6ec; --win-border: #e7d6b3; --win-ink: #9a7a3e;
+  --chip-on-bg: #3a2f48; --chip-on-ink: #fff;
+  --accent: #8a6fb3; --accent-soft: #efe7f8; --accent-ink: #6b5a8c;
+  --btn-bg: #3a2f48; --btn-ink: #f3e3bd;
+  --camp-bg: #fbeef3; --camp-ink: #9b4a6a;
+  --banner-bg: #f1eaf8; --banner-ink: #5d4c7a;
+  --sample-bg: #f1eaf8; --sample-ink: #5d4c7a;
+  --ok: #3f7d5c; --ok-bg: #e7f3ec; --cond: #93702c; --cond-bg: #f8efdc; --unk: #a24a5e; --unk-bg: #f9e8ec; --no: #7a7385; --no-bg: #efecf3;
+  --shadow: 0 6px 20px rgba(90, 70, 120, .06);
+  --font-body: "Zen Kaku Gothic New", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --font-head: var(--font-body);
+  --font-num: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1824; --surface: #262030; --surface-2: #2f283a;
+    --text: #efe9f5; --text-2: #c9bfd6; --text-3: #9a90a8; --border: #3a3246;
+    --hdr-bg: linear-gradient(120deg, #2a2335, #33283a); --hdr-ink: #efe9f5; --hdr-ink-2: #a99cb9; --hdr-line: #3a3246;
+    --gold: #d6b77d; --gold-ink: #e2c68f;
+    --rec-bg: linear-gradient(135deg, #2c2533, #332a2f); --rec-line: #6b5a3c;
+    --win-bg: #332a2f; --win-border: #6b5a3c; --win-ink: #e2c68f;
+    --chip-on-bg: #e2c68f; --chip-on-ink: #241d2b;
+    --accent: #cbbbe6; --accent-soft: #352c44; --accent-ink: #cbbbe6;
+    --btn-bg: #e2c68f; --btn-ink: #241d2b;
+    --camp-bg: #3a2431; --camp-ink: #f0b3c9;
+    --banner-bg: #2f283a; --banner-ink: #d6c8e8; --sample-bg: #2f283a; --sample-ink: #d6c8e8;
+    --ok: #8fd3ad; --ok-bg: #1f3529; --cond: #e8c983; --cond-bg: #3a2f17; --unk: #f2a7b8; --unk-bg: #3c1f28; --no: #b3abbd; --no-bg: #2f2a36;
+    --shadow: none;
+  }
+}
+/* ===== 共通：テーマ変数を使うコンポーネント上書き ===== */
+body { font-family: var(--font-body); letter-spacing: .02em; background: var(--bg); }
+.appbar { background: var(--hdr-bg); color: var(--hdr-ink); border-bottom: 1px solid var(--hdr-line); box-shadow: none; }
+.appbar-title { font-family: var(--font-head); font-weight: 600; letter-spacing: .08em; font-size: 17px; }
+.appbar-title img { border-radius: 9px; }
+.tabs a { color: var(--hdr-ink-2); font-weight: 500; letter-spacing: .12em; font-size: 14px; }
+.tabs a[aria-current="page"] { color: var(--hdr-ink); border-bottom: 2px solid var(--gold); }
+.search input { border-radius: 999px; border-color: var(--border); background: var(--surface); box-shadow: 0 1px 0 rgba(0,0,0,.02); }
+.search input:focus { outline: 1.5px solid var(--gold); }
+.chip { border-color: var(--border); background: var(--surface); color: var(--text-2); font-size: 13px; letter-spacing: .04em; }
+.chip[aria-pressed="true"] { background: var(--chip-on-bg); color: var(--chip-on-ink); border-color: var(--chip-on-bg); }
+.card { border-radius: 18px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+.card h3 { font-family: var(--font-head); font-weight: 600; letter-spacing: .04em; }
+.section h2 { font-family: var(--font-head); color: var(--text); font-weight: 600; letter-spacing: .1em; font-size: 14px; }
+.section h2::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); opacity: .6; margin-left: 6px; align-self: center; }
+.rec { background: var(--rec-bg); border: 1px solid var(--rec-line); color: var(--text-2); border-radius: 14px; }
+.rec-label { color: var(--gold-ink); letter-spacing: .1em; font-weight: 600; }
+.rec-rate, .hero .rate { font-family: var(--font-num); color: var(--gold-ink); font-weight: 600; letter-spacing: .01em; }
+.rec-rate { font-size: 28px; }
+.hero { background: var(--rec-bg); border: 1px solid var(--rec-line); border-radius: 20px; }
+.hero .k { color: var(--gold-ink); letter-spacing: .12em; }
+.hero .rate { font-size: 44px; }
+.hero.camp, .camp-line { background: var(--camp-bg); color: var(--camp-ink); border-color: transparent; }
+.panel { border-radius: 18px; }
+.panel h2 { font-family: var(--font-head); letter-spacing: .08em; font-weight: 600; }
+.banner { background: var(--banner-bg); color: var(--banner-ink); border-radius: 14px; }
+.badge { border-radius: 999px; padding: 1px 9px; font-weight: 600; letter-spacing: .03em; }
+.b-coupon { color: var(--gold-ink); background: transparent; border: 1px solid var(--gold); }
+.b-vs { color: var(--accent-ink); background: var(--accent-soft); border: 0; }
+.fav[aria-pressed="true"] { color: var(--gold); }
+.btn.primary { background: var(--btn-bg); border-color: var(--btn-bg); color: var(--btn-ink); border-radius: 999px; }
+.btn { border-radius: 999px; }
+/* デスクトップ：幅を広げて3列 */
+@media (min-width: 1024px) {
+  main, .appbar-row, .tabs { max-width: 1080px; }
+  .list.grid2 { grid-template-columns: repeat(3, 1fr); }
+  .tabs { justify-content: flex-start; gap: 28px; }
+  .tabs a { flex: 0 0 auto; }
+}
+a { color: var(--accent); }
+.b-coupon { color: var(--gold-ink); background: transparent; border: 1px solid var(--gold); }
+.compare .split > div.win { outline: 1.5px solid var(--win-border); background: var(--win-bg); }
+.section h2 { flex-wrap: wrap; }
+.section h2 small { font-weight: 400; letter-spacing: .02em; }
+@media (max-width: 639px) { .section h2::after { display: none; } }
+.offline-badge { background: var(--text); color: var(--bg); }
