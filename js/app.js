@@ -398,8 +398,8 @@
     const list = (S.onlineMeta && S.onlineMeta.upcomingSales) || [];
     if (!list.length) return '';
     return `<details class="upcoming">
-      <summary>📅 大型セール予定：${list.map((u) => esc(u.short || u.title)).join('・')} <span class="muted">（日程は公式発表待ち）</span></summary>
-      <ul>${list.map((u) => `<li><strong>${esc(u.title)}</strong>：${esc(u.expected)}${u.note ? `<br><span class="muted">${esc(u.note)}</span>` : ''}${u.url ? ` <a href="${esc(u.url)}" target="_blank" rel="noopener">公式 ↗</a>` : ''}</li>`).join('')}</ul>
+      <summary>📅 大型セール予定：${list.map((u) => esc(u.short || u.title)).join('・')} <span class="muted">（タップで詳細）</span></summary>
+      <ul>${list.map((u) => `<li>${u.status === 'confirmed' ? '<span class="badge b-ok">日程確定</span> ' : u.status === 'partial' ? '<span class="badge b-cond">開始日のみ発表</span> ' : '<span class="badge b-unk">日程未発表</span> '}<strong>${esc(u.title)}</strong>：${esc(u.expected)}${u.note ? `<br><span class="muted">${esc(u.note)}</span>` : ''}${u.url ? ` <a href="${esc(u.url)}" target="_blank" rel="noopener">公式 ↗</a>` : ''}</li>`).join('')}</ul>
     </details>`;
   }
 
