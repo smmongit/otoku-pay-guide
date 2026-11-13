@@ -5302,6 +5302,127 @@
       ],
       "checkedAt": "2026-11-13",
       "coupons": []
+    },
+    {
+      "id": "kaldi",
+      "name": "カルディコーヒーファーム",
+      "category": "supermarket",
+      "aliases": [
+        "カルディ",
+        "KALDI",
+        "かるでぃ",
+        "輸入食品"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_included"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "note": "一部店舗では利用不可",
+          "src": "https://pointcard.rakuten.co.jp/partner/kaldi/"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "出店している商業施設の運用により、使えない店舗・カードあり（公式FAQ）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "出店している商業施設の運用により、使えない店舗・カードあり（公式FAQ）"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%",
+          "note": "楽天ペイ公式の対象外リストは一部店舗のみ（柏駅）。取り扱いは店舗により異なる"
+        },
+        "paypay_balance": {
+          "status": "unverified",
+          "note": "公式FAQ：コード決済は出店先の商業施設により店舗ごとに異なる（PayPayの明記なし）"
+        },
+        "paypay_credit": {
+          "status": "unverified"
+        },
+        "dpoint_card": {
+          "status": "unverified",
+          "note": "dポイント公式の加盟店はオンラインストアのみ"
+        },
+        "d_barai": {
+          "status": "unverified"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "コーヒーと輸入食品の専門店",
+        "決済方法は出店している商業施設の運用に従うため、店舗ごとに異なる（公式FAQ）",
+        "独自のカルディカード（プリペイド）は比較対象外"
+      ],
+      "sources": [
+        {
+          "title": "楽天ポイントカード：加盟店ページ",
+          "url": "https://pointcard.rakuten.co.jp/partner/kaldi/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "カルディ：クレジットカードは使えますか？（FAQ）",
+          "url": "https://www.kaldi.co.jp/faq/shopinfo/using/post001.html",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "カルディ：電子マネーは使えますか？（FAQ）",
+          "url": "https://www.kaldi.co.jp/faq/shopinfo/using/post_4.html",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：コード・QR払い 最大1.5%還元の対象外店舗",
+          "url": "https://pay.rakuten.co.jp/topics/pointprogram/excluded-shops/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ポイントカード：お支払いとの合わせワザでダブルで貯まる",
+          "url": "https://pointcard.rakuten.co.jp/campaign/entire/w-point",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天カード：100円につき1ポイント",
+          "url": "https://www.rakuten-card.co.jp/card/rakuten-card/",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
     }
   ]
 }
