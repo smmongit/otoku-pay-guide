@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#0f3d3e"/>
+  <circle cx="256" cy="256" r="150" fill="#ffd95e"/>
+  <circle cx="256" cy="256" r="118" fill="none" stroke="#e7b931" stroke-width="12"/>
+  <text x="256" y="300" text-anchor="middle" font-family="Hiragino Sans, Noto Sans JP, sans-serif" font-weight="800" font-size="150" fill="#0f3d3e">P</text>
+  <path d="M352 120l14 30 32 4-24 22 6 32-28-16-28 16 6-32-24-22 32-4z" fill="#ffffff"/>
+</svg>

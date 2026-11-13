@@ -1,0 +1,406 @@
+{
+  "meta": {
+    "version": 1,
+    "updatedAt": "2026-11-13",
+    "note": "Phase 1 のサンプルデータです。チェーン名・還元率はすべて架空で、実在のチェーン・決済サービスの情報ではありません。",
+    "_format": "1件＝1チェーン（ブランド）。支店名・住所・最寄り駅は持たない。店舗により異なる条件は notes / condition に書く。"
+  },
+  "chains": [
+    {
+      "id": "sample-sasayama",
+      "name": "【サンプル】ささやまスーパー",
+      "aliases": [
+        "ささやま",
+        "サンプルスーパー"
+      ],
+      "category": "supermarket",
+      "isSample": true,
+      "defaultTaxRate": 0.08,
+      "pointCardRule": {
+        "maxCards": 1,
+        "status": "confirmed",
+        "note": "ポイントカードは1会計につき1枚まで（サンプル）"
+      },
+      "methods": {
+        "rakuten_pointcard": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_excluded"
+          },
+          "stack": {
+            "with": "any",
+            "status": "confirmed"
+          },
+          "note": "税抜200円ごとに1ポイント（サンプル）"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          }
+        },
+        "olive_touch_phone": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "rate": 0.5
+          }
+        },
+        "olive_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "rate": 0.5
+          }
+        },
+        "paypay_balance": {
+          "available": false,
+          "status": "confirmed"
+        },
+        "dpoint_card": {
+          "available": false,
+          "status": "confirmed"
+        },
+        "setagaya_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "rate": 1
+          },
+          "condition": "せたがやPay加盟店舗のみ（店舗により異なる・サンプル）"
+        }
+      },
+      "campaigns": [
+        {
+          "id": "sample-setagaya-202611",
+          "title": "【サンプル】せたがやPay 10%追加還元",
+          "method": "setagaya_pay",
+          "earn": {
+            "rate": 10,
+            "maxPoints": 1000
+          },
+          "start": "2026-11-01",
+          "end": "2026-11-30",
+          "status": "confirmed",
+          "conditions": "1回あたり1,000ポイントまで（サンプル）"
+        },
+        {
+          "id": "sample-olive-nodate",
+          "title": "【サンプル】終了日不明のキャンペーン",
+          "method": "olive_card",
+          "earn": {
+            "rate": 5
+          },
+          "start": "2026-10-01",
+          "end": null,
+          "status": "confirmed",
+          "conditions": "終了日が公表されていない例"
+        }
+      ],
+      "notes": [
+        "お酒・たばこ・商品券はポイント対象外（サンプル）",
+        "せたがやPayは加盟している店舗でのみ利用可（サンプル）"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "sample-midori",
+      "name": "【サンプル】みどり薬局",
+      "aliases": [
+        "みどり",
+        "サンプル薬局"
+      ],
+      "category": "drugstore",
+      "isSample": true,
+      "pointCardRule": {
+        "maxCards": 1,
+        "status": "confirmed"
+      },
+      "methods": {
+        "dpoint_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "stack": {
+            "with": "any",
+            "status": "confirmed"
+          }
+        },
+        "d_barai": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "rate": 0.5
+          }
+        },
+        "rakuten_pointcard": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "stack": {
+            "status": "unverified"
+          },
+          "note": "支払い方法との併用可否が未確認の例"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          }
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "unverified",
+          "note": "還元率が未確認の例"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "rate": 0.5
+          }
+        }
+      },
+      "campaigns": [],
+      "notes": [
+        "処方箋の調剤分はポイント対象外（サンプル）"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "sample-sakura",
+      "name": "【サンプル】さくらバーガー",
+      "aliases": [
+        "さくバ",
+        "サンプルバーガー"
+      ],
+      "category": "restaurant",
+      "isSample": true,
+      "methods": {
+        "olive_touch_phone": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "rate": 7
+          },
+          "requires": [
+            "smartphone_touch"
+          ],
+          "condition": "スマホのタッチ決済で支払った場合のみ。カード現物は対象外（サンプル）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "rate": 0.5
+          },
+          "note": "カード現物は通常還元（サンプル）"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          }
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "rate": 1
+          }
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "rate": 0.5
+          }
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "rate": 1
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ]
+        }
+      },
+      "campaigns": [],
+      "notes": [
+        "デリバリー注文は対象外（サンプル）"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "sample-komorebi",
+      "name": "【サンプル】こもれび珈琲",
+      "aliases": [
+        "こもれび",
+        "サンプルカフェ"
+      ],
+      "category": "cafe",
+      "isSample": true,
+      "methods": {
+        "rakuten_card": {
+          "available": true,
+          "status": "unverified",
+          "note": "利用できるが還元率が未確認の例"
+        },
+        "paypay_balance": {
+          "available": null,
+          "status": "unverified"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified"
+        }
+      },
+      "campaigns": [],
+      "notes": [],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "sample-tsubame",
+      "name": "【サンプル】つばめマート",
+      "aliases": [
+        "つばめ",
+        "サンプルコンビニ"
+      ],
+      "category": "convenience",
+      "isSample": true,
+      "pointCardRule": {
+        "maxCards": 1,
+        "status": "confirmed"
+      },
+      "methods": {
+        "rakuten_pointcard": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "rankEarn": {
+            "platinum": {
+              "per": 100,
+              "points": 1
+            },
+            "diamond": {
+              "per": 100,
+              "points": 1
+            }
+          },
+          "stack": {
+            "with": "any",
+            "status": "confirmed"
+          },
+          "note": "プラチナ以上はポイント2倍（会員ランク特典の例・サンプル）"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          }
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "rate": 0.5
+          }
+        },
+        "dpoint_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "stack": {
+            "with": "any",
+            "status": "confirmed"
+          }
+        }
+      },
+      "campaigns": [],
+      "notes": [],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "sample-hanamichi",
+      "name": "【サンプル】はなみち食堂",
+      "aliases": [
+        "はなみち",
+        "サンプル食堂"
+      ],
+      "category": "restaurant",
+      "isSample": true,
+      "methods": {
+        "rakuten_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          }
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "rate": 1
+          }
+        },
+        "setagaya_pay": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "rate": 1
+          }
+        }
+      },
+      "campaigns": [
+        {
+          "id": "sample-setagaya-ended",
+          "title": "【サンプル】終了したせたがやPay 20%還元",
+          "method": "setagaya_pay",
+          "earn": {
+            "rate": 20
+          },
+          "start": "2026-10-01",
+          "end": "2026-10-31",
+          "status": "confirmed"
+        }
+      ],
+      "notes": [
+        "同率の場合に優先順位で決まる例（サンプル）"
+      ],
+      "sources": [],
+      "checkedAt": null
+    }
+  ]
+}

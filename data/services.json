@@ -1,0 +1,128 @@
+{
+  "_comment": "比較対象の5サービスと、各サービスの決済手段の定義。type: payment=支払い（1会計で1つ）/ presentation=ポイントカード提示。pointType はポイントの種類（settings.json の pointValue と対応）。",
+  "services": {
+    "rakuten": {
+      "label": "楽天",
+      "short": "楽天",
+      "color": "#bf0000"
+    },
+    "olive": {
+      "label": "Olive／Vポイント",
+      "short": "Olive",
+      "color": "#0f7b5a"
+    },
+    "paypay": {
+      "label": "PayPay",
+      "short": "PayPay",
+      "color": "#e8481f"
+    },
+    "dpoint": {
+      "label": "dポイント／d払い",
+      "short": "dポイント",
+      "color": "#c8007d"
+    },
+    "setagaya": {
+      "label": "せたがやPay",
+      "short": "せたがやPay",
+      "color": "#2a7fc9"
+    }
+  },
+  "methods": {
+    "rakuten_pointcard": {
+      "service": "rakuten",
+      "type": "presentation",
+      "label": "楽天ポイントカード提示",
+      "pointType": "rakuten"
+    },
+    "rakuten_card": {
+      "service": "rakuten",
+      "type": "payment",
+      "label": "楽天カード",
+      "pointType": "rakuten"
+    },
+    "rakuten_pay": {
+      "service": "rakuten",
+      "type": "payment",
+      "label": "楽天ペイ",
+      "pointType": "rakuten"
+    },
+    "vpoint_card": {
+      "service": "olive",
+      "type": "presentation",
+      "label": "Vポイント提示",
+      "pointType": "vpoint"
+    },
+    "olive_touch_phone": {
+      "service": "olive",
+      "type": "payment",
+      "label": "Olive（スマホのタッチ決済）",
+      "pointType": "vpoint"
+    },
+    "olive_card": {
+      "service": "olive",
+      "type": "payment",
+      "label": "Olive（カード現物）",
+      "pointType": "vpoint"
+    },
+    "paypay_balance": {
+      "service": "paypay",
+      "type": "payment",
+      "label": "PayPay残高",
+      "pointType": "paypay"
+    },
+    "paypay_credit": {
+      "service": "paypay",
+      "type": "payment",
+      "label": "PayPayクレジット",
+      "pointType": "paypay"
+    },
+    "dpoint_card": {
+      "service": "dpoint",
+      "type": "presentation",
+      "label": "dポイントカード提示",
+      "pointType": "dpoint"
+    },
+    "d_barai": {
+      "service": "dpoint",
+      "type": "payment",
+      "label": "d払い",
+      "pointType": "dpoint"
+    },
+    "setagaya_pay": {
+      "service": "setagaya",
+      "type": "payment",
+      "label": "せたがやPay",
+      "pointType": "setagaya"
+    }
+  },
+  "capabilities": {
+    "smartphone_touch": "スマホ（Apple Pay / Google Pay 等）でOliveのタッチ決済ができる",
+    "rakuten_card_holder": "楽天カードを持っている",
+    "paypay_credit_holder": "PayPayクレジットを使える",
+    "setagaya_pay_user": "せたがやPayアプリを使える"
+  },
+  "categories": {
+    "supermarket": "スーパー",
+    "drugstore": "ドラッグストア",
+    "restaurant": "飲食店",
+    "cafe": "カフェ",
+    "convenience": "コンビニ",
+    "other": "その他"
+  },
+  "rakutenRanks": {
+    "regular": "レギュラー",
+    "silver": "シルバー",
+    "gold": "ゴールド",
+    "platinum": "プラチナ",
+    "diamond": "ダイヤモンド"
+  },
+  "onlineCategories": {
+    "fashion": "ファッション",
+    "cosme": "コスメ・美容",
+    "electronics": "家電・PC",
+    "department": "百貨店・総合EC",
+    "daily": "食品・日用品",
+    "travel": "旅行・ホテル",
+    "other": "その他"
+  }
+}

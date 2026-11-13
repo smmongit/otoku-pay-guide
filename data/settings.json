@@ -1,0 +1,32 @@
+{
+  "_comment": "個人設定の初期値。アプリの「設定」画面で端末ごとに上書きできます（上書きはこの端末のブラウザにのみ保存）。",
+  "rakutenRank": "platinum",
+  "priority": [
+    "rakuten",
+    "olive",
+    "paypay",
+    "dpoint",
+    "setagaya"
+  ],
+  "enabledServices": [
+    "rakuten",
+    "olive",
+    "paypay",
+    "dpoint",
+    "setagaya"
+  ],
+  "pointValue": {
+    "rakuten": 1,
+    "vpoint": 1,
+    "paypay": 1,
+    "dpoint": 1,
+    "setagaya": 1
+  },
+  "capabilities": [
+    "smartphone_touch",
+    "rakuten_card_holder",
+    "setagaya_pay_user"
+  ],
+  "referenceAmount": 1000,
+  "defaultTaxRate": 0.1
+}

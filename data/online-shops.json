@@ -1,0 +1,1003 @@
+{
+  "meta": {
+    "version": 1,
+    "updatedAt": "2026-11-13",
+    "note": "【サンプル】は架空のショップ（計算確認用）。isCandidate=true は調査候補で、楽天リーベイツへの掲載・還元率・URLは未確認です。",
+    "rebatesTopUrl": null
+  },
+  "shops": [
+    {
+      "id": "sample-hikari",
+      "name": "【サンプル】ひかりコスメ公式ストア",
+      "aliases": [
+        "ひかり",
+        "サンプルコスメ"
+      ],
+      "category": "cosme",
+      "isSample": true,
+      "popular": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 3,
+            "basis": "tax_excluded"
+          }
+        },
+        "campaigns": [
+          {
+            "id": "hikari-1111",
+            "title": "【サンプル】期間限定 ポイントバック6%",
+            "earn": {
+              "rate": 6,
+              "basis": "tax_excluded"
+            },
+            "start": "2026-11-10",
+            "end": "2026-11-20",
+            "status": "confirmed",
+            "conditions": "期間中の注文のみ（サンプル）"
+          }
+        ],
+        "firstTime": {
+          "earn": {
+            "fixedPoints": 500
+          },
+          "status": "conditional",
+          "conditions": "楽天リーベイツ経由で初めて購入する場合のみ（サンプル）"
+        },
+        "conditions": [
+          "税抜・送料を除いた商品代金が対象（サンプル）"
+        ],
+        "exclusions": [
+          "アプリからの購入は対象外（サンプル）",
+          "他社クーポン併用時は対象外（サンプル）",
+          "店舗受け取りは対象外（サンプル）"
+        ]
+      },
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          }
+        },
+        "olive_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "rate": 0.5
+          }
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "rate": 0.5
+          }
+        }
+      },
+      "notes": [],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "sample-soyokaze",
+      "name": "【サンプル】そよかぜアパレル",
+      "aliases": [
+        "そよかぜ",
+        "サンプルアパレル"
+      ],
+      "category": "fashion",
+      "isSample": true,
+      "popular": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 2
+          }
+        },
+        "campaigns": [
+          {
+            "id": "soyokaze-oct",
+            "title": "【サンプル】終了したキャンペーン 8%",
+            "earn": {
+              "rate": 8
+            },
+            "start": "2026-10-01",
+            "end": "2026-10-31",
+            "status": "confirmed"
+          }
+        ],
+        "exclusions": [
+          "セール品は対象外（サンプル）"
+        ]
+      },
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          }
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "rate": 0.5
+          }
+        }
+      },
+      "notes": [],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "sample-denki",
+      "name": "【サンプル】でんきの森オンライン",
+      "aliases": [
+        "でんきの森",
+        "サンプル家電"
+      ],
+      "category": "electronics",
+      "isSample": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 1
+          }
+        },
+        "campaigns": [
+          {
+            "id": "denki-nodate",
+            "title": "【サンプル】終了日不明のキャンペーン 5%",
+            "earn": {
+              "rate": 5
+            },
+            "start": "2026-11-01",
+            "end": null,
+            "status": "confirmed"
+          }
+        ],
+        "exclusions": [
+          "ゲーム機・金券は対象外（サンプル）"
+        ]
+      },
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          }
+        },
+        "olive_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "rate": 0.5
+          }
+        }
+      },
+      "notes": [],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "sample-tabi",
+      "name": "【サンプル】たびのそら予約",
+      "aliases": [
+        "たびのそら",
+        "サンプル旅行"
+      ],
+      "category": "travel",
+      "isSample": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": true,
+        "status": "confirmed",
+        "normal": {
+          "earn": {
+            "rate": 2
+          }
+        },
+        "campaigns": [
+          {
+            "id": "tabi-dec",
+            "title": "【サンプル】12月開始予定 4%",
+            "earn": {
+              "rate": 4
+            },
+            "start": "2026-12-01",
+            "end": "2026-12-31",
+            "status": "confirmed"
+          }
+        ],
+        "conditions": [
+          "宿泊完了後にポイント付与（サンプル）"
+        ],
+        "exclusions": [
+          "現地払いプランは対象外（サンプル）"
+        ]
+      },
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          }
+        }
+      },
+      "notes": [],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "sample-marugoto",
+      "name": "【サンプル】まるごと日用品",
+      "aliases": [
+        "まるごと",
+        "サンプル日用品"
+      ],
+      "category": "daily",
+      "isSample": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": false,
+        "status": "confirmed"
+      },
+      "payments": {
+        "rakuten_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          }
+        }
+      },
+      "notes": [
+        "楽天リーベイツ非掲載の例（サンプル）"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-01",
+      "name": "UNIQLO",
+      "aliases": [
+        "ユニクロ"
+      ],
+      "category": "fashion",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-02",
+      "name": "GU",
+      "aliases": [
+        "ジーユー"
+      ],
+      "category": "fashion",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-03",
+      "name": "ZOZOTOWN",
+      "aliases": [
+        "ゾゾタウン",
+        "ゾゾ"
+      ],
+      "category": "fashion",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-04",
+      "name": "adidas",
+      "aliases": [
+        "アディダス"
+      ],
+      "category": "fashion",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-05",
+      "name": "Nike",
+      "aliases": [
+        "ナイキ"
+      ],
+      "category": "fashion",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-06",
+      "name": "New Balance",
+      "aliases": [
+        "ニューバランス",
+        "ニューバラ"
+      ],
+      "category": "fashion",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-07",
+      "name": "SHEIN",
+      "aliases": [
+        "シーイン"
+      ],
+      "category": "fashion",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-08",
+      "name": "BEAMS",
+      "aliases": [
+        "ビームス"
+      ],
+      "category": "fashion",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-09",
+      "name": "UNITED ARROWS",
+      "aliases": [
+        "ユナイテッドアローズ",
+        "ユナイテッドアローズ"
+      ],
+      "category": "fashion",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-10",
+      "name": "WACOAL",
+      "aliases": [
+        "ワコール"
+      ],
+      "category": "fashion",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-11",
+      "name": "ベルメゾン",
+      "aliases": [
+        "bellemaison",
+        "千趣会"
+      ],
+      "category": "fashion",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-12",
+      "name": "資生堂オンラインストア",
+      "aliases": [
+        "shiseido",
+        "しせいどう"
+      ],
+      "category": "cosme",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-13",
+      "name": "DHC",
+      "aliases": [
+        "ディーエイチシー"
+      ],
+      "category": "cosme",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-14",
+      "name": "@cosme SHOPPING",
+      "aliases": [
+        "アットコスメ",
+        "atcosme"
+      ],
+      "category": "cosme",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-15",
+      "name": "FANCL",
+      "aliases": [
+        "ファンケル"
+      ],
+      "category": "cosme",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-16",
+      "name": "オルビス",
+      "aliases": [
+        "orbis"
+      ],
+      "category": "cosme",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-17",
+      "name": "ドクターシーラボ",
+      "aliases": [
+        "シーラボ",
+        "drcilabo"
+      ],
+      "category": "cosme",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-18",
+      "name": "iHerb",
+      "aliases": [
+        "アイハーブ"
+      ],
+      "category": "cosme",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-19",
+      "name": "OLIVE YOUNG",
+      "aliases": [
+        "オリーブヤング",
+        "オリヤン"
+      ],
+      "category": "cosme",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-20",
+      "name": "Apple公式サイト",
+      "aliases": [
+        "apple",
+        "アップル",
+        "iphone",
+        "mac"
+      ],
+      "category": "electronics",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-21",
+      "name": "ソニーストア",
+      "aliases": [
+        "sony",
+        "ソニー"
+      ],
+      "category": "electronics",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-22",
+      "name": "ビックカメラ.com",
+      "aliases": [
+        "ビックカメラ",
+        "ビック",
+        "biccamera"
+      ],
+      "category": "electronics",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-23",
+      "name": "ヨドバシ.com",
+      "aliases": [
+        "ヨドバシカメラ",
+        "ヨドバシ",
+        "yodobashi"
+      ],
+      "category": "electronics",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-24",
+      "name": "au PAY マーケット",
+      "aliases": [
+        "auペイマーケット",
+        "aupay"
+      ],
+      "category": "department",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-25",
+      "name": "LOHACO",
+      "aliases": [
+        "ロハコ"
+      ],
+      "category": "department",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-26",
+      "name": "イオンスタイルオンライン",
+      "aliases": [
+        "イオン",
+        "aeon"
+      ],
+      "category": "department",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-27",
+      "name": "三越伊勢丹オンラインストア",
+      "aliases": [
+        "三越",
+        "伊勢丹"
+      ],
+      "category": "department",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-28",
+      "name": "高島屋オンラインストア",
+      "aliases": [
+        "タカシマヤ",
+        "たかしまや"
+      ],
+      "category": "department",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-29",
+      "name": "大丸松坂屋オンラインストア",
+      "aliases": [
+        "大丸",
+        "松坂屋"
+      ],
+      "category": "department",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-30",
+      "name": "アカチャンホンポ",
+      "aliases": [
+        "赤ちゃん本舗",
+        "アカホン"
+      ],
+      "category": "daily",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-31",
+      "name": "サーモスオンライン",
+      "aliases": [
+        "thermos",
+        "サーモス"
+      ],
+      "category": "daily",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-32",
+      "name": "HARIO NETSHOP",
+      "aliases": [
+        "ハリオ",
+        "hario"
+      ],
+      "category": "daily",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    },
+    {
+      "id": "cand-33",
+      "name": "JAL",
+      "aliases": [
+        "日本航空",
+        "ジャル"
+      ],
+      "category": "travel",
+      "isCandidate": true,
+      "officialUrl": null,
+      "rebatesUrl": null,
+      "rebates": {
+        "listed": null,
+        "status": "unverified"
+      },
+      "payments": {},
+      "notes": [
+        "調査前：楽天リーベイツの掲載・還元率は未確認です"
+      ],
+      "sources": [],
+      "checkedAt": null
+    }
+  ]
+}
