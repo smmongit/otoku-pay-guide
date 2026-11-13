@@ -76,24 +76,53 @@
     if (!o.rakutenRank) S.settings.rakutenRank = E.rankOn(S.base, today());
   }
 
+  async function loadData() {
+    const [defs, base, stores, online] = await Promise.all([
+      getJSON('data/services.json'), getJSON('data/settings.json'), getJSON('data/stores.json'), getJSON('data/online-shops.json'),
+    ]);
+    S.defs = defs; S.base = base; S.storesMeta = stores.meta; S.onlineMeta = online.meta;
+    applySettings();
+    S.stores = stores.chains.map((c) => E.resolveStore({}, c));
+    S.storeById = Object.fromEntries(S.stores.map((s) => [s.id, s]));
+    S.shops = online.shops;
+    S.shopById = Object.fromEntries(S.shops.map((s) => [s.id, s]));
+    S.loadedAt = Date.now();
+  }
+
   async function init() {
     try {
-      const [defs, base, stores, online] = await Promise.all([
-        getJSON('data/services.json'), getJSON('data/settings.json'), getJSON('data/stores.json'), getJSON('data/online-shops.json'),
-      ]);
-      S.defs = defs; S.base = base; S.storesMeta = stores.meta; S.onlineMeta = online.meta;
-      applySettings();
-      S.stores = stores.chains.map((c) => E.resolveStore({}, c));
-      S.storeById = Object.fromEntries(S.stores.map((s) => [s.id, s]));
-      S.shops = online.shops;
-      S.shopById = Object.fromEntries(S.shops.map((s) => [s.id, s]));
+      await loadData();
     } catch (err) {
-      app.innerHTML = `<p class="empty"><strong>データを読み込めませんでした</strong>${esc(err.message)}<br>通信状態を確認して再読み込みしてください。</p>`;
+      app.innerHTML = `<p class="empty"><strong>データを読み込めませんでした</strong>${esc(err.message)}<br>通信状態を確認して、右上の「↻」を押してください。</p>`;
       return;
     }
     window.addEventListener('hashchange', route);
     route();
   }
+
+  // ------------------------------------------------------------ 更新（ホーム画面アプリには再読み込みボタンがないため）
+  /** キャッシュを消して、最新のページとデータを読み込み直す */
+  async function hardRefresh() {
+    const btn = document.getElementById('refresh-btn');
+    if (btn) btn.classList.add('spinning');
+    try {
+      const reg = 'serviceWorker' in navigator ? await navigator.serviceWorker.getRegistration() : null;
+      if (reg) await reg.update().catch(() => {});
+      if ('caches' in window) { const keys = await caches.keys(); await Promise.all(keys.map((k) => caches.delete(k))); }
+    } catch { /* オフラインなどで失敗しても再読み込みは行う */ }
+    location.reload();
+  }
+  document.getElementById('refresh-btn')?.addEventListener('click', hardRefresh);
+
+  /** アプリに戻ってきたとき、10分以上たっていればデータだけ裏で読み直す */
+  document.addEventListener('visibilitychange', async () => {
+    if (document.visibilityState !== 'visible' || !S.loadedAt || Date.now() - S.loadedAt < 10 * 60e3) return;
+    try {
+      await loadData();
+      const typing = document.activeElement && /INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName);
+      if (!typing) { const y = window.scrollY; route(); window.scrollTo(0, y); }
+    } catch { /* オフライン時は保存済みデータのまま */ }
+  });
 
   // ------------------------------------------------------------ ルーティング
   function route() {
@@ -664,8 +693,9 @@
       </div>
 
       <div class="panel"><h2>データ</h2>
-        <dl class="kv"><dt>店舗データ更新</dt><dd>${ymd(S.storesMeta.updatedAt)}</dd><dt>オンラインデータ更新</dt><dd>${ymd(S.onlineMeta.updatedAt)}</dd><dt>今日</dt><dd>${ymd(today())}</dd></dl>
+        <dl class="kv"><dt>この端末で読み込んだ日時</dt><dd>${new Date(S.loadedAt).toLocaleString('ja-JP', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</dd><dt>店舗データ更新</dt><dd>${ymd(S.storesMeta.updatedAt)}</dd><dt>オンラインデータ更新</dt><dd>${ymd(S.onlineMeta.updatedAt)}</dd><dt>今日</dt><dd>${ymd(today())}</dd></dl>
       </div>
+        <button class="btn" id="refresh2" style="margin-top:10px;width:100%">↻ 最新の状態に更新する</button>
       ${autoUpdatePanel()}
 
       <div class="btn-col" style="margin-top:16px"><button class="btn" id="reset">初期設定に戻す</button></div>`;
@@ -695,6 +725,7 @@
       save({ capabilities: [...caps] });
     }));
     app.querySelector('#ref').addEventListener('change', (e) => { const v = parseInt(e.target.value, 10); if (v > 0) save({ referenceAmount: v }); });
+    app.querySelector('#refresh2').addEventListener('click', hardRefresh);
     app.querySelector('#spu').addEventListener('change', (e) => { const v = parseFloat(e.target.value); if (v >= 0) save({ ichibaSpuExtra: v }); });
     app.querySelector('#reset').addEventListener('click', () => { LS.del(K.settings); applySettings(); renderSettings(); });
   }
@@ -717,7 +748,14 @@
   net();
 
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-    window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+    // 新しいバージョンのアプリが有効になったら、一度だけ自動で再読み込み（初回インストール時は除く）
+    const hadController = !!navigator.serviceWorker.controller;
+    let reloading = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (!hadController || reloading) return;
+      reloading = true; location.reload();
+    });
+    window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').then((reg) => reg.update()).catch(() => {}));
   }
 
   init();

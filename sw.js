@@ -2,7 +2,7 @@
  * アプリ本体: キャッシュ優先（更新時は CACHE のバージョンを上げる）
  * data/*.json: ネットワーク優先 → 失敗したら保存済みデータ（オフライン閲覧）
  */
-const CACHE = 'opg-v12';
+const CACHE = 'opg-v13';
 const SHELL = [
   './', 'index.html', 'css/style.css', 'js/engine.js', 'js/app.js', 'manifest.json',
   'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
@@ -10,7 +10,8 @@ const SHELL = [
 ];
 
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
+  // cache:'reload' で HTTP キャッシュを通さず必ずサーバーから取得（古いファイルの取り込みを防ぐ）
+  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL.map((u) => new Request(u, { cache: 'reload' })))).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (e) => {

@@ -375,3 +375,9 @@ details.upcoming li { margin: 4px 0; }
 .svc-paypay .rec-label, .svc-paypay .rec-rate, .hero.svc-paypay .k, .hero.svc-paypay .rate { color: var(--svc-paypay-ink); }
 .svc-dpoint .rec-label, .svc-dpoint .rec-rate, .hero.svc-dpoint .k, .hero.svc-dpoint .rate { color: var(--svc-dpoint-ink); }
 .svc-setagaya .rec-label, .svc-setagaya .rec-rate, .hero.svc-setagaya .k, .hero.svc-setagaya .rate { color: var(--svc-setagaya-ink); }
+
+/* ---------- 更新ボタン */
+.appbar-actions { display: flex; align-items: center; gap: 2px; }
+button.icon-btn { background: none; border: 0; color: inherit; cursor: pointer; }
+#refresh-btn.spinning svg { animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
