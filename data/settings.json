@@ -1,5 +1,5 @@
 {
-  "_comment": "個人設定の初期値。アプリの「設定」画面で端末ごとに上書きできます（上書きはこの端末のブラウザにのみ保存）。",
+  "_comment": "個人設定の初期値。rakutenRankSchedule は指定日以降に自動で切り替わる会員ランク。アプリの「設定」画面で端末ごとに上書きできます（上書きはこの端末のブラウザにのみ保存）。",
   "rakutenRank": "platinum",
   "priority": [
     "rakuten",
@@ -28,5 +28,12 @@
     "setagaya_pay_user"
   ],
   "referenceAmount": 1000,
-  "defaultTaxRate": 0.1
+  "defaultTaxRate": 0.1,
+  "rakutenRankSchedule": [
+    {
+      "from": "2026-12-01",
+      "rank": "diamond",
+      "note": "ダイヤモンド会員に昇格（本人確認済み）"
+    }
+  ]
 }

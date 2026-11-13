@@ -61,6 +61,8 @@
   function applySettings() {
     const o = LS.get(K.settings, {});
     S.settings = { ...S.base, ...o, pointValue: { ...S.base.pointValue, ...(o.pointValue || {}) } };
+    // 端末で手動変更していなければ、日付に応じてランクを自動切り替え
+    if (!o.rakutenRank) S.settings.rakutenRank = E.rankOn(S.base, today());
   }
 
   async function init() {
@@ -299,7 +301,7 @@
 
       <div class="panel">
         <h2>情報ソース</h2>
-        ${r.sources.length ? `<ul class="plain">${r.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title || s.url)}</a> ${scopeBadge(s.scope)}${s.checkedAt ? ` <small>(${ymd(s.checkedAt)}確認)</small>` : ''}</li>`).join('')}</ul>` : `<p class="sub">${r.isSample ? 'サンプルデータのため情報ソースはありません。' : '情報ソース未登録（要確認）'}</p>`}
+        ${r.sources.length ? `<ul class="plain">${r.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title || s.url)}</a> ${scopeBadge(s.scope)}${s.checkedAt ? ` <small>(${ymd(s.checkedAt)}確認)</small>` : ''}${s.via ? `<br><small class="badge b-cond">${esc(s.via)}</small>` : ''}</li>`).join('')}</ul>` : `<p class="sub">${r.isSample ? 'サンプルデータのため情報ソースはありません。' : '情報ソース未登録（要確認）'}</p>`}
         <dl class="kv" style="margin-top:10px"><dt>最終確認日</dt><dd>${r.checkedAt ? ymd(r.checkedAt) : '未確認'}</dd></dl>
       </div>
       <p class="foot">チェーン全体の情報です。一部の店舗（駅ナカ・商業施設内など）では使える決済が異なる場合があります。還元率・キャンペーンは変更されることがあるため、高額な買い物の前には公式情報を確認してください。</p>`;
@@ -564,6 +566,7 @@
       <div class="panel"><h2>楽天</h2>
         <div class="form-row"><label for="rank">楽天会員ランク</label>
           <select id="rank">${Object.entries(d.rakutenRanks).map(([k, v]) => `<option value="${k}" ${st.rakutenRank === k ? 'selected' : ''}>${esc(v)}</option>`).join('')}</select></div>
+        ${(S.base.rakutenRankSchedule || []).map((x) => `<p class="foot" style="margin-top:0">予定：${ymd(x.from)}から${esc(d.rakutenRanks[x.rank] || x.rank)}（${LS.get(K.settings, {}).rakutenRank ? '手動設定中のため自動切替は停止中' : '自動で切り替わります'}）</p>`).join('')}
         <p class="foot" style="margin-top:0">ランク特典はデータに記載がある店舗だけで反映されます（すべての店舗で還元率が上がるわけではありません）。</p>
       </div>
 

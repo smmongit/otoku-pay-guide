@@ -39,6 +39,14 @@
     return `${y}-${m}-${day}`;
   }
 
+  /** 日付時点の楽天会員ランク（settings.rakutenRankSchedule を from の昇順で適用） */
+  function rankOn(settings, todayISO) {
+    let rank = settings.rakutenRank;
+    const sched = [...(settings.rakutenRankSchedule || [])].sort((a, b) => (a.from < b.from ? -1 : 1));
+    for (const x of sched) if (x.from && todayISO >= x.from) rank = x.rank;
+    return rank;
+  }
+
   // ---------------------------------------------------------------- 店舗の解決
 
   /**
@@ -159,13 +167,6 @@
       res.reason = '利用可否 要確認';
       return res;
     }
-    res.missing = missingRequirements(e.requires, settings);
-    if (res.missing.length) {
-      res.reason = '適用条件を満たしていない';
-      return res;
-    }
-    res.eligible = true;
-
     // 会員ランク別の還元（実在する特典のみデータに書く）
     let earn = e.earn || null;
     const rank = settings.rakutenRank;
@@ -175,6 +176,13 @@
     }
     res.earn = earn;
     res.rate = nominalRate(earn);
+
+    res.missing = missingRequirements(e.requires, settings);
+    if (res.missing.length) {
+      res.reason = '適用条件を満たしていない';
+      return res;
+    }
+    res.eligible = true;
 
     if (!COUNTABLE_STATUS.has(res.status)) {
       res.reason = '還元率 要確認';
@@ -552,6 +560,7 @@
     STATUS_LABEL,
     COUNTABLE_STATUS,
     toISODate,
+    rankOn,
     resolveStore,
     nominalRate,
     calcPoints,

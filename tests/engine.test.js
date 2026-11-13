@@ -6,7 +6,7 @@ const fs = require('node:fs');
 const E = require('../js/engine.js');
 
 const load = (f) => JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', f), 'utf8'));
-const data = load('stores.json');
+const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures', 'stores.sample.json'), 'utf8'));
 const defs = load('services.json');
 const baseSettings = load('settings.json');
 const TODAY = '2026-11-13';
@@ -205,3 +205,8 @@ test('オンライン決済にポイントカード提示は入らない', () =>
 });
 
 console.log(`\n${passed} passed`);
+test('会員ランクの予定：12/1からダイヤモンド', () => {
+  assert.equal(E.rankOn(baseSettings, '2026-11-30'), 'platinum');
+  assert.equal(E.rankOn(baseSettings, '2026-12-01'), 'diamond');
+});
+console.log(`${passed} passed`);
