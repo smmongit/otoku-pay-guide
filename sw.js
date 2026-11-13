@@ -2,7 +2,7 @@
  * アプリ本体: キャッシュ優先（更新時は CACHE のバージョンを上げる）
  * data/*.json: ネットワーク優先 → 失敗したら保存済みデータ（オフライン閲覧）
  */
-const CACHE = 'opg-v16';
+const CACHE = 'opg-v17';
 const SHELL = [
   './', 'index.html', 'css/style.css', 'js/engine.js', 'js/app.js', 'manifest.json',
   'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',

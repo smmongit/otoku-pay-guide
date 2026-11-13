@@ -5724,6 +5724,2491 @@
         }
       ],
       "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "freshness",
+      "name": "フレッシュネスバーガー",
+      "category": "restaurant",
+      "aliases": [
+        "フレッシュネス",
+        "freshness"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "vpoint_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_excluded"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "note": "モバイルオーダーなどネット決済・一部店舗は対象外。公式に税込/税抜の明記がないため、少なめ（税抜）で計算",
+          "src": "https://t-point.tsite.jp/store/list/freshnessburger/"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "一部店舗はクレジット未対応（公式）"
+        },
+        "olive_touch_phone": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 16
+          },
+          "requires": [
+            "smartphone_touch"
+          ],
+          "condition": "スマホのタッチ決済（クレジットモード）の場合のみ。通常0.5%＋7.5%。商業施設内などの一部店舗は上乗せ対象外。1万円超などでカード差し込みになると対象外",
+          "note": "Olive 一般/ゴールドの場合。カード現物・iDは対象外"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "一部店舗はクレジット未対応（公式）"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "本人確認済みが条件。一部店舗で利用できない場合あり"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        },
+        "dpoint_card": {
+          "status": "unverified",
+          "note": "dポイント加盟店一覧で見つからず"
+        },
+        "d_barai": {
+          "status": "unverified"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象（三井住友銀行公式）",
+        "PayPayの5%還元クーポン配布の実績あり（期間限定）"
+      ],
+      "sources": [
+        {
+          "title": "フレッシュネスバーガー：各種決済サービス",
+          "url": "https://www.freshnessburger.co.jp/payment/",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "Vポイント：提携先ページ",
+          "url": "https://t-point.tsite.jp/store/list/freshnessburger/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "三井住友銀行：OliveのVポイント還元率（対象のコンビニ・飲食店）",
+          "url": "https://www.smbc.co.jp/kojin/olive-account/merit/point_rate/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：使えるお店",
+          "url": "https://pay.rakuten.co.jp/shop/",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "excelsior",
+      "name": "エクセルシオール カフェ",
+      "category": "cafe",
+      "aliases": [
+        "エクセルシオール",
+        "エクセル",
+        "excelsior"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "vpoint_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_excluded"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "note": "公式に税込/税抜の明記がないため、少なめ（税抜）で計算",
+          "src": "https://t-point.tsite.jp/store/list/excelsior/"
+        },
+        "dpoint_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_included"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/8115/"
+        },
+        "d_barai": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "requires": [
+            "dbarai_user"
+          ],
+          "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "一部店舗ではクレジット決済不可（公式）"
+        },
+        "olive_touch_phone": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 16
+          },
+          "requires": [
+            "smartphone_touch"
+          ],
+          "condition": "スマホのタッチ決済（クレジットモード）の場合のみ。通常0.5%＋7.5%。商業施設内などの一部店舗は上乗せ対象外。1万円超などでカード差し込みになると対象外",
+          "note": "Olive 一般/ゴールドの場合。カード現物・iDは対象外"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "一部店舗ではクレジット決済不可（公式）"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "本人確認済みが条件。一部店舗で利用できない場合あり"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象（三井住友銀行公式）",
+        "V・dのポイントカードに対応。1会計で提示できるのは原則1枚"
+      ],
+      "sources": [
+        {
+          "title": "エクセルシオール カフェ：決済可能ブランド一覧",
+          "url": "https://www.doutor.co.jp/exc/service/payment.html",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "Vポイント：提携先ページ",
+          "url": "https://t-point.tsite.jp/store/list/excelsior/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "dポイントクラブ：加盟店ページ",
+          "url": "https://dpoint.docomo.ne.jp/static/store/8115/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "三井住友銀行：OliveのVポイント還元率（対象のコンビニ・飲食店）",
+          "url": "https://www.smbc.co.jp/kojin/olive-account/merit/point_rate/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：使えるお店",
+          "url": "https://pay.rakuten.co.jp/shop/",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "steak-gusto",
+      "name": "ステーキガスト",
+      "category": "restaurant",
+      "aliases": [
+        "すかいらーく",
+        "ステーキ"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_included"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "note": "一部店舗では利用不可",
+          "src": "https://pointcard.rakuten.co.jp/partner/skylark_steak_gusto/"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "vpoint_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_excluded"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "note": "自動販売機の商品は対象外。公式に税込/税抜の明記がないため、少なめ（税抜）で計算",
+          "src": "https://t-point.tsite.jp/store/list/steak/"
+        },
+        "dpoint_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_included"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/335894/"
+        },
+        "d_barai": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "requires": [
+            "dbarai_user"
+          ],
+          "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "一部店舗では使えない（すかいらーく公式FAQ）"
+        },
+        "olive_touch_phone": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 16
+          },
+          "requires": [
+            "smartphone_touch"
+          ],
+          "condition": "スマホのタッチ決済（クレジットモード）の場合のみ。通常0.5%＋7.5%。商業施設内などの一部店舗は上乗せ対象外。1万円超などでカード差し込みになると対象外",
+          "note": "Olive 一般/ゴールドの場合。カード現物・iDは対象外"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "一部店舗では使えない"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "楽天ペイのポイント進呈対象外の店舗。支払い元を楽天カードにした場合のみ楽天カード分1%",
+          "note": "楽天ペイ公式の対象外店舗リストで「全店舗対象外」"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "本人確認済みが条件。一部店舗で利用できない場合あり"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象（三井住友銀行公式）",
+        "楽天・d・Vのポイントカードに対応。1会計で提示できるのは原則1枚"
+      ],
+      "sources": [
+        {
+          "title": "楽天ポイントカード：加盟店ページ",
+          "url": "https://pointcard.rakuten.co.jp/partner/skylark_steak_gusto/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "Vポイント：提携先ページ",
+          "url": "https://t-point.tsite.jp/store/list/steak/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "dポイントクラブ：加盟店ページ",
+          "url": "https://dpoint.docomo.ne.jp/static/store/335894/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "三井住友銀行：OliveのVポイント還元率（対象のコンビニ・飲食店）",
+          "url": "https://www.smbc.co.jp/kojin/olive-account/merit/point_rate/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：コード・QR払い 最大1.5%還元の対象外店舗",
+          "url": "https://pay.rakuten.co.jp/topics/pointprogram/excluded-shops/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "すかいらーく：現金以外で使用できるもの（FAQ）",
+          "url": "https://faq.skylark.co.jp/faq/show/53?category_id=2&site_domain=faq",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "pronto",
+      "name": "PRONTO（プロント）",
+      "category": "cafe",
+      "aliases": [
+        "プロント",
+        "pronto"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_excluded"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "note": "プロントカードのチャージ・タバコは対象外",
+          "src": "https://pointcard.rakuten.co.jp/partner/pronto/"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "dpoint_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_excluded"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/360162/"
+        },
+        "d_barai": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "requires": [
+            "dbarai_user"
+          ],
+          "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
+        },
+        "rakuten_card": {
+          "status": "unverified",
+          "note": "店頭のクレジットカード可否は店舗ページの「決済方法」で確認"
+        },
+        "olive_card": {
+          "status": "unverified",
+          "note": "店舗ページで確認"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%",
+          "note": "一部店舗はポイント対象外（楽天ペイ公式リスト）"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "本人確認済みが条件。一部店舗で利用できない場合あり"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外",
+        "楽天・dのポイントカードに対応。1会計で提示できるのは原則1枚"
+      ],
+      "sources": [
+        {
+          "title": "楽天ポイントカード：加盟店ページ",
+          "url": "https://pointcard.rakuten.co.jp/partner/pronto/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "dポイントクラブ：加盟店ページ",
+          "url": "https://dpoint.docomo.ne.jp/static/store/360162/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：コード・QR払い 最大1.5%還元の対象外店舗",
+          "url": "https://pay.rakuten.co.jp/topics/pointprogram/excluded-shops/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PRONTO：QRコード決済導入（プレスリリース）",
+          "url": "https://www.pronto.co.jp/news/news_file/file/release_20200831_QRcode.pdf",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "ueshima",
+      "name": "上島珈琲店",
+      "category": "cafe",
+      "aliases": [
+        "うえしま",
+        "上島",
+        "UCC"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "dpoint_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_included"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/114745/"
+        },
+        "d_barai": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "requires": [
+            "dbarai_user"
+          ],
+          "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "店舗により異なる（UCC公式の発表でクレジットカード対応を確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "店舗により異なる"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "本人確認済みが条件。一部店舗で利用できない場合あり"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外"
+      ],
+      "sources": [
+        {
+          "title": "dポイントクラブ：加盟店ページ",
+          "url": "https://dpoint.docomo.ne.jp/static/store/114745/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：使えるお店",
+          "url": "https://pay.rakuten.co.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "UCC：上島珈琲店のQRコード決済導入",
+          "url": "https://www.ucc.co.jp/company/news/2019/rel190201b.html",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "hoshino",
+      "name": "星乃珈琲店",
+      "category": "cafe",
+      "aliases": [
+        "ほしの",
+        "星乃"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "rakuten_card": {
+          "status": "unverified",
+          "note": "公式で支払い方法を確認できず"
+        },
+        "olive_card": {
+          "status": "unverified",
+          "note": "公式で支払い方法を確認できず"
+        },
+        "rakuten_pay": {
+          "status": "unverified"
+        },
+        "paypay_balance": {
+          "status": "unverified"
+        },
+        "dpoint_card": {
+          "status": "unverified"
+        },
+        "d_barai": {
+          "status": "unverified"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "公式サイトに支払い方法の記載がなく、どの決済も要確認"
+      ],
+      "sources": [
+        {
+          "title": "星乃珈琲店：店舗情報",
+          "url": "https://www.hoshinocoffee.com/shop.html",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "gongcha",
+      "name": "ゴンチャ",
+      "category": "cafe",
+      "aliases": [
+        "Gong cha",
+        "gongcha",
+        "タピオカ"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "店舗により異なる（公式FAQ：主に現金・クレジットカード・電子マネー）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "店舗により異なる"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%",
+          "note": "一部店舗はポイント対象外（楽天ペイ公式リスト）"
+        },
+        "paypay_balance": {
+          "status": "unverified",
+          "note": "店頭のPayPayは公式で確認できず（モバイルオーダーはPayPay可）"
+        },
+        "paypay_credit": {
+          "status": "unverified"
+        },
+        "dpoint_card": {
+          "status": "unverified"
+        },
+        "d_barai": {
+          "status": "unverified"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外",
+        "モバイルオーダー（LINE）はクレジットカード・PayPay等で事前決済可"
+      ],
+      "sources": [
+        {
+          "title": "ゴンチャ：支払い方法は何が対応していますか？（FAQ）",
+          "url": "https://www.gongcha.co.jp/faq/store_07/",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：コード・QR払い 最大1.5%還元の対象外店舗",
+          "url": "https://pay.rakuten.co.jp/topics/pointprogram/excluded-shops/",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "paul",
+      "name": "PAUL（ポール）",
+      "category": "cafe",
+      "aliases": [
+        "ポール",
+        "paul",
+        "パン"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "rakuten_card": {
+          "status": "unverified",
+          "note": "公式で支払い方法を確認できず"
+        },
+        "olive_card": {
+          "status": "unverified",
+          "note": "公式で支払い方法を確認できず"
+        },
+        "rakuten_pay": {
+          "status": "unverified"
+        },
+        "paypay_balance": {
+          "status": "unverified"
+        },
+        "dpoint_card": {
+          "status": "unverified"
+        },
+        "d_barai": {
+          "status": "unverified"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "フランスのベーカリー。公式に支払い方法の記載が見つからず、どの決済も要確認"
+      ],
+      "sources": [],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "muji",
+      "name": "無印良品",
+      "category": "lifestyle",
+      "aliases": [
+        "MUJI",
+        "むじるし",
+        "むじ"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "店舗により異なる（公式FAQ）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "店舗により異なる"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%",
+          "note": "楽天ペイ公式の対象外リストは一部店舗のみ。コード決済は店舗ごとに導入状況が異なる"
+        },
+        "paypay_balance": {
+          "status": "unverified",
+          "note": "コード決済は店舗ごとに異なる（店舗ページで確認）"
+        },
+        "paypay_credit": {
+          "status": "unverified"
+        },
+        "dpoint_card": {
+          "status": "unverified",
+          "note": "dポイントはネットストアのみ"
+        },
+        "d_barai": {
+          "status": "unverified"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外",
+        "独自のMUJI passport（マイル）は比較対象外",
+        "コード決済の導入状況は店舗ごとに異なる（公式の店舗ページ）"
+      ],
+      "sources": [
+        {
+          "title": "無印良品：クレジットカードでのお支払い（FAQ）",
+          "url": "https://faq.muji.com/",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：コード・QR払い 最大1.5%還元の対象外店舗",
+          "url": "https://pay.rakuten.co.jp/topics/pointprogram/excluded-shops/",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "loft",
+      "name": "ロフト",
+      "category": "lifestyle",
+      "aliases": [
+        "LOFT",
+        "ろふと"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "dpoint_card": {
+          "available": false,
+          "status": "confirmed",
+          "note": "dポイント公式の加盟店ページの対応サービスがd払いのみ（カード提示の記載なし）"
+        },
+        "d_barai": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "requires": [
+            "dbarai_user"
+          ],
+          "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
+        },
+        "rakuten_card": {
+          "status": "unverified",
+          "note": "店舗の決済一覧にクレジットカードの記載なし（要確認）"
+        },
+        "olive_card": {
+          "status": "unverified",
+          "note": "要確認"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
+        },
+        "paypay_balance": {
+          "status": "unverified",
+          "note": "店舗によりPayPay対応（各店舗の決済ページで確認）"
+        },
+        "paypay_credit": {
+          "status": "unverified"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外",
+        "使える決済は店舗ごとに異なる（公式）"
+      ],
+      "sources": [
+        {
+          "title": "dポイントクラブ：加盟店ページ",
+          "url": "https://dpoint.docomo.ne.jp/static/store/377590/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：使えるお店",
+          "url": "https://pay.rakuten.co.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "ロフト：決済サービスアイコンについて",
+          "url": "https://www.loft.co.jp/payment_services/",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "hands",
+      "name": "ハンズ",
+      "category": "lifestyle",
+      "aliases": [
+        "東急ハンズ",
+        "Hands",
+        "はんず"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_excluded"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "note": "一部商品・一部店舗は対象外",
+          "src": "https://pointcard.rakuten.co.jp/partner/hands/"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "dpoint_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_excluded"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/13930/"
+        },
+        "d_barai": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "requires": [
+            "dbarai_user"
+          ],
+          "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "店舗により対応ブランドが異なる（各店舗のサービス案内）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "店舗により異なる"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "本人確認済みが条件。一部店舗で利用できない場合あり"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外",
+        "楽天・dのポイントカードに対応。1会計で提示できるのは原則1枚",
+        "独自のハンズクラブは比較対象外"
+      ],
+      "sources": [
+        {
+          "title": "楽天ポイントカード：加盟店ページ",
+          "url": "https://pointcard.rakuten.co.jp/partner/hands/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "dポイントクラブ：加盟店ページ",
+          "url": "https://dpoint.docomo.ne.jp/static/store/13930/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：使えるお店",
+          "url": "https://pay.rakuten.co.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "ハンズ：渋谷スクランブルスクエア店 サービス案内",
+          "url": "https://store.hands.net/shibuya-sq/service/",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "francfranc",
+      "name": "Francfranc",
+      "category": "lifestyle",
+      "aliases": [
+        "フランフラン",
+        "francfranc"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "dpoint_card": {
+          "available": false,
+          "status": "confirmed",
+          "note": "dポイント公式の加盟店ページの対応サービスがd払いのみ（カード提示の記載なし）"
+        },
+        "d_barai": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "requires": [
+            "dbarai_user"
+          ],
+          "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "公式ヘルプ：店頭は現金・クレジットカード等"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "公式ヘルプ：店頭はクレジットカード可"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
+        },
+        "paypay_balance": {
+          "status": "unverified",
+          "note": "店頭のPayPayは公式で確認できず"
+        },
+        "paypay_credit": {
+          "status": "unverified"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外"
+      ],
+      "sources": [
+        {
+          "title": "Francfranc：店舗の支払いについて",
+          "url": "https://help.francfranc.com/hc/ja/articles/360022767273",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "dポイントクラブ：加盟店ページ",
+          "url": "https://dpoint.docomo.ne.jp/static/store/347501/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：使えるお店",
+          "url": "https://pay.rakuten.co.jp/shop/",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "3coins",
+      "name": "3COINS",
+      "category": "lifestyle",
+      "aliases": [
+        "スリーコインズ",
+        "スリコ",
+        "3coins"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "店舗により異なる（公式の店舗ページで確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "店舗により異なる"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%",
+          "note": "一部店舗はポイント対象外（楽天ペイ公式リスト）"
+        },
+        "paypay_balance": {
+          "status": "unverified",
+          "note": "店舗ページに「国内QR決済」とあるが種類の明記なし"
+        },
+        "paypay_credit": {
+          "status": "unverified"
+        },
+        "dpoint_card": {
+          "status": "unverified"
+        },
+        "d_barai": {
+          "status": "unverified"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外",
+        "決済方法は出店先の商業施設により異なる"
+      ],
+      "sources": [
+        {
+          "title": "3COINS：ルミネ荻窪店（支払い方法）",
+          "url": "https://www.3coins.jp/shop/%E3%83%AB%E3%83%9F%E3%83%8D%E8%8D%BB%E7%AA%AA%E5%BA%97",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：コード・QR払い 最大1.5%還元の対象外店舗",
+          "url": "https://pay.rakuten.co.jp/topics/pointprogram/excluded-shops/",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "daiso",
+      "name": "ダイソー",
+      "category": "lifestyle",
+      "aliases": [
+        "DAISO",
+        "100均",
+        "百均",
+        "だいそー"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "dpoint_card": {
+          "available": false,
+          "status": "confirmed",
+          "note": "dポイント公式の加盟店ページの対応サービスがd払いのみ（カード提示の記載なし）"
+        },
+        "d_barai": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "requires": [
+            "dbarai_user"
+          ],
+          "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "店舗により異なる（公式FAQ・店舗検索で確認）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "店舗により異なる"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "楽天ペイのポイント進呈対象外の店舗。支払い元を楽天カードにした場合のみ楽天カード分1%",
+          "note": "楽天ペイ公式の対象外店舗リストで「全店舗対象外」"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "本人確認済みが条件。一部店舗で利用できない場合あり"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外"
+      ],
+      "sources": [
+        {
+          "title": "dポイントクラブ：加盟店ページ",
+          "url": "https://dpoint.docomo.ne.jp/static/store/572701/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：コード・QR払い 最大1.5%還元の対象外店舗",
+          "url": "https://pay.rakuten.co.jp/topics/pointprogram/excluded-shops/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "ダイソー：キャッシュレス決済導入（ニュース）",
+          "url": "https://www.daiso-sangyo.co.jp/info/news/14538",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "cosme-store",
+      "name": "@cosme STORE",
+      "category": "lifestyle",
+      "aliases": [
+        "アットコスメストア",
+        "アットコスメ",
+        "コスメ"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "rakuten_card": {
+          "status": "unverified",
+          "note": "店舗の支払い方法を公式で確認できず"
+        },
+        "olive_card": {
+          "status": "unverified",
+          "note": "公式で確認できず"
+        },
+        "rakuten_pay": {
+          "status": "unverified"
+        },
+        "paypay_balance": {
+          "status": "unverified"
+        },
+        "dpoint_card": {
+          "status": "unverified",
+          "note": "dポイントは@cosme SHOPPING（通販）のみ"
+        },
+        "d_barai": {
+          "status": "unverified"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "実店舗の支払い方法は公式で確認できず、どの決済も要確認",
+        "通販の@cosme SHOPPINGは「オンライン」タブ"
+      ],
+      "sources": [],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "donki",
+      "name": "ドン・キホーテ",
+      "category": "lifestyle",
+      "aliases": [
+        "ドンキ",
+        "どんき",
+        "ドン・キ"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "dpoint_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1,
+            "basis": "tax_included"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/400911/"
+        },
+        "d_barai": {
+          "status": "unverified",
+          "note": "dポイント公式にd払いの記載なし"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外"
+        },
+        "rakuten_pay": {
+          "status": "unverified",
+          "note": "楽天ペイ公式の使えるお店一覧で見つからず"
+        },
+        "paypay_balance": {
+          "available": false,
+          "status": "confirmed",
+          "note": "公式FAQ：PayPayなどのQRコード決済は利用不可"
+        },
+        "paypay_credit": {
+          "available": false,
+          "status": "confirmed"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外",
+        "dポイントカード提示は100円（税込）で1pt",
+        "独自のmajicaは比較対象外"
+      ],
+      "sources": [
+        {
+          "title": "dポイントクラブ：加盟店ページ",
+          "url": "https://dpoint.docomo.ne.jp/static/store/400911/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PPIH：ドン・キホーテで利用可能な支払い方法（FAQ）",
+          "url": "https://ppih.co.jp/ir/faq/detail.php?faqid=2253",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "nitori",
+      "name": "ニトリ",
+      "category": "lifestyle",
+      "aliases": [
+        "にとり",
+        "NITORI",
+        "デコホーム"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "dpoint_card": {
+          "available": false,
+          "status": "confirmed",
+          "note": "dポイント公式の加盟店ページの対応サービスがd払いのみ（カード提示の記載なし）"
+        },
+        "d_barai": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "requires": [
+            "dbarai_user"
+          ],
+          "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "本人確認済みが条件。一部店舗で利用できない場合あり"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外",
+        "交通系ICカードは利用不可（公式）"
+      ],
+      "sources": [
+        {
+          "title": "dポイントクラブ：加盟店ページ",
+          "url": "https://dpoint.docomo.ne.jp/static/store/679126/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：使えるお店",
+          "url": "https://pay.rakuten.co.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "ニトリ：支払い方法について（店舗）FAQ",
+          "url": "https://www.faq.nitori-net.jp/question/01j9qqspkty1pb8y22jwqe50rz",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "tokyu-dept",
+      "name": "東急百貨店",
+      "category": "department",
+      "aliases": [
+        "東急",
+        "渋谷ヒカリエ",
+        "ShinQs"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_excluded"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "note": "各種ギフト券など一部商品・売場は対象外。TOKYU POINTとの併用不可（どちらか選択）",
+          "src": "https://pointcard.rakuten.co.jp/partner/tokyu-dept/"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "店舗により取り扱いが異なる場合あり"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "店舗により異なる"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "本人確認済みが条件。一部店舗で利用できない場合あり"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        },
+        "dpoint_card": {
+          "status": "unverified"
+        },
+        "d_barai": {
+          "status": "unverified"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外",
+        "楽天ポイントカードとTOKYU POINTはどちらか一方（公式）",
+        "東急カードはTOKYU POINTが最大3%（比較対象外）"
+      ],
+      "sources": [
+        {
+          "title": "楽天ポイントカード：加盟店ページ",
+          "url": "https://pointcard.rakuten.co.jp/partner/tokyu-dept/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：使えるお店",
+          "url": "https://pay.rakuten.co.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "東急百貨店：ご利用可能なお支払い方法",
+          "url": "https://www.tokyu-dept.co.jp/payment/index.html",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "odakyu-dept",
+      "name": "小田急百貨店",
+      "category": "department",
+      "aliases": [
+        "小田急",
+        "おだきゅう"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "dpoint_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_included"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "src": "https://dpoint.docomo.ne.jp/static/store/323546/"
+        },
+        "d_barai": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "requires": [
+            "dbarai_user"
+          ],
+          "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "売場により異なる場合あり"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "売場により異なる場合あり"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "バーコード決済は現金・クレジットカードとの併用不可（公式）"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外"
+      ],
+      "sources": [
+        {
+          "title": "dポイントクラブ：加盟店ページ",
+          "url": "https://dpoint.docomo.ne.jp/static/store/323546/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：使えるお店",
+          "url": "https://pay.rakuten.co.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "小田急百貨店：ご利用可能なお支払い方法",
+          "url": "https://www.odakyu-dept.co.jp/payment/index.html",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "tsutaya",
+      "name": "蔦屋書店／TSUTAYA",
+      "category": "other",
+      "aliases": [
+        "TSUTAYA",
+        "ツタヤ",
+        "つたや",
+        "蔦屋"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "vpoint_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 220,
+            "points": 1,
+            "basis": "tax_included"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "note": "220円につき1pt（店舗により対象外商品あり）",
+          "src": "https://t-point.tsite.jp/store/list/tsutaya/"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "一部店舗では使えない場合あり（公式FAQ）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "一部店舗では使えない場合あり"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "本人確認済みが条件。一部店舗で利用できない場合あり"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        },
+        "rakuten_pay": {
+          "status": "unverified",
+          "note": "楽天ペイ公式の使えるお店一覧で見つからず"
+        },
+        "dpoint_card": {
+          "status": "unverified"
+        },
+        "d_barai": {
+          "status": "unverified"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外",
+        "Vポイントの主要な提携先"
+      ],
+      "sources": [
+        {
+          "title": "Vポイント：提携先ページ",
+          "url": "https://t-point.tsite.jp/store/list/tsutaya/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "Vポイント：提携先ページ",
+          "url": "https://t-point.tsite.jp/store/list/tsutayabooks/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "TSUTAYA：店舗で使える支払い方法（FAQ）",
+          "url": "https://ssl.help.tsite.jp/faq/show/63388?site_domain=qa-store",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "kinokuniya",
+      "name": "紀伊國屋書店",
+      "category": "other",
+      "aliases": [
+        "紀伊国屋",
+        "きのくにや",
+        "本屋"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "vpoint_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1,
+            "basis": "tax_excluded"
+          },
+          "stack": {
+            "with": "any",
+            "status": "conditional",
+            "note": "支払い方法を問わず併用可（利用者の実体験にもとづく。楽天・dの同系列の組み合わせは公式にも記載あり）"
+          },
+          "note": "金券・送料などは対象外。公式に税込/税抜の明記がないため、少なめ（税抜）で計算",
+          "src": "https://t-point.tsite.jp/store/list/kinokuniya/"
+        },
+        "dpoint_card": {
+          "available": false,
+          "status": "confirmed",
+          "note": "dポイント公式の加盟店ページの対応サービスがd払いのみ（カード提示の記載なし）"
+        },
+        "d_barai": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "requires": [
+            "dbarai_user"
+          ],
+          "condition": "dカード以外のクレジットカードを支払い方法にすると対象外"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）",
+          "condition": "店舗により異なる（公式の店舗案内）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外",
+          "condition": "店舗により異なる"
+        },
+        "rakuten_pay": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "condition": "支払い元を楽天カードに設定した場合（楽天カード分の100円につき1pt）。楽天キャッシュ払いなら最大1.5%"
+        },
+        "paypay_balance": {
+          "status": "unverified",
+          "note": "PayPay公式の主要店舗一覧に掲載なし"
+        },
+        "paypay_credit": {
+          "status": "unverified"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外",
+        "図書カードの購入は現金のみ（公式）"
+      ],
+      "sources": [
+        {
+          "title": "Vポイント：提携先ページ",
+          "url": "https://t-point.tsite.jp/store/list/kinokuniya/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "dポイントクラブ：加盟店ページ",
+          "url": "https://dpoint.docomo.ne.jp/static/store/7854/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "楽天ペイ：使えるお店",
+          "url": "https://pay.rakuten.co.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "紀伊國屋書店：支払い方法は何がありますか？（FAQ）",
+          "url": "https://faq.kinokuniya.co.jp/faq/show/299?category_id=1&site_domain=default",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "toho",
+      "name": "TOHOシネマズ",
+      "category": "other",
+      "aliases": [
+        "トーホー",
+        "TOHO",
+        "映画館"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外"
+        },
+        "paypay_balance": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "condition": "飲食売店・グッズ売場・ネット購入のみ。劇場窓口・自動券売機では使えない（公式）"
+        },
+        "paypay_credit": {
+          "available": true,
+          "status": "conditional",
+          "earn": {
+            "per": 200,
+            "points": 2
+          },
+          "requires": [
+            "paypay_credit_holder"
+          ],
+          "condition": "PayPayクレジット（本人確認済み）。一部店舗で利用できない場合あり"
+        },
+        "rakuten_pay": {
+          "status": "unverified"
+        },
+        "dpoint_card": {
+          "status": "unverified"
+        },
+        "d_barai": {
+          "status": "unverified"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外",
+        "前売券（ムビチケ）はクレジットカード・PayPay不可（公式）"
+      ],
+      "sources": [
+        {
+          "title": "PayPay：使えるお店（主なご利用可能店舗）",
+          "url": "https://paypay.ne.jp/shop/",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "TOHOシネマズ：PayPayは利用できますか？（FAQ）",
+          "url": "https://help.tohotheater.jp/faq/show/2735?category_id=4&site_domain=default",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        },
+        {
+          "title": "TOHOシネマズ：チケット購入に利用できる支払方法",
+          "url": "https://help.tohotheater.jp/faq/show/420?site_domain=default",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
+    },
+    {
+      "id": "yodobashi-store",
+      "name": "ヨドバシカメラ",
+      "category": "electronics",
+      "aliases": [
+        "ヨドバシ",
+        "yodobashi",
+        "よどばし"
+      ],
+      "methods": {
+        "rakuten_pointcard": {
+          "available": false,
+          "status": "confirmed",
+          "note": "楽天ポイントカード公式の加盟店一覧に掲載なし"
+        },
+        "setagaya_pay": {
+          "available": null,
+          "status": "unverified",
+          "note": "チェーン店の加盟状況は公式に確認できず（せたがやPayアプリで店舗ごとに確認）"
+        },
+        "rakuten_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 100,
+            "points": 1
+          },
+          "note": "楽天カードの基本還元（100円につき1pt）"
+        },
+        "olive_card": {
+          "available": true,
+          "status": "confirmed",
+          "earn": {
+            "per": 200,
+            "points": 1
+          },
+          "note": "Olive クレジットモード通常還元（200円(税込)につき1pt）。カード現物のタッチ・差し込みは上乗せ対象外"
+        },
+        "rakuten_pay": {
+          "status": "unverified",
+          "note": "楽天ペイ公式の使えるお店一覧で見つからず"
+        },
+        "paypay_balance": {
+          "status": "unverified",
+          "note": "公式で確認できず"
+        },
+        "paypay_credit": {
+          "status": "unverified"
+        },
+        "dpoint_card": {
+          "status": "unverified"
+        },
+        "d_barai": {
+          "status": "unverified"
+        }
+      },
+      "campaigns": [],
+      "coupons": [],
+      "notes": [
+        "Olive 8%の対象外",
+        "独自のゴールドポイントは比較対象外（公式：現金10%・クレジットカード8%、アプリ利用でクレジットも10%）",
+        "オンラインのヨドバシ.comは楽天リーベイツ対象外"
+      ],
+      "sources": [
+        {
+          "title": "ヨドバシ.com：ゴールドポイントでのお買い物",
+          "url": "https://www.yodobashi.com/ec/support/member/pointservice/gold/shopping/index.html",
+          "via": "公式ページ（クラウドから直接閲覧できず、検索結果の抜粋で確認）",
+          "checkedAt": "2026-11-13"
+        }
+      ],
+      "checkedAt": "2026-11-13"
     }
   ]
 }

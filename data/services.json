@@ -110,6 +110,8 @@
     "convenience": "コンビニ",
     "fashion": "ファッション",
     "electronics": "家電",
+    "lifestyle": "雑貨・生活",
+    "department": "百貨店",
     "other": "その他"
   },
   "rakutenRanks": {
