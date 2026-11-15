@@ -1,7 +1,7 @@
 {
   "meta": {
     "updatedAt": "2026-11-15",
-    "note": "セール・キャンペーン情報。status：confirmed＝公式で確認／partial＝一部のみ確認／unverified＝まとめ投稿のみ・公式未確認／unannounced＝日程未発表。終了日を過ぎたものは画面に出ない。",
+    "note": "セール・キャンペーン情報。status：confirmed＝公式で確認／partial＝一部のみ確認／unverified＝まとめ投稿のみ・公式未確認／unannounced＝日程未発表。終了日を過ぎたものは画面に出ない。 使わないポイント（WAON POINT など）が報酬のセールは載せない。",
     "source": "出典：公式ページ。まとめ表（X投稿 card_reviews_ の「ブラックフライデーまとめ」2026/11/14時点）の掲載分は、公式で確認できたものと未確認のものを分けて記載"
   },
   "sales": [
@@ -309,27 +309,6 @@
       "note": "クーポンで値引きした分は、リーベイツのポイント対象外（リーベイツ公式の対象外条件）",
       "url": "https://www.mistore.jp/shopping/feature/shops_f3/blackfriday_sp",
       "stores": [],
-      "checkedAt": "2026-11-15"
-    },
-    {
-      "id": "welcia-bf",
-      "title": "ウエルシア ブラックフライデー（WAON POINT）",
-      "short": "ウエルシア",
-      "channels": [
-        "store"
-      ],
-      "stores": [
-        "welcia"
-      ],
-      "start": "2026-10-05",
-      "end": "2026-12-06",
-      "period": "10/5(月)〜12/6(日)",
-      "status": "confirmed",
-      "reward": "WAON POINT",
-      "summary": "WAON POINT最大20%還元（まとめ投稿は30%と記載だが、公式は20%）。1会計で対象商品3点以上かつ2,500円以上で250pt、5,000円以上で1,000pt。要エントリー、店頭のみ",
-      "note": "ポイントはWAON POINTで、このアプリの比較対象外。付与は2027年1月中旬、期間中の上限20,000pt",
-      "url": "https://www.welcia-yakkyoku.co.jp/content/fixed/5801/top_pdf/release261005.pdf",
-      "shops": [],
       "checkedAt": "2026-11-15"
     }
   ]
