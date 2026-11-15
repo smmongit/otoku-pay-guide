@@ -77,10 +77,11 @@
   }
 
   async function loadData() {
-    const [defs, base, stores, online] = await Promise.all([
+    const [defs, base, stores, online, salesDoc] = await Promise.all([
       getJSON('data/services.json'), getJSON('data/settings.json'), getJSON('data/stores.json'), getJSON('data/online-shops.json'),
+      getJSON('data/sales.json').catch(() => ({ sales: [] })),
     ]);
-    S.defs = defs; S.base = base; S.storesMeta = stores.meta; S.onlineMeta = online.meta;
+    S.defs = defs; S.base = base; S.storesMeta = stores.meta; S.onlineMeta = online.meta; S.sales = salesDoc.sales || [];
     applySettings();
     S.stores = stores.chains.map((c) => E.resolveStore({}, c));
     S.storeById = Object.fromEntries(S.stores.map((s) => [s.id, s]));
@@ -186,6 +187,7 @@
         <button class="clear" type="button" aria-label="検索語を消す" ${S.ui.sq ? '' : 'hidden'}>×</button>
       </div>
       <div class="chips" role="group" aria-label="カテゴリー">${storeChips()}</div>
+      ${salesBlock('store')}
       <div id="results"></div>`;
     const q = app.querySelector('#q');
     const clear = app.querySelector('.clear');
@@ -320,6 +322,7 @@
 
       ${hero}
       ${camp}
+      ${saleBanners('stores', r.id)}
       ${couponPanel(r)}
 
       <div class="panel">
@@ -394,14 +397,51 @@
     return null;
   }
 
-  function upcomingBlock() {
-    const list = (S.onlineMeta && S.onlineMeta.upcomingSales) || [];
+  // ------------------------------------------------------------ セール情報
+  const SALE_BADGE = {
+    confirmed: ['b-ok', '公式で確認'], partial: ['b-cond', '一部のみ確認'],
+    unverified: ['b-unk', 'まとめ投稿のみ・公式未確認'], unannounced: ['b-unk', '日程未発表'],
+  };
+  /** 今日の時点でのセールの状態：active（開催中）／upcoming（これから）／unannounced（日程未発表）／ended（終了） */
+  function saleState(u) {
+    const t = today();
+    if (!u.start) return 'unannounced';
+    if (u.end && t > u.end) return 'ended';
+    return t < u.start ? 'upcoming' : 'active';
+  }
+  const liveSales = (filter) => (S.sales || []).filter((u) => saleState(u) !== 'ended' && filter(u))
+    .sort((a, b) => (a.start || '9999').localeCompare(b.start || '9999'));
+
+  function saleRow(u) {
+    const [cls, label] = SALE_BADGE[u.status] || SALE_BADGE.unverified;
+    const ch = (u.channels || []).map((c) => (c === 'store' ? '実店舗' : 'オンライン')).join('・');
+    return `<li><div><span class="badge ${cls}">${label}</span>${u.reward ? ` <span class="badge b-no">${esc(u.reward)}・比較対象外</span>` : ''} <strong>${esc(u.title)}</strong></div>
+      <div class="muted">${esc(ch)} ／ ${esc(u.period)}</div>
+      ${u.summary ? `<div class="sale-sum">${esc(u.summary)}</div>` : ''}
+      ${u.note ? `<div class="muted">${esc(u.note)}</div>` : ''}
+      ${u.url ? `<a href="${esc(u.url)}" target="_blank" rel="noopener" class="muted">公式ページ ↗</a>` : ''}</li>`;
+  }
+
+  /** channel：'store'（実店舗タブ）／'online'（オンラインタブ）。折りたたみで表示 */
+  function salesBlock(channel) {
+    const list = liveSales((u) => (u.channels || []).includes(channel));
     if (!list.length) return '';
+    const groups = [['active', '開催中'], ['upcoming', 'これから'], ['unannounced', '日程未発表']];
+    const n = (k) => list.filter((u) => saleState(u) === k).length;
+    const summary = groups.filter(([k]) => n(k)).map(([k, l]) => `${l}${n(k)}件`).join('・');
     return `<details class="upcoming">
-      <summary>📅 大型セール予定：${list.map((u) => esc(u.short || u.title)).join('・')} <span class="muted">（タップで詳細）</span></summary>
-      <ul>${list.map((u) => `<li>${u.status === 'confirmed' ? '<span class="badge b-ok">日程確定</span> ' : u.status === 'partial' ? '<span class="badge b-cond">開始日のみ発表</span> ' : '<span class="badge b-unk">日程未発表</span> '}<strong>${esc(u.title)}</strong>：${esc(u.expected)}${u.note ? `<br><span class="muted">${esc(u.note)}</span>` : ''}${u.url ? ` <a href="${esc(u.url)}" target="_blank" rel="noopener">公式 ↗</a>` : ''}</li>`).join('')}</ul>
+      <summary>📅 セール情報：${summary} <span class="muted">（タップで詳細）</span></summary>
+      ${groups.map(([k, label]) => {
+        const items = list.filter((u) => saleState(u) === k);
+        return items.length ? `<h3 class="sale-h">${label}</h3><ul>${items.map(saleRow).join('')}</ul>` : '';
+      }).join('')}
+      <p class="muted" style="margin:6px 0 0">対象は、このアプリに登録しているお店・ショップのみ。終了日を過ぎると自動で消えます。</p>
     </details>`;
   }
+
+  /** お店・ショップの詳細に出す「このお店のセール」 */
+  const saleBanners = (kind, id) => liveSales((u) => (u[kind] || []).includes(id))
+    .map((u) => `<p class="banner">📅 ${esc(u.title)}：${esc(u.period)}。${esc(u.summary || '')}${u.status === 'unverified' ? '（公式未確認）' : ''}</p>`).join('');
 
   function shopCard(shop) {
     const ev = evalShop(shop);
@@ -447,7 +487,7 @@
     const hasSample = S.shops.some((s) => s.isSample);
     app.innerHTML = `
       ${hasSample ? '<p class="banner">【サンプル】は架空のショップです。</p>' : ''}
-      ${upcomingBlock()}
+      ${salesBlock('online')}
       ${S.onlineMeta.pointCap ? `<p class="foot" style="margin:8px 2px 0">※ ${esc(S.onlineMeta.pointCap)}</p>` : ''}
       <div class="search" role="search">
         <span class="ico">🔍</span>
@@ -600,7 +640,7 @@
         ${linkBtn(shop.officialUrl, '公式ショップを開く（リーベイツ経由なし）', false)}
       </div>
       ${couponPanel(shop)}
-      ${((S.onlineMeta && S.onlineMeta.upcomingSales) || []).filter((u) => (u.shops || []).includes(shop.id)).map((u) => `<p class="banner">📅 ${esc(u.title)}：${esc(u.expected)}。${esc(u.note || '')}</p>`).join('')}
+      ${saleBanners('shops', shop.id)}
 
       <div class="panel"><h2>ポイントバック率</h2>${ratesPanel}</div>
       ${(ev.extras || []).length ? `<div class="panel"><h2>その他のポイント</h2>${ev.extras.map((x) => `<div class="mrow"><span>${esc(x.label)}</span><span class="rate">${x.rate != null ? pct(x.rate) : '要確認'}</span><div class="meta">${statusBadge(x.status)}<span>${esc(x.condition || '')}</span></div></div>`).join('')}</div>` : ''}

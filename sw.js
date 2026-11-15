@@ -2,11 +2,11 @@
  * アプリ本体: キャッシュ優先（更新時は CACHE のバージョンを上げる）
  * data/*.json: ネットワーク優先 → 失敗したら保存済みデータ（オフライン閲覧）
  */
-const CACHE = 'opg-v20';
+const CACHE = 'opg-v21';
 const SHELL = [
   './', 'index.html', 'css/style.css', 'js/engine.js', 'js/app.js', 'manifest.json',
   'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
-  'data/services.json', 'data/settings.json', 'data/stores.json', 'data/online-shops.json',
+  'data/services.json', 'data/settings.json', 'data/stores.json', 'data/online-shops.json', 'data/sales.json',
 ];
 
 self.addEventListener('install', (e) => {

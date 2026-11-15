@@ -1,0 +1,336 @@
+{
+  "meta": {
+    "updatedAt": "2026-11-15",
+    "note": "セール・キャンペーン情報。status：confirmed＝公式で確認／partial＝一部のみ確認／unverified＝まとめ投稿のみ・公式未確認／unannounced＝日程未発表。終了日を過ぎたものは画面に出ない。",
+    "source": "出典：公式ページ。まとめ表（X投稿 card_reviews_ の「ブラックフライデーまとめ」2026/11/14時点）の掲載分は、公式で確認できたものと未確認のものを分けて記載"
+  },
+  "sales": [
+    {
+      "id": "ichiba-bf",
+      "title": "楽天市場 ブラックフライデー",
+      "short": "楽天市場BF",
+      "channels": [
+        "online"
+      ],
+      "start": "2026-11-19",
+      "end": "2026-11-25",
+      "period": "11/19(木)20:00〜11/25(水)1:59",
+      "status": "confirmed",
+      "summary": "要エントリー。1ショップ1,000円（税込）以上の買いまわりでポイントアップ（獲得上限7,000pt）。開始直後2時間は最大50%OFFクーポン",
+      "note": "楽天市場に公式店がある資生堂・ビックカメラ・マツキヨ・@cosme・OLIVE YOUNG・高島屋は、期間中は楽天市場の方がお得になりやすい",
+      "url": "https://event.rakuten.co.jp/campaign/point-up/blackfriday/",
+      "stores": [],
+      "shops": [],
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "id": "rebates-bf",
+      "title": "楽天リーベイツ ブラックフライデー",
+      "short": "リーベイツBF",
+      "channels": [
+        "online"
+      ],
+      "start": "2026-11-20",
+      "end": null,
+      "period": "11/20(金)〜（終了日は未発表）",
+      "status": "partial",
+      "summary": "エントリーは11/16(月)10:00ごろ開始予定（特設ページのカウントダウン）",
+      "note": "還元条件は未掲載（11/15時点）。昨年は要エントリーで購入額（税抜）1万円以上+1%〜3万円以上+3%",
+      "url": "https://www.rebates.jp/event/blackfriday",
+      "stores": [],
+      "shops": [],
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "id": "amazon-bf",
+      "title": "Amazon ブラックフライデー",
+      "short": "AmazonBF",
+      "channels": [
+        "online"
+      ],
+      "shops": [
+        "amazon"
+      ],
+      "start": null,
+      "end": null,
+      "period": "日程未発表（例年11月下旬）",
+      "status": "unannounced",
+      "summary": "",
+      "note": "セール価格はAmazon側の割引。dポイント連携の1%（5,000円以上）は通常どおり",
+      "url": "https://www.amazon.co.jp/",
+      "stores": [],
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "id": "qoo10-mega",
+      "title": "Qoo10 メガ割",
+      "short": "Qoo10メガ割",
+      "channels": [
+        "online"
+      ],
+      "shops": [
+        "qoo10"
+      ],
+      "start": null,
+      "end": null,
+      "period": "日程未発表（例年11月中旬〜下旬）",
+      "status": "unannounced",
+      "summary": "",
+      "note": "メガ割クーポンで値引きした分は楽天リーベイツのポイント対象外",
+      "url": "https://www.qoo10.jp/",
+      "stores": [],
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "id": "donki-bf",
+      "title": "ドン・キホーテ 驚ブラックフライデー",
+      "short": "ドンキ",
+      "channels": [
+        "store"
+      ],
+      "stores": [
+        "donki"
+      ],
+      "start": "2026-10-30",
+      "end": "2026-11-29",
+      "period": "10/30〜11/29（チラシセール：第1弾11/13〜・第2弾11/20〜）",
+      "status": "confirmed",
+      "summary": "フライングセール（対象101〜279店舗）。アプリ「majica」の宝箱企画でポイント最大96倍還元（11/13〜11/29）",
+      "note": "開始日と対象店舗は商品ごとに異なる。majica（独自ポイント）は比較対象外",
+      "url": "https://ppih.co.jp/news/pdf/news_261026_brackfriday.pdf",
+      "shops": [],
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "id": "nitori-bf",
+      "title": "ニトリ ブラックフライデー",
+      "short": "ニトリ",
+      "channels": [
+        "store"
+      ],
+      "stores": [
+        "nitori"
+      ],
+      "start": "2026-10-30",
+      "end": "2026-11-24",
+      "period": "10/30(金)〜11/24(火)",
+      "status": "confirmed",
+      "summary": "ニトリ初開催。家具・大型家電 約600アイテムが特別価格（店舗・ニトリネット）",
+      "url": "https://www.faq.nitori-net.jp/question/01m5k9446njsesyfsn5w8d958p",
+      "shops": [],
+      "note": "",
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "id": "hands-bf",
+      "title": "ハンズ ブラックフライデー",
+      "short": "ハンズ",
+      "channels": [
+        "store"
+      ],
+      "stores": [
+        "hands"
+      ],
+      "start": "2026-11-13",
+      "end": "2026-11-29",
+      "period": "11/13〜11/29（終了日は公式で未確認）",
+      "status": "partial",
+      "summary": "店舗とネットストアで開催。購入額に応じてボーナスポイント最大800pt（名古屋店の告知）",
+      "note": "公式のブラックフライデーページの日付表記（11/15〜12/1）と店舗告知（11/13開始）が一致しない。ハンズクラブ（独自ポイント）は比較対象外",
+      "url": "https://hands.net/season/black-friday/",
+      "shops": [],
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "id": "dennys-bf",
+      "title": "デニーズ ブラックフライデー",
+      "short": "デニーズ",
+      "channels": [
+        "store"
+      ],
+      "stores": [
+        "dennys"
+      ],
+      "start": "2026-11-13",
+      "end": "2026-11-30",
+      "period": "11/13〜11/30（日付は公式で未確認。公式は「11月上旬から順次」）",
+      "status": "partial",
+      "summary": "初のブラックフライデー。山盛りフライドポテトが税込100円（クーポン番号入力）、30円引きクーポンなど",
+      "note": "アプリ会員限定かどうか、公式ページの表記が食い違っている（専用ページはアプリ向け、トップは「どなたでも」）",
+      "url": "https://www.dennys.jp/campaign/blackfriday/",
+      "shops": [],
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "id": "uniqlo-kansha",
+      "title": "ユニクロ感謝祭",
+      "short": "ユニクロ",
+      "channels": [
+        "store",
+        "online"
+      ],
+      "stores": [
+        "uniqlo"
+      ],
+      "shops": [
+        "uniqlo"
+      ],
+      "start": "2026-11-20",
+      "end": "2026-11-26",
+      "period": "11/20〜11/26（まとめ投稿より）",
+      "status": "unverified",
+      "summary": "主要商品が特別価格",
+      "note": "公式で11月の開催を確認できていません（直近の感謝祭は5/23〜5/29）。発表されたら確認します",
+      "url": "https://www.uniqlo.com/jp/ja/special-feature/kanshasai",
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "id": "gu-kansha",
+      "title": "GU感謝祭",
+      "short": "GU",
+      "channels": [
+        "store",
+        "online"
+      ],
+      "stores": [
+        "gu"
+      ],
+      "shops": [
+        "gu"
+      ],
+      "start": "2026-11-20",
+      "end": "2026-11-26",
+      "period": "11/20〜11/26（まとめ投稿より）",
+      "status": "unverified",
+      "summary": "対象商品が特別価格",
+      "note": "公式で11月の開催を確認できていません。発表されたら確認します",
+      "url": "https://www.gu-global.com/jp/ja/",
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "id": "matsukiyo-bf",
+      "title": "マツキヨココカラ ブラックフライデー",
+      "short": "マツキヨ",
+      "channels": [
+        "store"
+      ],
+      "stores": [
+        "matsukiyo",
+        "cocokara"
+      ],
+      "start": "2026-11-24",
+      "end": "2026-11-30",
+      "period": "11/24〜11/30（まとめ投稿より）",
+      "status": "unverified",
+      "summary": "公式アプリクーポンで店内商品10%オフ、花王商品はポイント20倍",
+      "note": "公式で確認できていません。マツキヨココカラのポイントは比較対象外",
+      "url": "https://www.matsukiyo.co.jp/sp/point/mkappli_op",
+      "shops": [],
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "id": "seven-bf",
+      "title": "セブン-イレブン 揚げ物日替わり半額",
+      "short": "セブン",
+      "channels": [
+        "store"
+      ],
+      "stores": [
+        "seven-eleven"
+      ],
+      "start": "2026-11-26",
+      "end": "2026-11-29",
+      "period": "11/26〜11/29（まとめ投稿より）",
+      "status": "unverified",
+      "summary": "揚げ物が日替わりで半額",
+      "note": "2026年の発表は公式で見つからず。昨年（2025）は11/27〜11/30に同様のセールを実施",
+      "url": "https://www.sej.co.jp/company/news_release/news/2026.html",
+      "shops": [],
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "id": "jal-bf",
+      "title": "JAL ブラックフライデー",
+      "short": "JAL",
+      "channels": [
+        "online"
+      ],
+      "shops": [
+        "jal-jaldomestic",
+        "jal-jalinternational",
+        "jal-jalcocom",
+        "jal-jalcom"
+      ],
+      "start": "2026-11-17",
+      "end": "2026-11-30",
+      "period": "11/17〜11/30（国内線タイムセール：JMB先行11/17・一般11/18）",
+      "status": "confirmed",
+      "summary": "国内線タイムセール（羽田〜新千歳11,000円〜など）、JMBアプリ新規DL等で総額100万マイルが当たる抽選、JAL Payチャージボーナス（要エントリー）",
+      "note": "タイムセールの搭乗期間は2027/1/4〜2/28。マイルは比較対象外",
+      "url": "https://www.jal.co.jp/jp/ja/campaign/blackflyday/",
+      "stores": [],
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "id": "takashimaya-bf",
+      "title": "高島屋オンライン ブラックフライデー",
+      "short": "高島屋",
+      "channels": [
+        "online"
+      ],
+      "shops": [
+        "takashimaya"
+      ],
+      "start": "2026-11-16",
+      "end": "2026-11-28",
+      "period": "一般 11/18(水)10:00〜11/28(土)10:00（アプリ会員先行は11/16(月)10:00〜）",
+      "status": "confirmed",
+      "summary": "限定品・特別価格。タカシマヤアプリ会員は先行販売あり（クーポン：第1弾11/18〜23、第2弾11/23〜28）",
+      "note": "クーポンで値引きした分は、リーベイツのポイント対象外になる場合あり（リーベイツ公式の対象外条件は「消費税」等。個別に要確認）",
+      "url": "https://www.takashimaya.co.jp/shopping/special/blackfriday/",
+      "stores": [],
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "id": "mistore-bf",
+      "title": "三越伊勢丹オンライン ブラックフライデー",
+      "short": "三越伊勢丹",
+      "channels": [
+        "online"
+      ],
+      "shops": [
+        "mistore"
+      ],
+      "start": "2026-11-04",
+      "end": "2026-12-02",
+      "period": "11/4(水)10:00〜12/2(水)10:00",
+      "status": "confirmed",
+      "summary": "人気ブランド・話題アイテムのセール。送料クーポンプレゼント（〜11/18 9:59）",
+      "note": "クーポンで値引きした分は、リーベイツのポイント対象外（リーベイツ公式の対象外条件）",
+      "url": "https://www.mistore.jp/shopping/feature/shops_f3/blackfriday_sp",
+      "stores": [],
+      "checkedAt": "2026-11-15"
+    },
+    {
+      "id": "welcia-bf",
+      "title": "ウエルシア ブラックフライデー（WAON POINT）",
+      "short": "ウエルシア",
+      "channels": [
+        "store"
+      ],
+      "stores": [
+        "welcia"
+      ],
+      "start": "2026-10-05",
+      "end": "2026-12-06",
+      "period": "10/5(月)〜12/6(日)",
+      "status": "confirmed",
+      "reward": "WAON POINT",
+      "summary": "WAON POINT最大20%還元（まとめ投稿は30%と記載だが、公式は20%）。1会計で対象商品3点以上かつ2,500円以上で250pt、5,000円以上で1,000pt。要エントリー、店頭のみ",
+      "note": "ポイントはWAON POINTで、このアプリの比較対象外。付与は2027年1月中旬、期間中の上限20,000pt",
+      "url": "https://www.welcia-yakkyoku.co.jp/content/fixed/5801/top_pdf/release261005.pdf",
+      "shops": [],
+      "checkedAt": "2026-11-15"
+    }
+  ]
+}
