@@ -118,6 +118,8 @@ async function main() {
     for (const [key, kind] of Object.entries(KIND)) {
       const m = c.methods[key];
       if (!m || !m.src || m.available !== true) continue;
+      // 「購入額の○%」形式で登録している項目（例：ビックカメラの楽天ポイントカード5%）は、○円で○pt形式の自動確認の対象外
+      if (m.earn && m.earn.rate != null && m.earn.per == null) continue;
       const { status, lines, error } = await fetchLines(browser, m.src);
       checked++;
       if (status !== 200) { issues.push({ where: `${c.name}／${key}`, url: m.src, reason: error || `HTTP ${status}` }); continue; }
