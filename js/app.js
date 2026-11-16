@@ -407,6 +407,8 @@
     const t = today();
     if (!u.start) return 'unannounced';
     if (u.end && t > u.end) return 'ended';
+    // 終了日が未記載のまま開始から30日たったものは、古い情報として出さない
+    if (!u.end && t > new Date(new Date(u.start + 'T00:00:00').getTime() + 30 * 86400e3).toISOString().slice(0, 10)) return 'ended';
     return t < u.start ? 'upcoming' : 'active';
   }
   const liveSales = (filter) => (S.sales || []).filter((u) => saleState(u) !== 'ended' && filter(u))

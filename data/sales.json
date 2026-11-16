@@ -71,15 +71,15 @@
       "shops": [
         "qoo10"
       ],
-      "start": null,
+      "start": "2026-11-20",
       "end": null,
-      "period": "日程未発表（例年11月中旬〜下旬）",
-      "status": "unannounced",
-      "summary": "",
-      "note": "メガ割クーポンで値引きした分は楽天リーベイツのポイント対象外",
+      "period": "11/20(金)10:00〜（終了日は未発表）",
+      "status": "partial",
+      "summary": "20%OFFから。メガ割クーポン（MEGA COUPON 20%）など、商品2,000万点超",
+      "note": "開始日はQoo10公式アプリの告知画面で確認。メガ割クーポンなど各種割引で値引きした分は、楽天リーベイツのポイント対象外",
       "url": "https://www.qoo10.jp/",
       "stores": [],
-      "checkedAt": "2026-11-15"
+      "checkedAt": "2026-11-16"
     },
     {
       "id": "donki-bf",
