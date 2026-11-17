@@ -1,71 +1,15 @@
 {
   "meta": {
     "version": 2,
-    "updatedAt": "2026-11-17",
+    "updatedAt": "2026-11-18",
     "note": "楽天リーベイツ公式のストアページで2026/11/13に確認。還元率は変動するため購入直前に公式で再確認。",
     "rebatesTopUrl": "https://www.rebates.jp/",
     "pointCap": "獲得ポイント（各種ボーナス＋ポイントバックの合算）は購入金額（税抜）の20%が上限（楽天リーベイツ公式）",
     "autoUpdate": {
-      "at": "2026-11-16T21:44:37.770Z",
-      "date": "2026-11-17",
+      "at": "2026-11-17T21:46:12.272Z",
+      "date": "2026-11-18",
       "checked": 85,
-      "changed": [
-        {
-          "where": "資生堂オンラインストア（リーベイツ）",
-          "from": {
-            "rate": 10,
-            "basis": "tax_excluded"
-          },
-          "to": {
-            "rate": 7,
-            "basis": "tax_excluded"
-          }
-        },
-        {
-          "where": "ビックカメラ.com（リーベイツ）",
-          "from": {
-            "rate": 4,
-            "basis": "tax_excluded"
-          },
-          "to": {
-            "rate": 1,
-            "basis": "tax_excluded"
-          }
-        },
-        {
-          "where": "大丸松坂屋オンラインストア（リーベイツ）",
-          "from": {
-            "rate": 8,
-            "basis": "tax_excluded"
-          },
-          "to": {
-            "rate": 6,
-            "basis": "tax_excluded"
-          }
-        },
-        {
-          "where": "Booking.com（リーベイツ）",
-          "from": {
-            "rate": 3.5,
-            "basis": "tax_excluded"
-          },
-          "to": {
-            "rate": 3,
-            "basis": "tax_excluded"
-          }
-        },
-        {
-          "where": "エクスペディア（ホテル）（リーベイツ）",
-          "from": {
-            "rate": 6,
-            "basis": "tax_excluded"
-          },
-          "to": {
-            "rate": 3,
-            "basis": "tax_excluded"
-          }
-        }
-      ],
+      "changed": [],
       "issues": []
     }
   },
@@ -106,10 +50,10 @@
         {
           "title": "楽天リーベイツ：ユニクロオンラインストア",
           "url": "https://www.rebates.jp/uniqlo.com",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -178,10 +122,10 @@
         {
           "title": "楽天リーベイツ：GU（ジーユー）",
           "url": "https://www.rebates.jp/gu-japan",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -301,10 +245,10 @@
         {
           "title": "楽天リーベイツ：資生堂オンラインストア",
           "url": "https://www.rebates.jp/shiseido-jp",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -384,10 +328,10 @@
         {
           "title": "楽天リーベイツ：@cosme SHOPPING",
           "url": "https://www.rebates.jp/cosmeshopping",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -465,10 +409,10 @@
         {
           "title": "楽天リーベイツ：オリーブヤング公式ストア",
           "url": "https://www.rebates.jp/global.oliveyoung.com",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -540,10 +484,10 @@
         {
           "title": "楽天リーベイツ：マツキヨココカラ公式オンラインストア",
           "url": "https://www.rebates.jp/matsukiyo-jp",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -621,10 +565,10 @@
         {
           "title": "楽天リーベイツ：Apple公式サイト",
           "url": "https://www.rebates.jp/apple-store",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -698,10 +642,10 @@
         {
           "title": "楽天リーベイツ：ビックカメラ.com",
           "url": "https://www.rebates.jp/bic-camera",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -832,10 +776,10 @@
         {
           "title": "楽天リーベイツ：三越伊勢丹オンラインストア",
           "url": "https://www.rebates.jp/mistore.com",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -906,10 +850,10 @@
         {
           "title": "楽天リーベイツ：高島屋オンラインストア",
           "url": "https://www.rebates.jp/takashimaya",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -984,10 +928,10 @@
         {
           "title": "楽天リーベイツ：大丸松坂屋オンラインストア",
           "url": "https://www.rebates.jp/daimaru-matsuzakaya",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -1058,10 +1002,10 @@
         {
           "title": "楽天リーベイツ：Qoo10",
           "url": "https://www.rebates.jp/qoo10",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -1198,10 +1142,10 @@
         {
           "title": "楽天リーベイツ：JAL 国内線航空券",
           "url": "https://www.rebates.jp/jal-domestic",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -1267,10 +1211,10 @@
         {
           "title": "楽天リーベイツ：JAL 国際線航空券",
           "url": "https://www.rebates.jp/jal-international",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -1336,10 +1280,10 @@
         {
           "title": "楽天リーベイツ：JALパック 国内ツアー",
           "url": "https://www.rebates.jp/jal.co.com",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -1400,10 +1344,10 @@
         {
           "title": "楽天リーベイツ：JALパック 海外ツアー",
           "url": "https://www.rebates.jp/jal.com",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -1471,10 +1415,10 @@
         {
           "title": "楽天リーベイツ：ANAトラベラーズ（ツアー）",
           "url": "https://www.rebates.jp/www.ana.com",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -1538,10 +1482,10 @@
         {
           "title": "楽天リーベイツ：楽天トラベル",
           "url": "https://www.rebates.jp/travel.rakuten.co.jp.com",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -1655,10 +1599,10 @@
         {
           "title": "楽天リーベイツ：Booking.com",
           "url": "https://www.rebates.jp/booking.com",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -1722,10 +1666,10 @@
         {
           "title": "楽天リーベイツ：エクスペディア（ホテル）",
           "url": "https://www.rebates.jp/expedia.hotels.jp",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -1789,10 +1733,10 @@
         {
           "title": "楽天リーベイツ：エクスペディア（航空券）",
           "url": "https://www.rebates.jp/expedia.flights.jp",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -1856,10 +1800,10 @@
         {
           "title": "楽天リーベイツ：エクスペディア（現地ツアー）",
           "url": "https://www.rebates.jp/expedia.co.jp",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",
@@ -1925,10 +1869,10 @@
         {
           "title": "楽天リーベイツ：Klook（クルック）",
           "url": "https://www.rebates.jp/klook.com",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "conditional",
@@ -1995,10 +1939,10 @@
         {
           "title": "楽天リーベイツ：GetYourGuide",
           "url": "https://www.rebates.jp/getyourguide.com",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "rebates": {
         "listed": true,
         "status": "confirmed",

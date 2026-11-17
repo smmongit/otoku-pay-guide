@@ -1,70 +1,14 @@
 {
   "meta": {
     "version": 2,
-    "updatedAt": "2026-11-17",
+    "updatedAt": "2026-11-18",
     "note": "1件＝1チェーン。公式情報で確認した内容のみ。調べた日付は各チェーンの checkedAt。",
     "sourcePolicy": "sources[].via がある項目は、公式ページをクラウドから直接閲覧できず、検索結果の抜粋で確認したもの",
     "autoUpdate": {
-      "at": "2026-11-16T21:44:37.770Z",
-      "date": "2026-11-17",
+      "at": "2026-11-17T21:46:12.272Z",
+      "date": "2026-11-18",
       "checked": 85,
-      "changed": [
-        {
-          "where": "資生堂オンラインストア（リーベイツ）",
-          "from": {
-            "rate": 10,
-            "basis": "tax_excluded"
-          },
-          "to": {
-            "rate": 7,
-            "basis": "tax_excluded"
-          }
-        },
-        {
-          "where": "ビックカメラ.com（リーベイツ）",
-          "from": {
-            "rate": 4,
-            "basis": "tax_excluded"
-          },
-          "to": {
-            "rate": 1,
-            "basis": "tax_excluded"
-          }
-        },
-        {
-          "where": "大丸松坂屋オンラインストア（リーベイツ）",
-          "from": {
-            "rate": 8,
-            "basis": "tax_excluded"
-          },
-          "to": {
-            "rate": 6,
-            "basis": "tax_excluded"
-          }
-        },
-        {
-          "where": "Booking.com（リーベイツ）",
-          "from": {
-            "rate": 3.5,
-            "basis": "tax_excluded"
-          },
-          "to": {
-            "rate": 3,
-            "basis": "tax_excluded"
-          }
-        },
-        {
-          "where": "エクスペディア（ホテル）（リーベイツ）",
-          "from": {
-            "rate": 6,
-            "basis": "tax_excluded"
-          },
-          "to": {
-            "rate": 3,
-            "basis": "tax_excluded"
-          }
-        }
-      ],
+      "changed": [],
       "issues": []
     }
   },
@@ -301,7 +245,7 @@
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/65972/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "PayPay：使えるお店（主なご利用可能店舗）",
@@ -332,7 +276,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": []
     },
     {
@@ -626,7 +570,7 @@
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/70765/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "PayPay：使えるお店（主なご利用可能店舗）",
@@ -662,7 +606,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": []
     },
     {
@@ -770,7 +714,7 @@
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/263200/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "PayPay：使えるお店（主なご利用可能店舗）",
@@ -806,7 +750,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": []
     },
     {
@@ -920,7 +864,7 @@
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/welcia/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "dポイントクラブ：加盟店ページ",
@@ -950,7 +894,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": []
     },
     {
@@ -1196,7 +1140,7 @@
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/329564/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "PayPay：使えるお店（主なご利用可能店舗）",
@@ -1215,7 +1159,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": []
     },
     {
@@ -1356,12 +1300,12 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/kfc/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/kfc/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "三井住友銀行：OliveのVポイント還元率（対象のコンビニ・飲食店）",
@@ -1395,7 +1339,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": []
     },
     {
@@ -1531,12 +1475,12 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/yoshinoya/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/yoshinoya/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "三井住友銀行：OliveのVポイント還元率（対象のコンビニ・飲食店）",
@@ -1570,7 +1514,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": [
         {
           "service": "vpoint",
@@ -1663,7 +1607,7 @@
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/164872/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "PayPay：使えるお店（主なご利用可能店舗）",
@@ -1682,7 +1626,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": []
     },
     {
@@ -1829,17 +1773,17 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/sukiya/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/sukiya/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/152636/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "三井住友銀行：OliveのVポイント還元率（対象のコンビニ・飲食店）",
@@ -1874,7 +1818,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": [
         {
           "service": "vpoint",
@@ -2113,12 +2057,12 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/skylark_gusto/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/gusto/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "三井住友銀行：OliveのVポイント還元率（対象のコンビニ・飲食店）",
@@ -2144,7 +2088,7 @@
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/83658/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "ドコモ：d払い＋dポイントカード提示でダブルでたまる",
@@ -2158,7 +2102,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": [
         {
           "service": "vpoint",
@@ -2312,12 +2256,12 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/skylark_bamiyan/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/bamiyan/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "三井住友銀行：OliveのVポイント還元率（対象のコンビニ・飲食店）",
@@ -2343,7 +2287,7 @@
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/83662/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "ドコモ：d払い＋dポイントカード提示でダブルでたまる",
@@ -2357,7 +2301,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": [
         {
           "service": "vpoint",
@@ -2484,12 +2428,12 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/skylark_jonathan/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/jonathan/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "三井住友銀行：OliveのVポイント還元率（対象のコンビニ・飲食店）",
@@ -2513,7 +2457,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": [
         {
           "service": "vpoint",
@@ -3024,7 +2968,7 @@
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/doutor/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "三井住友銀行：OliveのVポイント還元率（対象のコンビニ・飲食店）",
@@ -3034,7 +2978,7 @@
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/8111/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "PayPay：使えるお店（主なご利用可能店舗）",
@@ -3053,7 +2997,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": []
     },
     {
@@ -3161,7 +3105,7 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/tullys/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "dポイントクラブ：加盟店ページ",
@@ -3190,7 +3134,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": []
     },
     {
@@ -3397,12 +3341,12 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/saint-marc/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/8113/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "PayPay：使えるお店（主なご利用可能店舗）",
@@ -3426,7 +3370,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": []
     },
     {
@@ -3536,12 +3480,12 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/misterdonut/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/263292/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "PayPay：使えるお店（主なご利用可能店舗）",
@@ -3571,7 +3515,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": []
     },
     {
@@ -3858,17 +3802,17 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/familymart/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/family/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/289914/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "ファミリーマート：ご利用可能な決済サービス",
@@ -3892,7 +3836,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": []
     },
     {
@@ -4025,7 +3969,7 @@
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/7780/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "PayPay：使えるお店（主なご利用可能店舗）",
@@ -4038,7 +3982,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": []
     },
     {
@@ -4174,17 +4118,17 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/cocos/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/cocos/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/266766/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "三井住友銀行：OliveのVポイント還元率（対象のコンビニ・飲食店）",
@@ -4202,7 +4146,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": [
         {
           "service": "vpoint",
@@ -4355,17 +4299,17 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/skylark_syabuyo/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/syabuyo/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/208885/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "三井住友銀行：OliveのVポイント還元率（対象のコンビニ・飲食店）",
@@ -4389,7 +4333,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": [
         {
           "service": "vpoint",
@@ -4518,17 +4462,17 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/nakau/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/nakau/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/376810/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "PayPay：使えるお店（主なご利用可能店舗）",
@@ -4541,7 +4485,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": [
         {
           "service": "vpoint",
@@ -4741,12 +4685,12 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/saint-marc_kamakura-pasta/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/8124/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "楽天ペイ：使えるお店",
@@ -4754,7 +4698,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": [
         {
           "service": "paypay",
@@ -4955,7 +4899,7 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/eyecity/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "アイシティ：ポイントサービス",
@@ -4978,7 +4922,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17",
+      "checkedAt": "2026-11-18",
       "coupons": []
     },
     {
@@ -5447,7 +5391,7 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/kaldi/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "カルディ：クレジットカードは使えますか？（FAQ）",
@@ -5478,7 +5422,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17"
+      "checkedAt": "2026-11-18"
     },
     {
       "id": "burgerking",
@@ -5903,7 +5847,7 @@
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/freshnessburger/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "三井住友銀行：OliveのVポイント還元率（対象のコンビニ・飲食店）",
@@ -5921,7 +5865,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17"
+      "checkedAt": "2026-11-18"
     },
     {
       "id": "excelsior",
@@ -6066,12 +6010,12 @@
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/excelsior/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/8115/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "三井住友銀行：OliveのVポイント還元率（対象のコンビニ・飲食店）",
@@ -6089,7 +6033,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17"
+      "checkedAt": "2026-11-18"
     },
     {
       "id": "steak-gusto",
@@ -6239,17 +6183,17 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/skylark_steak_gusto/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/steak/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/335894/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "三井住友銀行：OliveのVポイント還元率（対象のコンビニ・飲食店）",
@@ -6273,7 +6217,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17"
+      "checkedAt": "2026-11-18"
     },
     {
       "id": "pronto",
@@ -6382,12 +6326,12 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/pronto/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/360162/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "PayPay：使えるお店（主なご利用可能店舗）",
@@ -6406,7 +6350,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17"
+      "checkedAt": "2026-11-18"
     },
     {
       "id": "ueshima",
@@ -6515,7 +6459,7 @@
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/114745/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "PayPay：使えるお店（主なご利用可能店舗）",
@@ -6534,7 +6478,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17"
+      "checkedAt": "2026-11-18"
     },
     {
       "id": "hoshino",
@@ -7019,12 +6963,12 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/hands/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/13930/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "PayPay：使えるお店（主なご利用可能店舗）",
@@ -7043,7 +6987,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17"
+      "checkedAt": "2026-11-18"
     },
     {
       "id": "francfranc",
@@ -7481,7 +7425,7 @@
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/400911/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "PPIH：ドン・キホーテで利用可能な支払い方法（FAQ）",
@@ -7490,7 +7434,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17"
+      "checkedAt": "2026-11-18"
     },
     {
       "id": "nitori",
@@ -7708,7 +7652,7 @@
         {
           "title": "楽天ポイントカード：加盟店ページ",
           "url": "https://pointcard.rakuten.co.jp/partner/tokyu-dept/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "PayPay：使えるお店（主なご利用可能店舗）",
@@ -7727,7 +7671,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17"
+      "checkedAt": "2026-11-18"
     },
     {
       "id": "odakyu-dept",
@@ -7835,7 +7779,7 @@
         {
           "title": "dポイントクラブ：加盟店ページ",
           "url": "https://dpoint.docomo.ne.jp/static/store/323546/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "PayPay：使えるお店（主なご利用可能店舗）",
@@ -7854,7 +7798,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17"
+      "checkedAt": "2026-11-18"
     },
     {
       "id": "tsutaya",
@@ -7955,7 +7899,7 @@
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/tsutaya/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "Vポイント：提携先ページ",
@@ -7974,7 +7918,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17"
+      "checkedAt": "2026-11-18"
     },
     {
       "id": "kinokuniya",
@@ -8076,7 +8020,7 @@
         {
           "title": "Vポイント：提携先ページ",
           "url": "https://t-point.tsite.jp/store/list/kinokuniya/",
-          "checkedAt": "2026-11-17"
+          "checkedAt": "2026-11-18"
         },
         {
           "title": "dポイントクラブ：加盟店ページ",
@@ -8095,7 +8039,7 @@
           "checkedAt": "2026-11-13"
         }
       ],
-      "checkedAt": "2026-11-17"
+      "checkedAt": "2026-11-18"
     },
     {
       "id": "toho",
